@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html class="page page--form" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Погнали. Направления</title>
+  </head>
+  <body class="page__body">
+    <header class="page-header">
+      <div class="page-header__logo-wrapper">
+        <a class="page-header__logo">
+          <img src="https://via.placeholder.com/100x15" width="100" height="15" alt="Логотип сервиса Погнали?">
+        </a>
+        <button class="page-header__menu-toggle" type="button" aria-label="Меню"></button>
+      </div>
+      <nav class="navigation">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a href="index.html" class="navigation__link">О сервисе</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link">Направления</a>
+          </li>
+          <li class="navigation__item">
+            <a href="catalog.html" class="navigation__link">Попутчики</a>
+          </li>
+        </ul>
+      </nav>
+      <a class="authorization" href="">Авторизация</a>
+      <ul class="contacts contacts--header">
+        <li class="contacts__item">
+          <a class="contacts__link contacts__link--phone" href="tel:+78005558628">8 800 555-86-28</a>
+        </li>
+        <li class="contacts__item">
+          <a class="contacts__link contacts__link--mail" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+        </li>
+      </ul>
+      <ul class="social social--header">
+        <li class="social-item">
+          <a class="social-link" href="https://www.facebook.com/htmlacademy/" aria-label="Мы в Facebook"></a>
+        </li>
+        <li class="social-item">
+          <a class="social-link" href="https://vk.com/htmlacademy" aria-label="Мы в VK"></a>
+        </li>
+        <li class="social-item">
+          <a class="social-link" href="https://www.instagram.com/htmlacademy/?hl=ru" aria-label="Мы в Instagram"></a>
+        </li>
+      </ul>
+      <div class="wrapper">
+        <h1 class="main-title">Направления</h1>
+      </div>
+    </header>
+    <main class="page-main">
+      <section class="user">
+        <h2 class="visually-hidden">Информация о пользователе</h2>
+        <div class="wrapper">
+          <dl class="user__level-list">
+            <dt class="user__level">99</dt>
+            <dd class="user__description">level</dd>
+          </dl>
+          <a class="user__photo-wrapper" href="#">
+            <img src="https://via.placeholder.com/100x100" width="100" height="100" alt="Фотография пользователя">
+          </a>
+          <a class="user__change-photo" href="">Сменить фото</a>
+          <ul class="user__hashtags-list">
+            <li class="user__hashtags-item">
+              <a class="user__hashtags-link">бургер</a>
+            </li>
+            <li class="user__hashtags-item">
+              <a class="user__hashtags-link">бар</a>
+            </li>
+            <li class="user__hashtags-item">
+              <a class="user__hashtags-link">футбол</a>
+            </li>
+            <li class="user__hashtags-item">
+              <a class="user__hashtags-link">концерт</a>
+            </li>
+            <li class="user__hashtags-item">
+              <a class="user__hashtags-link">крафт</a>
+            </li>
+          </ul>
+          <ul class="user__transport-list">
+            <li class="user__transport-item">
+              <!-- Здесь будет svg-иконка самолёта с модификатором active-->
+            </li>
+            <li class="user__transport-item">
+              <!-- Здесь будет svg-иконка автобуса с модификатором active-->
+            </li>
+            <li class="user__transport-item">
+              <!-- Здесь будет svg-иконка велосипеда-->
+            </li>
+            <li class="user__transport-item">
+              <!-- Здесь будет svg-иконка с бегущим человечком с модификатором active-->
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="plans">
+        <div class="wrapper">
+          <h2 class="section-title section-title--form">Мои планы:</h2>
+          <ol class="plans__list">
+            <li class="plans__item">
+              <h3 class="plans__title">Франция, Италия</h3>
+              <div class="plans__info-wrapper">
+                <p class="plans__companions">3 попутчика</p>
+                <p class="plans__dates">26 мар — 29 мар</p>
+                <a class="plans__change">Изменить</a>
+              </div>
+            </li>
+            <li class="plans__item">
+              <h3 class="plans__title">Таиланд, Индонезия</h3>
+              <div class="plans__info-wrapper">
+                <p class="plans__companions">1 попутчик</p>
+                <p class="plans__dates">1 июл — 15 июл</p>
+                <a class="plans__change">Изменить</a>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+      <section class="add-plan">
+        <div class="wrapper">
+          <h2 class="section-title section-title--form">Добавить план:</h2>
+          <form class="add-plan__form" action="https://echo.htmlacademy.ru" method="post">
+            <fieldset class="add-plan__step" id="step1">
+              <legend class="add-plan__legend">Шаг 1. Даты пребывания</legend>
+              <p class="add-plan__info">
+                Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку, и ее предполагаемую длительность.
+              </p>
+              <div class="add-plan__input-controls-wrapper">
+                <div class="add-plan__label-wrapper">
+                  <label class="add-plan__label" for="companions-number">Ищу попутчиков:</label>
+                  <span class="add-plan__unit">Чел.</span>
+                </div>
+                <div class="add-plan__number-input-wrapper">
+                  <button class="add-plan__number-change add-plan__number-change--decrease" type="button" aria-label="Уменьшить количество попутчиков"></button>
+                  <input class="add-plan__number-input" type="number" id="companions-number" name="companions-number" value="2" min="0">
+                  <button class="add-plan__number-change add-plan__number-change--increase" type="button" aria-label="Увеличить количество попутчиков"></button>
+                </div>
+              </div>
+              <div class="add-plan__input-controls-wrapper">
+                <div class="add-plan__label-wrapper">
+                  <label class="add-plan__label" for="days-number">Длительность</label>
+                  <span class="add-plan__unit">Дн.</span>
+                </div>
+                <div class="add-plan__number-input-wrapper">
+                  <button class="add-plan__number-change add-plan__number-change--decrease" type="button" aria-label="Уменьшить количество дней"></button>
+                  <input class="add-plan__number-input" type="number" id="days-number" name="days-number" value="3" min="1">
+                  <button class="add-plan__number-change add-plan__number-change--increase" type="button" aria-label="Увеличить количество дней"></button>
+                </div>
+              </div>
+              <div class="add-plan__checkbox-wrapper">
+                <input class="add-plan__checkbox-input" type="checkbox" id="kids" name="kids" checked>
+                <label class="add-plan__checkbox-label" for="kids">Можно с детьми</label>
+              </div>
+              <div class="add-plan__calendar calendar">
+                <div class="calendar__month-choose">
+                  <button class="calendar__month-change calendar__month-change--previous" type="button" aria-label="Выбрать предыдущий месяц"></button>
+                  <p class="calendar__month-name">Март 2019</p>
+                  <button class="calendar__month-change calendar__month-change--next" type="button" aria-label="Выбрать следующий месяц"></button>
+                </div>
+                <table class="calendar__table">
+                  <thead class="calendar__table-head">
+                    <tr class="calendar__table-head-row">
+                      <th class="calendar__day-of-week">П</th>
+                      <th class="calendar__day-of-week">В</th>
+                      <th class="calendar__day-of-week">С</th>
+                      <th class="calendar__day-of-week">Ч</th>
+                      <th class="calendar__day-of-week">П</th>
+                      <th class="calendar__day-of-week">С</th>
+                      <th class="calendar__day-of-week">В</th>
+                    </tr>
+                  </thead>
+                  <tbody class="calendar__table-body">
+                    <tr class="calendar__table-body-row">
+                      <td class="calendar__day-of-month-wrapper">
+                        <input class="visually-hidden calendar__day-of-month-input" type="checkbox" name="feb23" id="feb23" disabled>
+                        <label class="calendar__day-of-month-label" for="feb23">23</label>
+                      </td>
+                      <td class="calendar__day-of-month-wrapper">
+                        <input class="visually-hidden calendar__day-of-month-input" type="checkbox" name="feb24" id="feb24" disabled>
+                        <label class="calendar__day-of-month-label" for="feb24">24</label>
+                      </td>
+                      <td class="calendar__day-of-month-wrapper">
+                        <input class="visually-hidden calendar__day-of-month-input" type="checkbox" name="feb25" id="feb25" disabled>
+                        <label class="calendar__day-of-month-label" for="feb25">25</label>
+                      </td>
+                      <td class="calendar__day-of-month-wrapper">
+                        <input class="visually-hidden calendar__day-of-month-input" type="checkbox" name="feb26" id="feb26" disabled>
+                        <label class="calendar__day-of-month-label" for="feb26">26</label>
+                      </td>
+                      <td class="calendar__day-of-month-wrapper">
+                        <input class="visually-hidden calendar__day-of-month-input" type="checkbox" name="feb27" id="feb27" disabled>
+                        <label class="calendar__day-of-month-label" for="feb27">27</label>
+                      </td>
+                      <td class="calendar__day-of-month-wrapper">
+                        <input class="visually-hidden calendar__day-of-month-input" type="checkbox" name="feb28" id="feb28" disabled>
+                        <label class="calendar__day-of-month-label" for="feb28">28</label>
+                      </td>
+                      <td class="calendar__day-of-month-wrapper">
+                        <input class="visually-hidden calendar__day-of-month-input" type="checkbox" name="mar01" id="mar01" disabled>
+                        <label class="calendar__day-of-month-label" for="mar01">1</label>
+                      </td>
+                    </tr>
+                    <tr class="calendar__table-body-row">
+                      <td class="calendar__day-of-month-wrapper">
+                        <input class="visually-hidden calendar__day-of-month-input" type="checkbox" name="mar02" id="mar02" disabled>
+                        <label class="calendar__day-of-month-label" for="mar02">2</label>
+                      </td>
+                      <td class="calendar__day-of-month-wrapper">
+                        <input class="visually-hidden calendar__day-of-month-input" type="checkbox" name="mar03" id="mar03" disabled>
+                        <label class="calendar__day-of-month-label" for="mar03">3</label>
+                      </td>
+                      <td class="calendar__day-of-month-wrapper">
+                        <input class="visually-hidden calendar__day-of-month-input" type="checkbox" name="mar04" id="mar04" disabled>
+                        <label class="calendar__day-of-month-label" for="mar04">4</label>
+                      </td>
+                      <td class="calendar__day-of-month-wrapper">
+                        <input class="visually-hidden calendar__day-of-month-input" type="checkbox" name="mar05" id="mar05" disabled>
+                        <label class="calendar__day-of-month-label" for="mar05">5</label>
+                      </td>
+                      <td class="calendar__day-of-month-wrapper">
+                        <input class="visually-hidden calendar__day-of-month-input" type="checkbox" name="mar06" id="mar06" disabled>
+                        <label class="calendar__day-of-month-label" for="mar06">6</label>
+                      </td>
+                      <td class="calendar__day-of-month-wrapper">
+                        <input class="visually-hidden calendar__day-of-month-input" type="checkbox" name="mar07" id="mar07" disabled>
+                        <label class="calendar__day-of-month-label" for="mar07">7</label>
+                      </td>
+                      <td class="calendar__day-of-month-wrapper">
+                        <input class="visually-hidden calendar__day-of-month-input" type="checkbox" name="mar08" id="mar08" disabled>
+                        <label class="calendar__day-of-month-label" for="mar08">8</label>
+                      </td>
+                    </tr>
+                    <tr class="calendar__table-body-row">
+                      <td class="calendar__day-of-month-wrapper">
+                        <input class="visually-hidden calendar__day-of-month-input" type="checkbox" name="mar09" id="mar09" disabled>
+                        <label class="calendar__day-of-month-label" for="mar09">9</label>
+                      </td>
+                      <td class="calendar__day-of-month-wrapper">
+                        <input class="visually-hidden calendar__day-of-month-input" type="checkbox" name="mar10" id="mar10" disabled>
+                        <label class="calendar__day-of-month-label" for="mar10">10</label>
+                      </td>
+                      <td class="calendar__day-of-month-wrapper">
+                        <input class="visually-hidden calendar__day-of-month-input" type="checkbox" name="mar11" id="mar11" disabled>
+                        <label class="calendar__day-of-month-label" for="mar11">11</label>
+                      </td>
+                      <td class="calendar__day-of-month-wrapper">
+                        <input class="visually-hidden calendar__day-of-month-input" type="checkbox" name="mar12" id="mar12" disabled>
+                        <label class="calendar__day-of-month-label" for="mar12">12</label>
+                      </td>
+                      <td class="calendar__day-of-month-wrapper">
+                        <input class="visually-hidden calendar__day-of-month-input" type="checkbox" name="mar13" id="mar13" disabled>
+                        <label class="calendar__day-of-month-label" for="mar13">13</label>
+                      </td>
+                      <td class="calendar__day-of-month-wrapper">
+                        <input class="visually-hidden calendar__day-of-month-input" type="checkbox" name="mar14" id="mar14" disabled>
+                        <label class="calendar__day-of-month-label" for="mar14">14</label>
+                      </td>
+                      <td class="calendar__day-of-month-wrapper">
+                        <input class="visually-hidden calendar__day-of-month-input" type="checkbox" name="mar15" id="mar15" disabled>
+                        <label class="calendar__day-of-month-label" for="mar15">15</label>
+                      </td>
+                    </tr>
+                    <tr class="calendar__table-body-row">
+                      <td class="calendar__day-of-month-wrapper">
+                        <input class="visually-hidden calendar__day-of-month-input" type="checkbox" name="mar16" id="mar16" disabled>
+                        <label class="calendar__day-of-month-label" for="mar16">16</label>
+                      </td>
+                      <td class="calendar__day-of-month-wrapper">
+                        <input class="visually-hidden calendar__day-of-month-input" type="checkbox" name="mar17" id="mar17" disabled>
+                        <label class="calendar__day-of-month-label" for="mar17">17</label>
+                      </td>
+                      <td class="calendar__day-of-month-wrapper">
+                        <input class="visually-hidden calendar__day-of-month-input" type="checkbox" name="mar18" id="mar18" disabled>
+                        <label class="calendar__day-of-month-label" for="mar18">18</label>
+                      </td>
+                      <td class="calendar__day-of-month-wrapper">
+                        <input class="visually-hidden calendar__day-of-month-input" type="checkbox" name="mar19" id="mar19" disabled>
+                        <label class="calendar__day-of-month-label" for="mar19">19</label>
+                      </td>
+                      <td class="calendar__day-of-month-wrapper">
+                        <input class="visually-hidden calendar__day-of-month-input" type="checkbox" name="mar20" id="mar20" disabled>
+                        <label class="calendar__day-of-month-label" for="mar20">20</label>
+                      </td>
+                      <td class="calendar__day-of-month-wrapper">
+                        <input class="visually-hidden calendar__day-of-month-input" type="checkbox" name="mar21" id="mar21" disabled>
+                        <label class="calendar__day-of-month-label" for="mar21">21</label>
+                      </td>
+                      <td class="calendar__day-of-month-wrapper">
+                        <input class="visually-hidden calendar__day-of-month-input" type="checkbox" name="mar22" id="mar22" disabled>
+                        <label class="calendar__day-of-month-label" for="mar22">22</label>
+                      </td>
+                    </tr>
+                    <tr class="calendar__table-body-row">
+                      <td class="calendar__day-of-month-wrapper">
+                        <input class="visually-hidden calendar__day-of-month-input" type="checkbox" name="mar23" id="mar23" disabled>
+                        <label class="calendar__day-of-month-label" for="mar23">23</label>
+                      </td>
+                      <td class="calendar__day-of-month-wrapper">
+                        <input class="visually-hidden calendar__day-of-month-input" type="checkbox" name="mar24" id="mar24" disabled>
+                        <label class="calendar__day-of-month-label" for="mar24">24</label>
+                      </td>
+                      <td class="calendar__day-of-month-wrapper">
+                        <input class="visually-hidden calendar__day-of-month-input" type="checkbox" name="mar25" id="mar25" disabled>
+                        <label class="calendar__day-of-month-label" for="mar25">25</label>
+                      </td>
+                      <td class="calendar__day-of-month-wrapper">
+                        <input class="visually-hidden calendar__day-of-month-input" type="checkbox" name="mar26" id="mar26" checked>
+                        <label class="calendar__day-of-month-label" for="mar26">26</label>
+                      </td>
+                      <td class="calendar__day-of-month-wrapper">
+                        <input class="visually-hidden calendar__day-of-month-input" type="checkbox" name="mar27" id="mar27" checked>
+                        <label class="calendar__day-of-month-label" for="mar27">27</label>
+                      </td>
+                      <td class="calendar__day-of-month-wrapper">
+                        <input class="visually-hidden calendar__day-of-month-input" type="checkbox" name="mar28" id="mar28" checked>
+                        <label class="calendar__day-of-month-label" for="mar28">28</label>
+                      </td>
+                      <td class="calendar__day-of-month-wrapper">
+                        <input class="visually-hidden calendar__day-of-month-input" type="checkbox" name="mar29" id="mar29">
+                        <label class="calendar__day-of-month-label" for="mar29">29</label>
+                      </td>
+                    </tr>
+                    <tr class="calendar__table-body-row">
+                      <td class="calendar__day-of-month-wrapper">
+                        <input class="visually-hidden calendar__day-of-month-input" type="checkbox" name="mar30" id="mar30">
+                        <label class="calendar__day-of-month-label" for="mar30">30</label>
+                      </td>
+                      <td class="calendar__day-of-month-wrapper">
+                        <input class="visually-hidden calendar__day-of-month-input" type="checkbox" name="mar29" id="mar29">
+                        <label class="calendar__day-of-month-label" for="mar31">31</label>
+                      </td>
+                      <td class="calendar__day-of-month-wrapper">
+                        <input class="visually-hidden calendar__day-of-month-input" type="checkbox" name="apr01" id="apr01">
+                        <label class="calendar__day-of-month-label" for="apr01">1</label>
+                      </td>
+                      <td class="calendar__day-of-month-wrapper">
+                        <input class="visually-hidden calendar__day-of-month-input" type="checkbox" name="apr02" id="apr02">
+                        <label class="calendar__day-of-month-label" for="apr02">2</label>
+                      </td>
+                      <td class="calendar__day-of-month-wrapper">
+                        <input class="visually-hidden calendar__day-of-month-input" type="checkbox" name="apr03" id="apr03">
+                        <label class="calendar__day-of-month-label" for="apr03">3</label>
+                      </td>
+                      <td class="calendar__day-of-month-wrapper">
+                        <input class="visually-hidden calendar__day-of-month-input" type="checkbox" name="apr04" id="apr04">
+                        <label class="calendar__day-of-month-label" for="apr04">4</label>
+                      </td>
+                      <td class="calendar__day-of-month-wrapper">
+                        <input class="visually-hidden calendar__day-of-month-input" type="checkbox" name="apr05" id="apr05">
+                        <label class="calendar__day-of-month-label" for="apr05">5</label>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <a class="add-plan__next-step" href="#step2">Следующий шаг</a>
+            </fieldset>
+            <fieldset class="add-plan__step" id="step2">
+              <legend class="add-plan__legend">Шаг 2. Маршрут</legend>
+              <p class="add-plan__info">
+                Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу несколько.
+              </p>
+              <div class="country-picker">
+                <div class="country-picker__selector-wrapper country-picker__selector-wrapper--country-chosen">
+                  <button class="country-picker__selector country-picker__selector--chosen" aria-label="Выбор страны">
+                    Босния и Герцеговина
+                  </button>
+                  <div class="country-picker__flag-wrapper">
+                    <div class="country-picker__flag">
+                      <img class="country-picker__image" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Боснии и Герцеговины">
+                    </div>
+                  </div>
+                  <button class="country-picker__delete" type="button" aria-label="Удалить страну из списка"></button>
+                </div>
+                <div class="country-picker__selector-wrapper country-picker__selector-wrapper--country-chosen">
+                  <div class="country-picker__selector-wrapper country-picker__selector-wrapper--country-chosen">
+                    <button class="country-picker__selector country-picker__selector--chosen" aria-label="Выбор страны">
+                      Чехия
+                    </button>
+                    <div class="country-picker__flag-wrapper">
+                      <div class="country-picker__flag">
+                        <img class="country-picker__image" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Чехии">
+                      </div>
+                    </div>
+                    <button class="country-picker__delete" type="button" aria-label="Удалить страну из списка"></button>
+                  </div>
+                </div>
+                <div class="country-picker__selector-wrapper">
+                  <a class="country-picker__selector" href="#">Выберите страну</a>
+                  <button class="country-picker__delete" type="button" aria-label="Удалить страну из списка"></button>
+                  <div class="country-picker__country-chooser country-chooser">
+                    <table class="country-chooser__letters-table">
+                      <tbody class="country-chooser__letters-table-body">
+                        <tr class="country-chooser__letters-table-row">
+                          <td class="country-chooser__letter">
+                            <input class="visually-hidden country-chooser__radio-letter" type="radio" name="letters" id="letter1" checked>
+                            <label class="country-chooser__label-letter" for="letter1">А</label>
+                          </td>
+                          <td class="country-chooser__letter">
+                            <input class="visually-hidden country-chooser__radio-letter" type="radio" name="letters" id="letter2">
+                            <label class="country-chooser__label-letter" for="letter2">Б</label>
+                          </td>
+                          <td class="country-chooser__letter">
+                            <input class="visually-hidden country-chooser__radio-letter" type="radio" name="letters" id="letter3">
+                            <label class="country-chooser__label-letter" for="letter3">В</label>
+                          </td>
+                          <td class="country-chooser__letter">
+                            <input class="visually-hidden country-chooser__radio-letter" type="radio" name="letters" id="letter4">
+                            <label class="country-chooser__label-letter" for="letter4">Г</label>
+                          </td>
+                          <td class="country-chooser__letter">
+                            <input class="visually-hidden country-chooser__radio-letter" type="radio" name="letters" id="letter5">
+                            <label class="country-chooser__label-letter" for="letter5">Д</label>
+                          </td>
+                        </tr>
+                        <tr class="country-chooser__letters-table-row">
+                          <td class="country-chooser__letter">
+                            <input class="visually-hidden country-chooser__radio-letter" type="radio" name="letters" id="letter6">
+                            <label class="country-chooser__label-letter" for="letter6">Е</label>
+                          </td>
+                          <td class="country-chooser__letter">
+                            <input class="visually-hidden country-chooser__radio-letter" type="radio" name="letters" id="letter7">
+                            <label class="country-chooser__label-letter" for="letter7">З</label>
+                          </td>
+                          <td class="country-chooser__letter">
+                            <input class="visually-hidden country-chooser__radio-letter" type="radio" name="letters" id="letter8">
+                            <label class="country-chooser__label-letter" for="letter8">И</label>
+                          </td>
+                          <td class="country-chooser__letter">
+                            <input class="visually-hidden country-chooser__radio-letter" type="radio" name="letters" id="letter9">
+                            <label class="country-chooser__label-letter" for="letter9">К</label>
+                          </td>
+                          <td class="country-chooser__letter">
+                            <input class="visually-hidden country-chooser__radio-letter" type="radio" name="letters" id="letter10">
+                            <label class="country-chooser__label-letter" for="letter10">Л</label>
+                          </td>
+                        </tr>
+                        <tr class="country-chooser__letters-table-row">
+                          <td class="country-chooser__letter">
+                            <input class="visually-hidden country-chooser__radio-letter" type="radio" name="letters" id="letter11">
+                            <label class="country-chooser__label-letter" for="letter11">М</label>
+                          </td>
+                          <td class="country-chooser__letter">
+                            <input class="visually-hidden country-chooser__radio-letter" type="radio" name="letters" id="letter12">
+                            <label class="country-chooser__label-letter" for="letter12">Н</label>
+                          </td>
+                          <td class="country-chooser__letter">
+                            <input class="visually-hidden country-chooser__radio-letter" type="radio" name="letters" id="letter13">
+                            <label class="country-chooser__label-letter" for="letter13">О</label>
+                          </td>
+                          <td class="country-chooser__letter">
+                            <input class="visually-hidden country-chooser__radio-letter" type="radio" name="letters" id="letter14">
+                            <label class="country-chooser__label-letter" for="letter14">П</label>
+                          </td>
+                          <td class="country-chooser__letter">
+                            <input class="visually-hidden country-chooser__radio-letter" type="radio" name="letters" id="letter15">
+                            <label class="country-chooser__label-letter" for="letter15">Р</label>
+                          </td>
+                        </tr>
+                        <tr class="country-chooser__letters-table-row">
+                          <td class="country-chooser__letter">
+                            <input class="visually-hidden country-chooser__radio-letter" type="radio" name="letters" id="letter16">
+                            <label class="country-chooser__label-letter" for="letter16">С</label>
+                          </td>
+                          <td class="country-chooser__letter">
+                            <input class="visually-hidden country-chooser__radio-letter" type="radio" name="letters" id="letter17">
+                            <label class="country-chooser__label-letter" for="letter17">Т</label>
+                          </td>
+                          <td class="country-chooser__letter">
+                            <input class="visually-hidden country-chooser__radio-letter" type="radio" name="letters" id="letter18">
+                            <label class="country-chooser__label-letter" for="letter18">У</label>
+                          </td>
+                          <td class="country-chooser__letter">
+                            <input class="visually-hidden country-chooser__radio-letter" type="radio" name="letters" id="letter19">
+                            <label class="country-chooser__label-letter" for="letter19">Ф</label>
+                          </td>
+                          <td class="country-chooser__letter">
+                            <input class="visually-hidden country-chooser__radio-letter" type="radio" name="letters" id="letter20">
+                            <label class="country-chooser__label-letter" for="letter20">Х</label>
+                          </td>
+                        </tr>
+                        <tr class="country-chooser__letters-table-row">
+                          <td class="country-chooser__letter">
+                            <input class="visually-hidden country-chooser__radio-letter" type="radio" name="letters" id="letter21">
+                            <label class="country-chooser__label-letter" for="letter21">Ч</label>
+                          </td>
+                          <td class="country-chooser__letter">
+                            <input class="visually-hidden country-chooser__radio-letter" type="radio" name="letters" id="letter22">
+                            <label class="country-chooser__label-letter" for="letter22">Ш</label>
+                          </td>
+                          <td class="country-chooser__letter">
+                            <input class="visually-hidden country-chooser__radio-letter" type="radio" name="letters" id="letter23">
+                            <label class="country-chooser__label-letter" for="letter23">Э</label>
+                          </td>
+                          <td class="country-chooser__letter">
+                            <input class="visually-hidden country-chooser__radio-letter" type="radio" name="letters" id="letter24">
+                            <label class="country-chooser__label-letter" for="letter24">Ю</label>
+                          </td>
+                          <td class="country-chooser__letter">
+                            <input class="visually-hidden country-chooser__radio-letter" type="radio" name="letters" id="letter25">
+                            <label class="country-chooser__label-letter" for="letter25">Я</label>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <ul class="country-chooser__countries-list">
+                      <li class="country-chooser__countries-item">
+                        <ul class="country-chooser__countries-letter-list">
+                          <li class="country-chooser__countries-letter-item">
+                            <a class="country-chooser__country-link" href="#">Австралия</a>
+                          </li>
+                          <li class="country-chooser__countries-letter-item">
+                            <a class="country-chooser__country-link" href="#">Австрия</a>
+                          </li>
+                          <li class="country-chooser__countries-letter-item">
+                            <a class="country-chooser__country-link" href="#">Азербайджан</a>
+                          </li>
+                          <li class="country-chooser__countries-letter-item">
+                            <a class="country-chooser__country-link" href="#">Албания</a>
+                          </li>
+                          <li class="country-chooser__countries-letter-item">
+                            <a class="country-chooser__country-link" href="#">Алжир</a>
+                          </li>
+                          <li class="country-chooser__countries-letter-item">
+                            <a class="country-chooser__country-link" href="#">Ангола</a>
+                          </li>
+                          <li class="country-chooser__countries-letter-item">
+                            <a class="country-chooser__country-link" href="#">Андорра</a>
+                          </li>
+                          <li class="country-chooser__countries-letter-item">
+                            <a class="country-chooser__country-link" href="#">Антигуа и Барбуда</a>
+                          </li>
+                          <li class="country-chooser__countries-letter-item">
+                            <a class="country-chooser__country-link" href="#">Аргентина</a>
+                          </li>
+                          <li class="country-chooser__countries-letter-item">
+                            <a class="country-chooser__country-link" href="#">Армения</a>
+                          </li>
+                          <li class="country-chooser__countries-letter-item">
+                            <a class="country-chooser__country-link" href="#">Афганистан</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="country-chooser__countries-item">
+                        <ul class="country-chooser__countries-letter-list">
+                          <li class="country-chooser__countries-letter-item">
+                            <a class="country-chooser__country-link" href="#">Багамские Острова</a>
+                          </li>
+                          <li class="country-chooser__countries-letter-item">
+                            <a class="country-chooser__country-link" href="#">Бангладеш</a>
+                          </li>
+                          <li class="country-chooser__countries-letter-item">
+                            <a class="country-chooser__country-link" href="#">Барбадос</a>
+                          </li>
+                          <li class="country-chooser__countries-letter-item">
+                            <a class="country-chooser__country-link" href="#">Бахрейн</a>
+                          </li>
+                          <li class="country-chooser__countries-letter-item">
+                            <a class="country-chooser__country-link" href="#">Белоруссия</a>
+                          </li>
+                          <li class="country-chooser__countries-letter-item">
+                            <a class="country-chooser__country-link" href="#">Белиз</a>
+                          </li>
+                          <li class="country-chooser__countries-letter-item">
+                            <a class="country-chooser__country-link" href="#">Бельгия</a>
+                          </li>
+                          <li class="country-chooser__countries-letter-item">
+                            <a class="country-chooser__country-link" href="#">Бенин</a>
+                          </li>
+                          <li class="country-chooser__countries-letter-item">
+                            <a class="country-chooser__country-link" href="#">Болгария</a>
+                          </li>
+                          <li class="country-chooser__countries-letter-item">
+                            <a class="country-chooser__country-link" href="#">Боливия</a>
+                          </li>
+                          <li class="country-chooser__countries-letter-item">
+                            <a class="country-chooser__country-link" href="#">Босния и Герцеговина</a>
+                          </li>
+                          <li class="country-chooser__countries-letter-item">
+                            <a class="country-chooser__country-link" href="#">Ботсвана</a>
+                          </li>
+                          <li class="country-chooser__countries-letter-item">
+                            <a class="country-chooser__country-link" href="#">Бразилия</a>
+                          </li>
+                          <li class="country-chooser__countries-letter-item">
+                            <a class="country-chooser__country-link" href="#">Бруней</a>
+                          </li>
+                          <li class="country-chooser__countries-letter-item">
+                            <a class="country-chooser__country-link" href="#">Буркина-Фасо</a>
+                          </li>
+                          <li class="country-chooser__countries-letter-item">
+                            <a class="country-chooser__country-link" href="#">Бурунди</a>
+                          </li>
+                          <li class="country-chooser__countries-letter-item">
+                            <a class="country-chooser__country-link" href="#">Бутан</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <!-- закину сюда и все остальные страны, но это необязательно, поэтому не сейчас-->
+                    </ul>
+                  </div>
+                </div>
+                <div class="country-picker__selector-wrapper country-picker__selector-wrapper--add-country">
+                  <a class="country-picker__selector" href="#">Добавить страну</a>
+                </div>
+              <a class="add-plan__next-step" href="#step3">Следующий шаг</a>
+              <a class="add-plan__previous-step" href="#step1">Предыдущий шаг</a>
+            </fieldset>
+            <fieldset class="add-plan__step" id="step3">
+              <legend class="add-plan__legend">Шаг 3. Развлечения</legend>
+              <p class="add-plan__info">
+                Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.
+              </p>
+              <ul class="entertainment">
+                <li class="entertainment__country">
+                  <label class="entertainment__country-name" for="entertainment1">Босния и Герцеговина</label>
+                  <div class="entertainment__country-flag">
+                    <img class="entertainment__country-flag-image" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Боснии и Герцеговины">
+                  </div>
+                  <textarea class="entertainment__country-story" id="entertainment1" placeholder="План действий"></textarea>
+                </li>
+                <li class="entertainment__country">
+                  <label class="entertainment__country-name" for="entertainment2">Чехия</label>
+                  <div class="entertainment__country-flag">
+                    <img class="entertainment__country-flag-image" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Чехии">
+                  </div>
+                  <textarea class="entertainment__country-story" id="entertainment2">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+                </li>
+              </ul>
+              <button class="add-plan__submit-button" type="submit">Отправить</button>
+              <a class="add-plan__previous-step" href="#step2">Предыдущий шаг</a>
+            </fieldset>
+          </form>
+        </div>
+      </section>
+    <footer class="page-footer">
+      <div class="wrapper">
+        <a class="page-footer__logo" href="">
+          <img src="https://via.placeholder.com/96x15" width="96" height="15" alt="Логотип сервиса Погнали?">
+        </a>
+        <ul class="social social--footer">
+          <li class="social-item">
+            <a class="social-link" href="https://www.facebook.com/htmlacademy/" aria-label="Мы в Facebook"></a>
+          </li>
+          <li class="social-item">
+            <a class="social-link" href="https://vk.com/htmlacademy" aria-label="Мы в VK"></a>
+          </li>
+          <li class="social-item">
+            <a class="social-link" href="https://www.instagram.com/htmlacademy/?hl=ru" aria-label="Мы в Instagram"></a>
+          </li>
+        </ul>
+        <div class="page-footer__academy-wrapper">
+          <p class="page-footer__academy-text">Разработано</p>
+          <a class="page-footer__academy-link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Ссылка на интенсив от HTML Academy"></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
