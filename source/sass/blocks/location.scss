@@ -1,0 +1,45 @@
+.location {
+  background-color: var(--basic-yellow);
+}
+
+.location__address {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  color: var(--basic-blue);
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-left: 61px;
+  font-style: normal;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: var(--basic-accent-dark-blue);
+    z-index: 1;
+    background-repeat: no-repeat;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 45px;
+    height: 45px;
+    transform: translateY(-50%);
+    background-color: transparent;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-image: url("../../img/icon-location.svg");
+    z-index: 2;
+  }
+}

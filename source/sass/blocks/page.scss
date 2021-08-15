@@ -1,0 +1,37 @@
+a {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.page {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.page__body {
+  box-sizing: border-box;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  grid-template-columns: 100%;
+  align-content: start;
+  background-color: var(--background-lighter-blue);
+  font-family: var(--pognali-font);
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+}

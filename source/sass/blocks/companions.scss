@@ -1,0 +1,172 @@
+.companions {
+  background-color: var(--basic-blue);
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.companions__wrapper {
+  padding-top: 68px;
+}
+
+.companions__list {
+  margin-top: 54px;
+  margin-bottom: 20px;
+}
+
+.companions__item {
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 10px;
+  background-color: var(--basic-white);
+  width: 270px;
+  padding-bottom: 20px;
+}
+
+.companions__item:not(:nth-last-child(1)) {
+  margin-bottom: 9px;
+}
+
+.companions__photo-image {
+  vertical-align: top;
+}
+
+.companions__countries-list {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-top: -11px;
+  margin-bottom: 13px;
+}
+
+.companions__countries-item {
+  width: 35px;
+  height: 25px;
+  background-repeat: no-repeat;
+
+  &--australia {
+    background-image: url("../../img/flag-australia-mobile.png");
+  }
+
+  &--belgium {
+    background-image: url("../../img/flag-belgium-mobile.png");
+  }
+
+  &--bosnia-and-herzegovina {
+    background-image: url("../../img/flag-bosnia-and-herzegovina-mobile.png");
+  }
+
+  &--czech {
+    background-image: url("../../img/flag-czech-mobile.png");
+  }
+
+  &--dominica {
+    background-image: url("../../img/flag-dominica-mobile.png");
+  }
+
+  &--france {
+    background-image: url("../../img/flag-france-mobile.png");
+  }
+
+  &--germany {
+    background-image: url("../../img/flag-germany-mobile.png");
+  }
+
+  &--seychelles {
+    background-image: url("../../img/flag-seychelles-mobile.png");
+  }
+
+  &--sri-lanka {
+    background-image: url("../../img/flag-sri-lanka-mobile.png");
+  }
+
+  &--thailand {
+    background-image: url("../../img/flag-thailand-mobile.png");
+  }
+
+  &--uk {
+    background-image: url("../../img/flag-uk-mobile.png");
+  }
+
+  &--usa {
+    background-image: url("../../img/flag-usa-mobile.png");
+  }
+}
+
+.companions__countries-item:not(:nth-last-child(1)) {
+  margin-right: 20px;
+}
+
+.companions__profile-name {
+  display: inline-block;
+  margin: 0 auto;
+  color: var(--special-blue);
+  position: relative;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 21px;
+
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    top: 7px;
+    left: -16px;
+  }
+}
+
+.companions__profile-name--online::after {
+  background-color: var(--special-online);
+}
+
+.companions__profile-name--offline::after {
+  background-color: var(--special-offline);
+}
+
+.companions__profile-link:hover {
+  opacity: 0.6;
+}
+
+.companions__profile-link:active {
+  opacity: 0.3;
+}
+
+.companions__hashtags-list {
+  margin: 0 auto;
+  margin-top: 15px;
+  margin-bottom: 14px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 200px;
+}
+
+.companions__hashtags-item {
+  margin-right: 5px;
+}
+
+.companions__hashtags-link {
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--basic-grey);
+
+  &::before {
+    content: "#";
+  }
+}
+
+.companions__transport-list {
+  margin: 0 auto;
+  display: flex;
+  width: 120px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.companions__transport-icon--active {
+  opacity: 1;
+}

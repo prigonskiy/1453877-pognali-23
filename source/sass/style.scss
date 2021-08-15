@@ -1,1 +1,51 @@
-// Начните писать стили здесь
+// Global
+@import "global/fonts.scss";
+@import "global/variables.scss";
+
+// Blocks
+@import "blocks/page.scss";
+@import "blocks/page-header.scss";
+// @import "blocks/page-main.scss";
+@import "blocks/page-footer.scss";
+@import "blocks/visually-hidden.scss";
+@import "blocks/wrapper.scss";
+@import "blocks/main-title.scss";
+@import "blocks/section-title.scss";
+@import "blocks/section-text.scss";
+@import "blocks/section-link.scss";
+@import "blocks/contacts.scss";
+@import "blocks/social.scss";
+@import "blocks/level.scss";
+@import "blocks/contacts-authorization.scss";
+// @import "blocks/step.scss";
+// @import "blocks/step-legend.scss";
+// @import "blocks/step-info.scss";
+// @import "blocks/step-next.scss";
+// @import "blocks/step-previous.scss";
+// @import "blocks/add-plan-submit.scss";
+@import "blocks/navigation.scss";
+@import "blocks/authorization.scss";
+@import "blocks/promo.scss";
+@import "blocks/about.scss";
+@import "blocks/directions.scss";
+@import "blocks/companions.scss";
+@import "blocks/rates.scss";
+@import "blocks/registration.scss";
+@import "blocks/location.scss";
+@import "blocks/map.scss";
+// @import "blocks/user.scss";
+// @import "blocks/transport.scss";
+// @import "blocks/my-plans.scss";
+// @import "blocks/add-plan.scss";
+// @import "blocks/companions-dates.scss";
+// @import "blocks/calendar.scss";
+// @import "blocks/route.scss";
+// @import "blocks/countries.scss";
+// @import "blocks/country-picker.scss";
+// @import "blocks/countries-list.scss";
+// @import "blocks/entertainment.scss";
+// @import "blocks/country-filter.scss";
+// @import "blocks/companion-filter.scss";
+// @import "blocks/transport.scss";
+// @import "blocks/companion-cards.scss";
+// @import "blocks/pagination.scss";
