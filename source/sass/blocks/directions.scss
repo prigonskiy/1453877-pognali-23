@@ -53,19 +53,19 @@
 
   &--thailand {
     &::after {
-      background-image: url("../../img/flag-thailand-mobile.png");
+      background-image: url("../img/flag-thailand-mobile.png");
     }
   }
 
   &--france {
     &::after {
-      background-image: url("../../img/flag-france-mobile.png");
+      background-image: url("../img/flag-france-mobile.png");
     }
   }
 
   &--czech {
     &::after {
-      background-image: url("../../img/flag-czech-mobile.png");
+      background-image: url("../img/flag-czech-mobile.png");
     }
   }
 }
@@ -103,7 +103,7 @@
   &::before {
     content: "";
     position: absolute;
-    background-image: url("../../img/icon-user.svg");
+    background-image: url("../img/icon-user.svg");
     background-repeat: no-repeat;
     width: 14px;
     height: 14px;

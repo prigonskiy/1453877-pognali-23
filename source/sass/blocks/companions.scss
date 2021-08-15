@@ -31,6 +31,12 @@
   vertical-align: top;
 }
 
+.companions__level {
+  position: absolute;
+  top: 17px;
+  left: 16px;
+}
+
 .companions__countries-list {
   text-align: center;
   display: flex;
@@ -45,51 +51,51 @@
   background-repeat: no-repeat;
 
   &--australia {
-    background-image: url("../../img/flag-australia-mobile.png");
+    background-image: url("../img/flag-australia-mobile.png");
   }
 
   &--belgium {
-    background-image: url("../../img/flag-belgium-mobile.png");
+    background-image: url("../img/flag-belgium-mobile.png");
   }
 
   &--bosnia-and-herzegovina {
-    background-image: url("../../img/flag-bosnia-and-herzegovina-mobile.png");
+    background-image: url("../img/flag-bosnia-and-herzegovina-mobile.png");
   }
 
   &--czech {
-    background-image: url("../../img/flag-czech-mobile.png");
+    background-image: url("../img/flag-czech-mobile.png");
   }
 
   &--dominica {
-    background-image: url("../../img/flag-dominica-mobile.png");
+    background-image: url("../img/flag-dominica-mobile.png");
   }
 
   &--france {
-    background-image: url("../../img/flag-france-mobile.png");
+    background-image: url("../img/flag-france-mobile.png");
   }
 
   &--germany {
-    background-image: url("../../img/flag-germany-mobile.png");
+    background-image: url("../img/flag-germany-mobile.png");
   }
 
   &--seychelles {
-    background-image: url("../../img/flag-seychelles-mobile.png");
+    background-image: url("../img/flag-seychelles-mobile.png");
   }
 
   &--sri-lanka {
-    background-image: url("../../img/flag-sri-lanka-mobile.png");
+    background-image: url("../img/flag-sri-lanka-mobile.png");
   }
 
   &--thailand {
-    background-image: url("../../img/flag-thailand-mobile.png");
+    background-image: url("../img/flag-thailand-mobile.png");
   }
 
   &--uk {
-    background-image: url("../../img/flag-uk-mobile.png");
+    background-image: url("../img/flag-uk-mobile.png");
   }
 
   &--usa {
-    background-image: url("../../img/flag-usa-mobile.png");
+    background-image: url("../img/flag-usa-mobile.png");
   }
 }
 

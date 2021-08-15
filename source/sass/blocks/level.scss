@@ -1,11 +1,14 @@
 .level {
-  position: absolute;
   background-color: var(--basic-opaque);
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  top: 17px;
-  left: 16px;
+
+  &--form {
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+  }
 }
 
 .level__value {
@@ -18,6 +21,12 @@
   margin-bottom: 5px;
   text-align: center;
   padding-top: 15px;
+
+  &--form {
+    font-size: 38px;
+    line-height: 38px;
+    color: var(--basic-dark-blue);
+  }
 }
 
 .level__legend {
@@ -27,4 +36,10 @@
   font-size: 14px;
   line-height: 12px;
   text-align: center;
+
+  &--form {
+    font-size: 18px;
+    line-height: 18px;
+    color: var(--basic-grey);
+  }
 }

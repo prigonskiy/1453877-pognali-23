@@ -50,12 +50,12 @@
     right: 23px;
     width: 13px;
     height: 13px;
-    background-image: url("../../img/icon-triangle.svg");
+    background-image: url("../img/icon-triangle.svg");
     background-repeat: no-repeat;
   }
 }
 
 .section-link--location:hover::after,
 .section-link--location:active::after {
-  background-image: url("../../img/icon-triangle-white.svg");
+  background-image: url("../img/icon-triangle-white.svg");
 }
