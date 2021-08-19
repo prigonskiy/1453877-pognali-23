@@ -5,6 +5,7 @@ let desktopWidth = 1440;
 let deviceWidth = document.body.clientWidth;
 
 let index = document.querySelector('.page--index');
+let form = document.querySelector('.page--form');
 
 // Menu
 
@@ -56,3 +57,17 @@ if (index) {
     businessPopup.classList.remove('rates__business-popup--active');
   })
 }
+
+// Choose country {
+
+/*if (form) {
+  let countryPickers = document.querySelectorAll('.country-picker country-picker--choose');
+  let addCountries = countryPickers.querySelectorAll('.country-picker__button');
+
+  for (let i = 0; i < countryPickers.length; i++) {
+    addCountries[i].addEventListener('click', function(evt) {
+      evt.preventDefault();
+      countryPickers[i]
+    })
+  }
+}*/

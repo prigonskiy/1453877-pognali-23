@@ -1,0 +1,207 @@
+.country-picker {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--special-blue);
+    top: 50%;
+    transform: translateY(-50%);
+    right: 49px;
+    z-index: 10;
+  }
+
+  &--choose,
+  &--add {
+    &::before {
+      background-color: transparent;
+      border: 1px solid var(--background-medium-grey);
+    }
+  }
+
+  &:not(:nth-last-child(1)) {
+    margin-bottom: 22px;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 8px;
+      height: 11px;
+      bottom: -17px;
+      right: 49px;
+      background-repeat: no-repeat;
+      background-image: url("../img/icon-arrow-2.svg");
+      background-size: contain;
+      background-position: center;
+    }
+  }
+}
+
+.country-picker__button {
+  display: flex;
+  position: relative;
+  width: 168px;
+  color: var(--special-blue);
+  text-transform: uppercase;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: 0.09em;
+  border: 1px solid var(--background-medium-grey);
+  border-radius: 4px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  padding-left: 11px;
+  padding-right: 4px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: left;
+  overflow: hidden;
+  background-color: transparent;
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 10;
+  }
+}
+
+.country-picker--chosen .country-picker__button,
+.country-picker--choose .country-picker__button {
+  &::before {
+    width: 16px;
+    height: 12px;
+    background-image: url("../img/icon-arrow-down.svg");
+  }
+}
+
+.country-picker--add .country-picker__button {
+  background-color: var(--background-lighter-blue);
+  border: none;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-left: 12px;
+  padding-right: 12px;
+
+  &::before {
+    width: 14px;
+    height: 14px;
+    background-image: url("../img/icon-plus.svg");
+  }
+}
+
+.country-picker--chosen .country-picker__button {
+  &::after {
+    position: absolute;
+    content: "";
+    width: 54px;
+    height: 100%;
+    right: 0;
+    top: 0;
+    background-image: linear-gradient(to left, var(--basic-white), 95%, transparent);
+  }
+}
+
+.country-picker--choose .country-picker__button,
+.country-picker--add .country-picker__button {
+  width: 100%;
+}
+
+.country-picker--choose-active .country-picker__button {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  background-color: var(--special-blue);
+  color: var(--basic-white);
+  padding-left: 17px;
+  padding-right: 17px;
+
+  &::before {
+    display: none;
+  }
+}
+
+.country-picker--choose-active {
+  &::before {
+    display: none;
+  }
+}
+
+.country-picker__flag-wrapper {
+  border: 1px solid var(--background-medium-grey);
+  border-radius: 4px;
+  flex-shrink: 0;
+  margin-left: -1px;
+}
+
+.country-picker--choose .country-picker__flag-wrapper,
+.country-picker--add .country-picker__flag-wrapper {
+  display: none;
+}
+
+.country-picker__flag-image {
+  vertical-align: middle;
+  text-align: center;
+  padding: 8px;
+}
+
+.country-picker__delete-country {
+  position: absolute;
+  width: 21px;
+  height: 21px;
+  border: none;
+  border-radius: 50%;
+  top: -10px;
+  right: -10px;
+  cursor: pointer;
+}
+
+.country-picker--choose-active .country-picker__delete-country {
+  width: 9px;
+  height: 9px;
+  border-radius: none;
+  top: 50%;
+  right: 17px;
+  background: transparent;
+  transform: translateY(-50%);
+}
+
+.country-picker--add .country-picker__delete-country {
+  display: none;
+}
+
+.country-picker__delete-country-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 9px;
+  height: 9px;
+}
+
+.country-picker--choose-active .country-picker__delete-country-icon path {
+  stroke: var(--basic-white);
+}
+
+.country-picker__countries-list {
+  display: none;
+}
+
+.country-picker--choose-active .country-picker__countries-list {
+  display: block;
+  position: absolute;
+  top: 41px;
+  left: 0;
+}

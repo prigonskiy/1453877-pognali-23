@@ -1,0 +1,127 @@
+.calendar {
+  margin-bottom: 22px;
+}
+
+.calendar__month-picker-wrapper {
+  position: relative;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  border-top: 1px solid var(--basic-another-light-blue);
+  border-bottom: 1px solid var(--basic-another-light-blue);
+  margin-bottom: 22px;
+}
+
+.calendar__month-name {
+  margin: 0;
+  padding: 0;
+  color: var(--special-blue);
+  text-align: center;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.calendar__month-change {
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  border: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-image: url("../img/icon-arrow.svg");
+  width: 9px;
+  height: 19px;
+  opacity: 0.3;
+
+  &--next {
+    transform: translateY(-50%) rotate(180deg);
+    top: 50%;
+    left: auto;
+    right: 0;
+  }
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
+}
+
+.calendar__table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.calendar__day-of-week {
+  text-align: center;
+  color: var(--basic-grey);
+  font-size: 14px;
+  line-height: 18px;
+  padding-bottom: 10px;
+
+  &:nth-child(6),
+  &:nth-child(7) {
+    color: var(--special-accent-red);
+  }
+}
+
+.calendar__table-body {
+  border: 1px solid var(--basic-another-light-blue);
+}
+
+.calendar__day-of-month-wrapper {
+  border: 1px solid var(--basic-another-light-blue);
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.calendar__day-of-month-label {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  padding-top: 7px;
+  padding-bottom: 6px;
+  margin: 0;
+  font-weight: 500;
+  color: var(--special-blue);
+  font-size: 14px;
+  line-height: 18px;
+  width: 100%;
+  height: 100%;
+  background-color: var(--background-lighter-blue);
+}
+
+.calendar__day-of-month-input:disabled ~ .calendar__day-of-month-label {
+  opacity: 0.3;
+  background-color: transparent;
+}
+
+.calendar__day-of-month-input:checked ~ .calendar__day-of-month-label {
+  background-color: var(--special-blue);
+  color: var(--basic-white);
+}
+
+.calendar__day-of-month-input:not(:disabled) ~ .calendar__day-of-month-label:hover {
+  background-color: var(--special-blue);
+  color: var(--basic-white);
+  cursor: pointer;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+    top: -1px;
+    left: -1px;
+    background-color: transparent;
+    border: 2px solid var(--special-accent-red);
+  }
+}

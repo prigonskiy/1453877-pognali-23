@@ -1,0 +1,175 @@
+.companions-dates__amount-controls-wrapper:not(:nth-last-child(1)) {
+  margin-bottom: 20px;
+}
+
+.companions-dates__label-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.companions-dates__label {
+  margin: 0;
+  padding: 0;
+  color: var(--special-blue);
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 500;
+  letter-spacing: 0.09em;
+  padding-bottom: 8px;
+}
+
+.companions-dates__unit {
+  color: var(--special-blue);
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 500;
+  letter-spacing: 0.07em;
+  opacity: 0.3;
+}
+
+.companions-dates__number-input-wrapper {
+  position: relative;
+}
+
+.companions-dates__number-change {
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  top: 15px;
+  width: 14px;
+  height: 14px;
+
+  &--decrease {
+    left: 14px;
+
+    &::after {
+      position: absolute;
+      top: 6px;
+      left: 0;
+      content: "";
+      width: 14px;
+      height: 2px;
+      background-color: var(--another-grey);
+      z-index: 2;
+    }
+  }
+
+  &--increase {
+    right: 14px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      right: 6px;
+      width: 2px;
+      height: 14px;
+      background-color: var(--another-grey);
+      z-index: 2;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 6px;
+      right: 0;
+      width: 14px;
+      height: 2px;
+      background-color: var(--another-grey);
+      z-index: 2;
+    }
+  }
+}
+
+.companions-dates__number-input {
+  width: 100%;
+  border: 1px solid var(--background-medium-grey);
+  border-radius: 4px;
+  color: var(--special-blue);
+  font-size: 15px;
+  line-height: 14px;
+  padding: 0;
+  margin: 0;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  font-weight: 500;
+  font-family: inherit;
+  appearance: none;
+
+  &:hover {
+    border-color: var(--basic-accent-another-dark-blue);
+  }
+
+  &:active {
+    border-color: var(--basic-dark-blue);
+  }
+}
+
+.companions-dates__number-input:hover ~ .companions-dates__number-change::before,
+.companions-dates__number-input:hover ~ .companions-dates__number-change::after {
+  background-color: var(--basic-accent-another-dark-blue);
+}
+
+.companions-dates__number-input:focus ~ .companions-dates__number-change::before,
+.companions-dates__number-input:focus ~ .companions-dates__number-change::after {
+  background-color: var(--basic-dark-blue);
+}
+
+.companions-dates__checkbox-label {
+  position: relative;
+  padding-left: 39px;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  color: var(--special-blue);
+  font-size: 15px;
+  line-height: 15px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 26px;
+    height: 26px;
+    border: 1px solid var(--background-medium-grey);
+    border-radius: 4px;
+    background-color: transparent;
+  }
+
+  &:hover {
+    &::before {
+      border-color: var(--basic-accent-another-dark-blue);
+    }
+  }
+
+  &:active {
+    &::before {
+      border-color: var(--basic-light-blue);
+      background-color: var(--basic-light-blue);
+    }
+  }
+}
+
+.companions-dates__checkbox-input:checked ~ .companions-dates__checkbox-label::after {
+  position: absolute;
+  content: "";
+  width: 14px;
+  height: 13px;
+  background: url("../img/icon-check.svg");
+  background-repeat: no-repeat;
+  top: 7px;
+  left: 6px;
+}
+
+.companions-dates__checkbox-input:checked ~ .companions-dates__checkbox-label:active::after {
+  opacity: 0.3;
+}
+
+.companions-dates__calendar {
+  margin-top: 24px;
+}
+
