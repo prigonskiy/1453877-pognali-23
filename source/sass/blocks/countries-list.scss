@@ -1,85 +1,919 @@
-.countries-list {
-  box-sizing: border-box;
-  z-index: 10000;
-  width: 100%;
-  border: 1px solid var(--background-medium-grey);
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
-  background-color: var(--basic-white);
-  box-shadow: 0 2px 16px var(--special-blue-another-strange-opaque);
-}
-
-.countries-list__wrapper {
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
 .countries-list__letters-list {
   display: flex;
   flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
+  width: 100%;
+  margin-top: -1px;
+  box-sizing: border-box;
+  border-left: 1px solid var(--background-medium-grey);
+  border-right: 1px solid var(--background-medium-grey);
+  border-bottom: 1px solid var(--background-medium-grey);
+
+  &--filter {
+    background-color: var(--basic-white);
+    border-top: 1px solid var(--background-medium-grey);
+  }
+}
+
+.countries-list__sorted-names-list {
+  border-left: 1px solid var(--background-medium-grey);
+  border-right: 1px solid var(--background-medium-grey);
+  width: 100%;
+  box-sizing: border-box;
+
+  &--filter {
+    border-left: none;
+    border-right: none;
+  }
+}
+
+.countries-list__sorted-names-item {
+  display: none;
+  padding: 20px;
+  border-bottom: 1px solid var(--background-medium-grey);
+
+  &--filter {
+    padding-left: 0;
+    padding-right: 0;
+    border-bottom: none;
+  }
+}
+
+.countries-list__sorted-names-letter {
+  display: none;
 }
 
 .countries-list__letters-item {
-  box-sizing: border-box;
+  display: flex;
   width: 20%;
+  box-sizing: border-box;
   height: 40px;
+  align-items: center;
+  justify-content: center;
   border-right: 1px solid var(--background-medium-grey);
   border-bottom: 1px solid var(--background-medium-grey);
 
   &:nth-child(5n) {
     border-right: none;
   }
+
+  &:nth-child(n+21) {
+    border-bottom: none;
+  }
 }
 
 .countries-list__label-letter {
+  color: var(--special-blue);
   display: flex;
   justify-content: center;
+  position: relative;
   align-items: center;
-  width: 100%;
-  height: 100%;
-  color: var(--special-blue);
-  font-weight: 500;
   font-size: 14px;
   line-height: 18px;
+  font-weight: 500;
   text-transform: uppercase;
+  width: 100%;
+  height: 100%;
 }
 
-.countries-list__sorted-names-item {
-  display: none;
+.countries-list__country-link {
+  color: var(--basic-grey);
+  font-size: 16px;
+  line-height: 22px;
 }
 
-@for $i from 1 through 25 {
-  .countries-list__radio-letter--letter#{$i}:checked ~ .countries-list__letters-list .countries-list__label-letter[for=letter#{$i}] {
+/*@for $i from 1 through 25 {
+  .countries-list__radio-letter--letter#{$i}:checked ~ .countries-list__letters-list .countries-list__label-letter[for="letter#{$i}"] {
     background-color: var(--background-lighter-blue);
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background-color: var(--background-lighter-blue);
+      bottom: -1px;
+      left: 0;
+    }
+  }
+
+  .countries-list__radio-letter--letter#{$i}:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter#{$i}"] {
+    background-color: var(--special-blue);
+    color: var(--basic-white);
+
+    &::after {
+      width: calc(100% + 2px);
+      height: calc(100% + 2px);
+      top: -1px;
+      left: -1px;
+      background-color: transparent;
+      border: 1px solid var(--special-blue);
+    }
   }
 
   .countries-list__radio-letter--letter#{$i}:checked ~ .countries-list__sorted-names-list .countries-list__sorted-names-item:nth-child(#{$i}) {
     display: block;
   }
 }
+*/
 
-.countries-list__letter-names-list {
-  margin: 0;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  margin-left: 19px;
-  margin-right: 19px;
+//выше - прекрасные циклы, которые не принимает линтер. Что ж. Тогда//
+
+.countries-list__radio-letter--letter1:checked ~ .countries-list__letters-list .countries-list__label-letter[for="#letter1"] {
+  background-color: var(--background-lighter-blue);
+}
+
+.countries-list__radio-letter--letter1:checked ~ .countries-list__letters-list .countries-list__label-letter[for="#letter1"]::after {
+  content: "";
+  position: absolute;
   width: 100%;
-  padding: 0;
+  height: 1px;
+  background-color: var(--background-lighter-blue);
+  bottom: -1px;
+  left: 0;
 }
 
-.countries-list__letter-names-item {
-  &:not(:nth-last-child(1)) {
-    margin-bottom: 4px;
-  }
+.countries-list__radio-letter--letter1:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter1"] {
+  background-color: var(--special-blue);
+  color: var(--basic-white);
 }
 
-.countries-list__country-link {
-  font-size: 16px;
-  line-height: 22px;
-  color: var(--basic-grey);
+.countries-list__radio-letter--letter1:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter1"]::after {
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  top: -1px;
+  left: -1px;
+  background-color: transparent;
+  border: 1px solid var(--special-blue);
+}
+
+.countries-list__radio-letter--letter1:checked ~ .countries-list__sorted-names-list .countries-list__sorted-names-item:nth-child(1) {
+  display: block;
+}
+
+.countries-list__radio-letter--letter2:checked ~ .countries-list__letters-list .countries-list__label-letter[for="letter2"] {
+  background-color: var(--background-lighter-blue);
+}
+
+.countries-list__radio-letter--letter2:checked ~ .countries-list__letters-list .countries-list__label-letter[for="letter2"]::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: var(--background-lighter-blue);
+  bottom: -1px;
+  left: 0;
+}
+
+.countries-list__radio-letter--letter2:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter2"] {
+  background-color: var(--special-blue);
+  color: var(--basic-white);
+}
+
+.countries-list__radio-letter--letter2:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter2"]::after {
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  top: -1px;
+  left: -1px;
+  background-color: transparent;
+  border: 1px solid var(--special-blue);
+}
+
+.countries-list__radio-letter--letter2:checked ~ .countries-list__sorted-names-list .countries-list__sorted-names-item:nth-child(2) {
+  display: block;
+}
+
+.countries-list__radio-letter--letter3:checked ~ .countries-list__letters-list .countries-list__label-letter[for="letter3"] {
+  background-color: var(--background-lighter-blue);
+}
+
+.countries-list__radio-letter--letter3:checked ~ .countries-list__letters-list .countries-list__label-letter[for="letter3"]::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: var(--background-lighter-blue);
+  bottom: -1px;
+  left: 0;
+}
+
+.countries-list__radio-letter--letter3:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter3"] {
+  background-color: var(--special-blue);
+  color: var(--basic-white);
+}
+
+.countries-list__radio-letter--letter3:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter3"]::after {
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  top: -1px;
+  left: -1px;
+  background-color: transparent;
+  border: 1px solid var(--special-blue);
+}
+
+.countries-list__radio-letter--letter3:checked ~ .countries-list__sorted-names-list .countries-list__sorted-names-item:nth-child(3) {
+  display: block;
+}
+
+.countries-list__radio-letter--letter4:checked ~ .countries-list__letters-list .countries-list__label-letter[for="letter4"] {
+  background-color: var(--background-lighter-blue);
+}
+
+.countries-list__radio-letter--letter4:checked ~ .countries-list__letters-list .countries-list__label-letter[for="letter4"]::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: var(--background-lighter-blue);
+  bottom: -1px;
+  left: 0;
+}
+
+.countries-list__radio-letter--letter4:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter4"] {
+  background-color: var(--special-blue);
+  color: var(--basic-white);
+}
+
+.countries-list__radio-letter--letter4:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter4"]::after {
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  top: -1px;
+  left: -1px;
+  background-color: transparent;
+  border: 1px solid var(--special-blue);
+}
+
+.countries-list__radio-letter--letter4:checked ~ .countries-list__sorted-names-list .countries-list__sorted-names-item:nth-child(4) {
+  display: block;
+}
+
+.countries-list__radio-letter--letter5:checked ~ .countries-list__letters-list .countries-list__label-letter[for="letter5"] {
+  background-color: var(--background-lighter-blue);
+}
+
+.countries-list__radio-letter--letter5:checked ~ .countries-list__letters-list .countries-list__label-letter[for="letter5"]::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: var(--background-lighter-blue);
+  bottom: -1px;
+  left: 0;
+}
+
+.countries-list__radio-letter--letter5:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter5"] {
+  background-color: var(--special-blue);
+  color: var(--basic-white);
+}
+
+.countries-list__radio-letter--letter5:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter5"]::after {
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  top: -1px;
+  left: -1px;
+  background-color: transparent;
+  border: 1px solid var(--special-blue);
+}
+
+.countries-list__radio-letter--letter5:checked ~ .countries-list__sorted-names-list .countries-list__sorted-names-item:nth-child(5) {
+  display: block;
+}
+
+.countries-list__radio-letter--letter6:checked ~ .countries-list__letters-list .countries-list__label-letter[for="letter6"] {
+  background-color: var(--background-lighter-blue);
+}
+
+.countries-list__radio-letter--letter6:checked ~ .countries-list__letters-list .countries-list__label-letter[for="letter6"]::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: var(--background-lighter-blue);
+  bottom: -1px;
+  left: 0;
+}
+
+.countries-list__radio-letter--letter6:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter6"] {
+  background-color: var(--special-blue);
+  color: var(--basic-white);
+}
+
+.countries-list__radio-letter--letter6:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter6"]::after {
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  top: -1px;
+  left: -1px;
+  background-color: transparent;
+  border: 1px solid var(--special-blue);
+}
+
+.countries-list__radio-letter--letter6:checked ~ .countries-list__sorted-names-list .countries-list__sorted-names-item:nth-child(6) {
+  display: block;
+}
+
+.countries-list__radio-letter--letter7:checked ~ .countries-list__letters-list .countries-list__label-letter[for="letter7"] {
+  background-color: var(--background-lighter-blue);
+}
+
+.countries-list__radio-letter--letter7:checked ~ .countries-list__letters-list .countries-list__label-letter[for="letter7"]::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: var(--background-lighter-blue);
+  bottom: -1px;
+  left: 0;
+}
+
+.countries-list__radio-letter--letter7:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter7"] {
+  background-color: var(--special-blue);
+  color: var(--basic-white);
+}
+
+.countries-list__radio-letter--letter7:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter7"]::after {
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  top: -1px;
+  left: -1px;
+  background-color: transparent;
+  border: 1px solid var(--special-blue);
+}
+
+.countries-list__radio-letter--letter7:checked ~ .countries-list__sorted-names-list .countries-list__sorted-names-item:nth-child(7) {
+  display: block;
+}
+
+.countries-list__radio-letter--letter8:checked ~ .countries-list__letters-list .countries-list__label-letter[for="letter8"] {
+  background-color: var(--background-lighter-blue);
+}
+
+.countries-list__radio-letter--letter8:checked ~ .countries-list__letters-list .countries-list__label-letter[for="letter8"]::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: var(--background-lighter-blue);
+  bottom: -1px;
+  left: 0;
+}
+
+.countries-list__radio-letter--letter8:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter8"] {
+  background-color: var(--special-blue);
+  color: var(--basic-white);
+}
+
+.countries-list__radio-letter--letter8:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter8"]::after {
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  top: -1px;
+  left: -1px;
+  background-color: transparent;
+  border: 1px solid var(--special-blue);
+}
+
+.countries-list__radio-letter--letter8:checked ~ .countries-list__sorted-names-list .countries-list__sorted-names-item:nth-child(8) {
+  display: block;
+}
+
+.countries-list__radio-letter--letter9:checked ~ .countries-list__letters-list .countries-list__label-letter[for="letter9"] {
+  background-color: var(--background-lighter-blue);
+}
+
+.countries-list__radio-letter--letter9:checked ~ .countries-list__letters-list .countries-list__label-letter[for="letter9"]::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: var(--background-lighter-blue);
+  bottom: -1px;
+  left: 0;
+}
+
+.countries-list__radio-letter--letter9:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter9"] {
+  background-color: var(--special-blue);
+  color: var(--basic-white);
+}
+
+.countries-list__radio-letter--letter9:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter9"]::after {
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  top: -1px;
+  left: -1px;
+  background-color: transparent;
+  border: 1px solid var(--special-blue);
+}
+
+.countries-list__radio-letter--letter9:checked ~ .countries-list__sorted-names-list .countries-list__sorted-names-item:nth-child(9) {
+  display: block;
+}
+
+.countries-list__radio-letter--letter10:checked ~ .countries-list__letters-list .countries-list__label-letter[for="letter10"] {
+  background-color: var(--background-lighter-blue);
+}
+
+.countries-list__radio-letter--letter10:checked ~ .countries-list__letters-list .countries-list__label-letter[for="letter10"]::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: var(--background-lighter-blue);
+  bottom: -1px;
+  left: 0;
+}
+
+.countries-list__radio-letter--letter10:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter10"] {
+  background-color: var(--special-blue);
+  color: var(--basic-white);
+}
+
+.countries-list__radio-letter--letter10:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter10"]::after {
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  top: -1px;
+  left: -1px;
+  background-color: transparent;
+  border: 1px solid var(--special-blue);
+}
+
+.countries-list__radio-letter--letter10:checked ~ .countries-list__sorted-names-list .countries-list__sorted-names-item:nth-child(10) {
+  display: block;
+}
+
+.countries-list__radio-letter--letter11:checked ~ .countries-list__letters-list .countries-list__label-letter[for="letter11"] {
+  background-color: var(--background-lighter-blue);
+}
+
+.countries-list__radio-letter--letter11:checked ~ .countries-list__letters-list .countries-list__label-letter[for="letter11"]::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: var(--background-lighter-blue);
+  bottom: -1px;
+  left: 0;
+}
+
+.countries-list__radio-letter--letter11:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter11"] {
+  background-color: var(--special-blue);
+  color: var(--basic-white);
+}
+
+.countries-list__radio-letter--letter11:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter11"]::after {
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  top: -1px;
+  left: -1px;
+  background-color: transparent;
+  border: 1px solid var(--special-blue);
+}
+
+.countries-list__radio-letter--letter11:checked ~ .countries-list__sorted-names-list .countries-list__sorted-names-item:nth-child(11) {
+  display: block;
+}
+
+.countries-list__radio-letter--letter12:checked ~ .countries-list__letters-list .countries-list__label-letter[for="letter12"] {
+  background-color: var(--background-lighter-blue);
+}
+
+.countries-list__radio-letter--letter12:checked ~ .countries-list__letters-list .countries-list__label-letter[for="letter12"]::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: var(--background-lighter-blue);
+  bottom: -1px;
+  left: 0;
+}
+
+.countries-list__radio-letter--letter12:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter12"] {
+  background-color: var(--special-blue);
+  color: var(--basic-white);
+}
+
+.countries-list__radio-letter--letter12:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter12"]::after {
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  top: -1px;
+  left: -1px;
+  background-color: transparent;
+  border: 1px solid var(--special-blue);
+}
+
+.countries-list__radio-letter--letter12:checked ~ .countries-list__sorted-names-list .countries-list__sorted-names-item:nth-child(12) {
+  display: block;
+}
+
+.countries-list__radio-letter--letter13:checked ~ .countries-list__letters-list .countries-list__label-letter[for="letter13"] {
+  background-color: var(--background-lighter-blue);
+}
+
+.countries-list__radio-letter--letter13:checked ~ .countries-list__letters-list .countries-list__label-letter[for="letter13"]::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: var(--background-lighter-blue);
+  bottom: -1px;
+  left: 0;
+}
+
+.countries-list__radio-letter--letter13:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter13"] {
+  background-color: var(--special-blue);
+  color: var(--basic-white);
+}
+
+.countries-list__radio-letter--letter13:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter13"]::after {
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  top: -1px;
+  left: -1px;
+  background-color: transparent;
+  border: 1px solid var(--special-blue);
+}
+
+.countries-list__radio-letter--letter13:checked ~ .countries-list__sorted-names-list .countries-list__sorted-names-item:nth-child(13) {
+  display: block;
+}
+
+.countries-list__radio-letter--letter14:checked ~ .countries-list__letters-list .countries-list__label-letter[for="letter14"] {
+  background-color: var(--background-lighter-blue);
+}
+
+.countries-list__radio-letter--letter14:checked ~ .countries-list__letters-list .countries-list__label-letter[for="letter14"]::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: var(--background-lighter-blue);
+  bottom: -1px;
+  left: 0;
+}
+
+.countries-list__radio-letter--letter14:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter14"] {
+  background-color: var(--special-blue);
+  color: var(--basic-white);
+}
+
+.countries-list__radio-letter--letter14:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter14"]::after {
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  top: -1px;
+  left: -1px;
+  background-color: transparent;
+  border: 1px solid var(--special-blue);
+}
+
+.countries-list__radio-letter--letter14:checked ~ .countries-list__sorted-names-list .countries-list__sorted-names-item:nth-child(14) {
+  display: block;
+}
+
+.countries-list__radio-letter--letter15:checked ~ .countries-list__letters-list .countries-list__label-letter[for="letter15"] {
+  background-color: var(--background-lighter-blue);
+}
+
+.countries-list__radio-letter--letter15:checked ~ .countries-list__letters-list .countries-list__label-letter[for="letter15"]::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: var(--background-lighter-blue);
+  bottom: -1px;
+  left: 0;
+}
+
+.countries-list__radio-letter--letter15:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter15"] {
+  background-color: var(--special-blue);
+  color: var(--basic-white);
+}
+
+.countries-list__radio-letter--letter15:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter15"]::after {
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  top: -1px;
+  left: -1px;
+  background-color: transparent;
+  border: 1px solid var(--special-blue);
+}
+
+.countries-list__radio-letter--letter15:checked ~ .countries-list__sorted-names-list .countries-list__sorted-names-item:nth-child(15) {
+  display: block;
+}
+
+.countries-list__radio-letter--letter16:checked ~ .countries-list__letters-list .countries-list__label-letter[for="letter16"] {
+  background-color: var(--background-lighter-blue);
+}
+
+.countries-list__radio-letter--letter16:checked ~ .countries-list__letters-list .countries-list__label-letter[for="letter16"]::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: var(--background-lighter-blue);
+  bottom: -1px;
+  left: 0;
+}
+
+.countries-list__radio-letter--letter16:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter16"] {
+  background-color: var(--special-blue);
+  color: var(--basic-white);
+}
+
+.countries-list__radio-letter--letter16:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter16"]::after {
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  top: -1px;
+  left: -1px;
+  background-color: transparent;
+  border: 1px solid var(--special-blue);
+}
+
+.countries-list__radio-letter--letter16:checked ~ .countries-list__sorted-names-list .countries-list__sorted-names-item:nth-child(16) {
+  display: block;
+}
+
+.countries-list__radio-letter--letter17:checked ~ .countries-list__letters-list .countries-list__label-letter[for="letter17"] {
+  background-color: var(--background-lighter-blue);
+}
+
+.countries-list__radio-letter--letter17:checked ~ .countries-list__letters-list .countries-list__label-letter[for="letter17"]::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: var(--background-lighter-blue);
+  bottom: -1px;
+  left: 0;
+}
+
+.countries-list__radio-letter--letter17:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter17"] {
+  background-color: var(--special-blue);
+  color: var(--basic-white);
+}
+
+.countries-list__radio-letter--letter17:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter17"]::after {
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  top: -1px;
+  left: -1px;
+  background-color: transparent;
+  border: 1px solid var(--special-blue);
+}
+
+.countries-list__radio-letter--letter17:checked ~ .countries-list__sorted-names-list .countries-list__sorted-names-item:nth-child(17) {
+  display: block;
+}
+
+.countries-list__radio-letter--letter18:checked ~ .countries-list__letters-list .countries-list__label-letter[for="letter18"] {
+  background-color: var(--background-lighter-blue);
+}
+
+.countries-list__radio-letter--letter18:checked ~ .countries-list__letters-list .countries-list__label-letter[for="letter18"]::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: var(--background-lighter-blue);
+  bottom: -1px;
+  left: 0;
+}
+
+.countries-list__radio-letter--letter18:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter18"] {
+  background-color: var(--special-blue);
+  color: var(--basic-white);
+}
+
+.countries-list__radio-letter--letter18:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter18"]::after {
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  top: -1px;
+  left: -1px;
+  background-color: transparent;
+  border: 1px solid var(--special-blue);
+}
+
+.countries-list__radio-letter--letter18:checked ~ .countries-list__sorted-names-list .countries-list__sorted-names-item:nth-child(18) {
+  display: block;
+}
+
+.countries-list__radio-letter--letter19:checked ~ .countries-list__letters-list .countries-list__label-letter[for="letter19"] {
+  background-color: var(--background-lighter-blue);
+}
+
+.countries-list__radio-letter--letter19:checked ~ .countries-list__letters-list .countries-list__label-letter[for="letter19"]::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: var(--background-lighter-blue);
+  bottom: -1px;
+  left: 0;
+}
+
+.countries-list__radio-letter--letter19:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter19"] {
+  background-color: var(--special-blue);
+  color: var(--basic-white);
+}
+
+.countries-list__radio-letter--letter19:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter19"]::after {
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  top: -1px;
+  left: -1px;
+  background-color: transparent;
+  border: 1px solid var(--special-blue);
+}
+
+.countries-list__radio-letter--letter19:checked ~ .countries-list__sorted-names-list .countries-list__sorted-names-item:nth-child(19) {
+  display: block;
+}
+
+.countries-list__radio-letter--letter20:checked ~ .countries-list__letters-list .countries-list__label-letter[for="letter20"] {
+  background-color: var(--background-lighter-blue);
+}
+
+.countries-list__radio-letter--letter20:checked ~ .countries-list__letters-list .countries-list__label-letter[for="letter20"]::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: var(--background-lighter-blue);
+  bottom: -1px;
+  left: 0;
+}
+
+.countries-list__radio-letter--letter20:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter20"] {
+  background-color: var(--special-blue);
+  color: var(--basic-white);
+}
+
+.countries-list__radio-letter--letter20:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter20"]::after {
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  top: -1px;
+  left: -1px;
+  background-color: transparent;
+  border: 1px solid var(--special-blue);
+}
+
+.countries-list__radio-letter--letter20:checked ~ .countries-list__sorted-names-list .countries-list__sorted-names-item:nth-child(20) {
+  display: block;
+}
+
+.countries-list__radio-letter--letter21:checked ~ .countries-list__letters-list .countries-list__label-letter[for="letter21"] {
+  background-color: var(--background-lighter-blue);
+}
+
+.countries-list__radio-letter--letter21:checked ~ .countries-list__letters-list .countries-list__label-letter[for="letter21"]::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: var(--background-lighter-blue);
+  bottom: -1px;
+  left: 0;
+}
+
+.countries-list__radio-letter--letter21:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter21"] {
+  background-color: var(--special-blue);
+  color: var(--basic-white);
+}
+
+.countries-list__radio-letter--letter21:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter21"]::after {
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  top: -1px;
+  left: -1px;
+  background-color: transparent;
+  border: 1px solid var(--special-blue);
+}
+
+.countries-list__radio-letter--letter21:checked ~ .countries-list__sorted-names-list .countries-list__sorted-names-item:nth-child(21) {
+  display: block;
+}
+
+.countries-list__radio-letter--letter22:checked ~ .countries-list__letters-list .countries-list__label-letter[for="letter22"] {
+  background-color: var(--background-lighter-blue);
+}
+
+.countries-list__radio-letter--letter22:checked ~ .countries-list__letters-list .countries-list__label-letter[for="letter22"]::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: var(--background-lighter-blue);
+  bottom: -1px;
+  left: 0;
+}
+
+.countries-list__radio-letter--letter22:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter22"] {
+  background-color: var(--special-blue);
+  color: var(--basic-white);
+}
+
+.countries-list__radio-letter--letter22:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter22"]::after {
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  top: -1px;
+  left: -1px;
+  background-color: transparent;
+  border: 1px solid var(--special-blue);
+}
+
+.countries-list__radio-letter--letter22:checked ~ .countries-list__sorted-names-list .countries-list__sorted-names-item:nth-child(22) {
+  display: block;
+}
+
+.countries-list__radio-letter--letter23:checked ~ .countries-list__letters-list .countries-list__label-letter[for="letter23"] {
+  background-color: var(--background-lighter-blue);
+}
+
+.countries-list__radio-letter--letter23:checked ~ .countries-list__letters-list .countries-list__label-letter[for="letter23"]::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: var(--background-lighter-blue);
+  bottom: -1px;
+  left: 0;
+}
+
+.countries-list__radio-letter--letter23:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter23"] {
+  background-color: var(--special-blue);
+  color: var(--basic-white);
+}
+
+.countries-list__radio-letter--letter23:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter23"]::after {
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  top: -1px;
+  left: -1px;
+  background-color: transparent;
+  border: 1px solid var(--special-blue);
+}
+
+.countries-list__radio-letter--letter23:checked ~ .countries-list__sorted-names-list .countries-list__sorted-names-item:nth-child(23) {
+  display: block;
+}
+
+.countries-list__radio-letter--letter24:checked ~ .countries-list__letters-list .countries-list__label-letter[for="letter24"] {
+  background-color: var(--background-lighter-blue);
+}
+
+.countries-list__radio-letter--letter24:checked ~ .countries-list__letters-list .countries-list__label-letter[for="letter24"]::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: var(--background-lighter-blue);
+  bottom: -1px;
+  left: 0;
+}
+
+.countries-list__radio-letter--letter24:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter24"] {
+  background-color: var(--special-blue);
+  color: var(--basic-white);
+}
+
+.countries-list__radio-letter--letter24:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter24"]::after {
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  top: -1px;
+  left: -1px;
+  background-color: transparent;
+  border: 1px solid var(--special-blue);
+}
+
+.countries-list__radio-letter--letter24:checked ~ .countries-list__sorted-names-list .countries-list__sorted-names-item:nth-child(24) {
+  display: block;
+}
+
+.countries-list__radio-letter--letter25:checked ~ .countries-list__letters-list .countries-list__label-letter[for="letter25"] {
+  background-color: var(--background-lighter-blue);
+}
+
+.countries-list__radio-letter--letter25:checked ~ .countries-list__letters-list .countries-list__label-letter[for="letter25"]::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: var(--background-lighter-blue);
+  bottom: -1px;
+  left: 0;
+}
+
+.countries-list__radio-letter--letter25:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter25"] {
+  background-color: var(--special-blue);
+  color: var(--basic-white);
+}
+
+.countries-list__radio-letter--letter25:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter25"]::after {
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  top: -1px;
+  left: -1px;
+  background-color: transparent;
+  border: 1px solid var(--special-blue);
+}
+
+.countries-list__radio-letter--letter25:checked ~ .countries-list__sorted-names-list .countries-list__sorted-names-item:nth-child(25) {
+  display: block;
 }
