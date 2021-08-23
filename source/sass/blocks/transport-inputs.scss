@@ -3,18 +3,18 @@
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background-color: var(--basic-white);
+  background-color: $basic-white;
 
   &:not(:nth-last-child(1)) {
     margin-right: 1px;
   }
 
   &:hover {
-    filter: drop-shadow(0 2px 6px var(--special-blue-strange-opaque));
+    filter: drop-shadow(0 2px 6px $special-blue-strange-opaque);
   }
 
   &:active {
-    background-color: var(--basic-light-blue);
+    background-color: $basic-light-blue;
   }
 }
 
@@ -35,24 +35,24 @@
 }
 
 .transport-inputs__input ~ .transport-inputs:hover .transport-inputs__icon {
-  fill: var(--basic-light-grey);
+  fill: $basic-light-grey;
 }
 
 .transport-inputs__input ~ .transport-inputs:active .transport-inputs__icon {
-  fill: var(--special-blue);
+  fill: $special-blue;
   opacity: 0.1;
 }
 
 .transport-inputs__input:checked ~ .transport-inputs__label .transport-inputs__icon {
-  fill: var(--special-blue);
+  fill: $special-blue;
 }
 
 .transport-inputs__input:checked ~ .transport-inputs__label:hover .transport-inputs__icon {
   opacity: 0.7;
-  fill: var(--special-blue);
+  fill: $special-blue;
 }
 
 .transport-inputs__input:checked ~ .transport-inputs__label:active .transport-inputs__icon {
   opacity: 0.3;
-  fill: var(--special-blue);
+  fill: $special-blue;
 }

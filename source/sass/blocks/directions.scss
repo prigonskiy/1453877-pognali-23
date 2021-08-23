@@ -1,5 +1,5 @@
 .directions {
-  background-color: var(--background-lighter-blue);
+  background-color: $background-lighter-blue;
   z-index: 10;
 }
 
@@ -31,7 +31,7 @@
 }
 
 .directions__country-information {
-  background-color: var(--basic-white);
+  background-color: $basic-white;
   position: relative;
   border-radius: 10px;
   padding-top: 26px;
@@ -72,7 +72,7 @@
 
 .directions__country-name {
   margin: 0;
-  color: var(--basic-black);
+  color: $basic-black;
   font-weight: 700;
   font-size: 21px;
   line-height: 21px;
@@ -82,7 +82,7 @@
 .directions__country-motto {
   margin: 0;
   padding: 0;
-  color: var(--basic-grey-opaque);
+  color: $basic-grey-opaque;
   font-weight: 500;
   font-size: 16px;
   line-height: 18px;
@@ -95,7 +95,7 @@
   margin: 0;
   padding: 0;
   margin-left: 19px;
-  color: var(--basic-grey-opaque);
+  color: $basic-grey-opaque;
   font-weight: 500;
   font-size: 16px;
   line-height: 20px;

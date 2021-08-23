@@ -12,7 +12,7 @@
 .contacts__link {
   display: block;
   position: relative;
-  color: var(--basic-blue);
+  color: $basic-blue;
   font-size: 16px;
   line-height: 16px;
   font-weight: 700;
@@ -27,7 +27,7 @@
     width: 45px;
     height: 45px;
     border-radius: 50%;
-    background-color: var(--basic-accent-dark-blue);
+    background-color: $basic-accent-dark-blue;
     z-index: 1;
     background-repeat: no-repeat;
   }
@@ -47,7 +47,7 @@
   }
 
   &--registration {
-    color: var(--basic-yellow);
+    color: $basic-yellow;
   }
 }
 

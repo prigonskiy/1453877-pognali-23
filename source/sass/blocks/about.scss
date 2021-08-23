@@ -1,6 +1,6 @@
 .about {
   position: relative;
-  background-color: var(--basic-blue);
+  background-color: $basic-blue;
   padding-top: 72px;
   padding-bottom: 82px;
   z-index: 10;
@@ -19,6 +19,6 @@
   height: 132px;
   border-top-right-radius: 20px;
   z-index: -1;
-  background-color: var(--basic-darker-blue);
+  background-color: $basic-darker-blue;
   background-repeat: no-repeat;
 }

@@ -1,6 +1,6 @@
 .companion-cards__item {
   position: relative;
-  background-color: var(--basic-white);
+  background-color: $basic-white;
   border-radius: 20px;
   padding-left: 18px;
   padding-right: 18px;
@@ -15,7 +15,7 @@
 }
 
 .companion-cards__profile-link {
-  color: var(--special-blue);
+  color: $special-blue;
   display: block;
   height: 40px;
 }
@@ -44,15 +44,15 @@
   font-weight: 700;
   font-size: 20px;
   line-height: 20px;
-  color: var(--special-blue);
+  color: $special-blue;
 }
 
 .companion-cards__profile-name--online::after {
-  background-color: var(--special-online);
+  background-color: $special-online;
 }
 
 .companion-cards__profile-name--offline::after {
-  background-color: var(--special-offline);
+  background-color: $special-offline;
 }
 
 .companion-cards__likes-wrapper {
@@ -64,7 +64,7 @@
 }
 
 .companion-cards__likes-amount {
-  color: var(--basic-dark-blue);
+  color: $basic-dark-blue;
   text-transform: uppercase;
   font-weight: 700;
   font-size: 14px;
@@ -83,21 +83,21 @@
 }
 
 .companion-cards__hashtags-link {
-  color: var(--basic-grey);
+  color: $basic-grey;
   font-size: 15px;
   line-height: 18px;
   flex-grow: 1;
 
   &::before {
     content: "#";
-    color: var(--basic-grey);
+    color: $basic-grey;
     font-size: 15px;
     line-height: 18px;
   }
 }
 
 .companion-cards__category-title {
-  color: var(--basic-grey);
+  color: $basic-grey;
   font-size: 15px;
   line-height: 16px;
   font-weight: normal;
@@ -106,7 +106,7 @@
 }
 
 .companion-cards__country-name {
-  color: var(--special-blue);
+  color: $special-blue;
   font-weight: 500;
   font-size: 15px;
   line-height: 16px;
@@ -128,7 +128,7 @@
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background-color: var(--background-lighter-blue);
+  background-color: $background-lighter-blue;
 }
 
 .companion-cards__transport-icon {
@@ -164,7 +164,7 @@
 }
 
 .companion-cards__level-value {
-  color: var(--special-blue);
+  color: $special-blue;
   font-weight: 700;
   font-size: 24px;
   line-height: 24px;
@@ -174,8 +174,8 @@
   display: block;
   width: 100%;
   border-radius: 25px;
-  background-color: var(--basic-yellow);
-  color: var(--basic-dark-blue);
+  background-color: $basic-yellow;
+  color: $basic-dark-blue;
   text-transform: uppercase;
   text-align: center;
   font-weight: 700;
@@ -190,7 +190,7 @@
   width: 100%;
   text-align: center;
   text-transform: uppercase;
-  color: var(--special-blue);
+  color: $special-blue;
   font-size: 17px;
   line-height: 30px;
   font-weight: 700;

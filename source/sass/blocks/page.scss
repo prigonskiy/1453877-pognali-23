@@ -29,8 +29,8 @@ ol {
   grid-template-rows: min-content 1fr min-content;
   grid-template-columns: 100%;
   align-content: start;
-  background-color: var(--background-lighter-blue);
-  font-family: var(--pognali-font);
+  background-color: $background-lighter-blue;
+  font-family: $pognali-font;
   font-size: 16px;
   line-height: 22px;
   font-weight: 400;

@@ -1,5 +1,5 @@
 .section-title {
-  color: var(--special-orange-dark);
+  color: $special-orange-dark;
   font-weight: 700;
   margin: 0;
   margin-left: 25px;
@@ -11,7 +11,7 @@
   }
 
   &--form {
-    color: var(--special-blue);
+    color: $special-blue;
     font-size: 24px;
     line-height: 24px;
     margin-bottom: 29px;

@@ -14,18 +14,18 @@
   border-radius: 50%;
 
   &--phone {
-    background-color: var(--special-orange-dark);
+    background-color: $special-orange-dark;
 
     &:hover {
-      background-color: var(--special-orange-dark-hover);
+      background-color: $special-orange-dark-hover;
     }
   }
 
   &--mail {
-    background-color: var(--special-orange-light);
+    background-color: $special-orange-light;
 
     &:hover {
-      background-color: var(--special-orange-dark);
+      background-color: $special-orange-dark;
     }
   }
 

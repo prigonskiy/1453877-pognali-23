@@ -1,5 +1,5 @@
 .companion-filter {
-  background-color: var(--basic-yellow);
+  background-color: $basic-yellow;
   border-radius: 20px;
 }
 
@@ -14,7 +14,7 @@
   margin: 0;
   padding: 0;
   letter-spacing: 0.02em;
-  color: var(--special-blue);
+  color: $special-blue;
   font-size: 22px;
   line-height: 22px;
   font-weight: 700;
@@ -29,7 +29,7 @@
   padding-inline-start: 0;
   padding-inline-end: 0;
   padding-block-end: 0;
-  border-top: 1px solid var(--special-border-yellow);
+  border-top: 1px solid $special-border-yellow;
 }
 
 .companion-filter__legend {
@@ -39,7 +39,7 @@
   font-weight: bold;
   font-size: 16px;
   line-height: 18px;
-  color: var(--special-blue);
+  color: $special-blue;
   text-transform: uppercase;
 }
 
@@ -48,11 +48,11 @@
   position: relative;
 
   &:hover {
-    color: var(--basic-opaque);
+    color: $basic-opaque;
   }
 
   &:active {
-    color: var(--basic-more-opaque);
+    color: $basic-more-opaque;
 
     &::before {
       opacity: 0.3;
@@ -67,7 +67,7 @@
     top: 0;
     left: 0;
     border-radius: 4px;
-    background-color: var(--basic-white);
+    background-color: $basic-white;
   }
 }
 
@@ -89,9 +89,9 @@
   padding-bottom: 14px;
   text-transform: uppercase;
   font-weight: 700;
-  background-color: var(--basic-white);
+  background-color: $basic-white;
   cursor: pointer;
-  color: var(--basic-dark-blue);
+  color: $basic-dark-blue;
   font-size: 17px;
   line-height: 17px;
   font-family: inherit;

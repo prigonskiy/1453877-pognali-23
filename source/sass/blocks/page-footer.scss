@@ -1,5 +1,5 @@
 .page-footer {
-  background-color: var(--basic-white);
+  background-color: $basic-white;
 }
 
 .page-footer__logo {
@@ -11,11 +11,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top: 1px solid var(--basic-border-gray);
+  border-top: 1px solid $basic-border-gray;
 }
 
 .page-footer__academy-text {
-  color: var(--basic-grey);
+  color: $basic-grey;
   font-size: 16px;
   line-height: 16px;
 }

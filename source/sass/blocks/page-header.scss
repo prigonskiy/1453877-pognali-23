@@ -1,13 +1,13 @@
 .page-header {
   position: relative;
-  background-color: var(--basic-dark-blue);
+  background-color: $basic-dark-blue;
 
   &--form::after {
     position: absolute;
     content: "";
     width: 100%;
     height: 14px;
-    background-color: var(--basic-yellow);
+    background-color: $basic-yellow;
     bottom: -4px;
     left: 0;
     z-index: -1;
@@ -15,7 +15,7 @@
 }
 
 .page-header__menu {
-  background-color: var(--basic-white);
+  background-color: $basic-white;
   padding-bottom: 28px;
 
   &--active {
@@ -70,7 +70,7 @@
 }
 
 .page-header__logo-image--closed path {
-  fill: var(--basic-white);
+  fill: $basic-white;
 }
 
 .page-header__menu-toggle {

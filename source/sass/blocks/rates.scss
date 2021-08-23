@@ -1,5 +1,5 @@
 .rates {
-  background-color: var(--background-lighter-blue);
+  background-color: $background-lighter-blue;
   position: relative;
 }
 
@@ -48,7 +48,7 @@
     height: 34px;
     border-radius: 50%;
     line-height: 16px;
-    color: var(--basic-white);
+    color: $basic-white;
     font-size: 16px;
     text-align: center;
     vertical-align: middle;
@@ -56,15 +56,15 @@
   }
 
   &:nth-child(1)::before {
-    background-color: var(--special-orange-dark);
+    background-color: $special-orange-dark;
   }
 
   &:nth-child(2)::before {
-    background-color: var(--special-orange-light);
+    background-color: $special-orange-light;
   }
 
   &:nth-child(3)::before {
-    background-color: var(--basic-yellow);
+    background-color: $basic-yellow;
   }
 }
 
@@ -73,7 +73,7 @@
   padding: 0;
   margin-bottom: 6px;
   font-weight: 300;
-  color: var(--basic-grey);
+  color: $basic-grey;
   font-size: 16px;
   line-height: 16px;
   max-width: 190px;
@@ -83,7 +83,7 @@
   margin: 0;
   padding: 0;
   font-weight: 300;
-  color: var(--basic-grey);
+  color: $basic-grey;
   font-size: 16px;
   line-height: 16px;
   max-width: 190px;
@@ -92,7 +92,7 @@
 .rates__business-rates {
   display: block;
   text-align: center;
-  color: var(--basic-accent-blue);
+  color: $basic-accent-blue;
   font-weight: 700;
   line-height: 16px;
 }
@@ -100,9 +100,9 @@
 .rates__business-popup {
   display: none;
   width: 270px;
-  background-color: var(--basic-white);
+  background-color: $basic-white;
   border-radius: 20px;
-  box-shadow: 0 2px 8px var(--special-blue-more-opaque);
+  box-shadow: 0 2px 8px $special-blue-more-opaque;
 
   &--active {
     display: block;
@@ -126,19 +126,19 @@
 }
 
 .rates__business-item {
-  border-top: 1px solid var(--basic-border-gray);
+  border-top: 1px solid $basic-border-gray;
   padding-top: 11px;
   padding-bottom: 11px;
 
   &:nth-last-child(1) {
-    border-bottom: 1px solid var(--basic-border-gray);
+    border-bottom: 1px solid $basic-border-gray;
   }
 }
 
 .rates__business-service {
   margin: 0;
   padding: 0;
-  color: var(--basic-grey);
+  color: $basic-grey;
   font-size: 16px;
   line-height: 22px;
   font-weight: 300;
@@ -147,7 +147,7 @@
 .rates__business-price {
   margin: 0;
   padding: 0;
-  color: var(--basic-grey);
+  color: $basic-grey;
   font-size: 16px;
   line-height: 22px;
   font-weight: 300;
@@ -157,13 +157,13 @@
   display: block;
   width: 100%;
   cursor: pointer;
-  background-color: var(--background-grey);
+  background-color: $background-grey;
   border: none;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   padding-top: 21px;
   padding-bottom: 21px;
-  color: var(--special-blue);
+  color: $special-blue;
   text-transform: uppercase;
   font-weight: 700;
   line-height: 24px;

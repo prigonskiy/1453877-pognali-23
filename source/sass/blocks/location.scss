@@ -1,12 +1,12 @@
 .location {
-  background-color: var(--basic-yellow);
+  background-color: $basic-yellow;
 }
 
 .location__address {
   position: relative;
   margin: 0;
   padding: 0;
-  color: var(--basic-blue);
+  color: $basic-blue;
   font-size: 16px;
   line-height: 22px;
   font-weight: 700;
@@ -23,7 +23,7 @@
     width: 45px;
     height: 45px;
     border-radius: 50%;
-    background-color: var(--basic-accent-dark-blue);
+    background-color: $basic-accent-dark-blue;
     z-index: 1;
     background-repeat: no-repeat;
   }

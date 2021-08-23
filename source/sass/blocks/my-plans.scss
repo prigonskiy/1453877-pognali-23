@@ -1,5 +1,5 @@
 .my-plans {
-  background-color: var(--background-lighter-grey);
+  background-color: $background-lighter-grey;
 }
 
 .my-plans__list {
@@ -9,7 +9,7 @@
 .my-plans__item {
   counter-increment: my-plans-counter;
   position: relative;
-  background-color: var(--basic-white);
+  background-color: $basic-white;
   border-radius: 10px;
   padding-top: 24px;
   padding-bottom: 23px;
@@ -23,7 +23,7 @@
   &::before {
     position: absolute;
     content: counter(my-plans-counter) ". ";
-    color: var(--special-blue);
+    color: $special-blue;
     top: 24px;
     left: 23px;
     font-weight: 500;
@@ -37,7 +37,7 @@
   margin-bottom: 20px;
   padding: 0;
   padding-left: 18px;
-  color: var(--special-blue);
+  color: $special-blue;
   font-weight: 700;
   font-size: 16px;
   line-height: 16px;
@@ -52,7 +52,7 @@
   line-height: 14px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--special-blue);
+  color: $special-blue;
 }
 
 .my-plans__dates {
@@ -64,7 +64,7 @@
   line-height: 14px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--special-blue);
+  color: $special-blue;
 }
 
 .my-plans__change {
