@@ -1,0 +1,197 @@
+.companion-cards__item {
+  position: relative;
+  background-color: var(--basic-white);
+  border-radius: 20px;
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-top: 15px;
+  padding-bottom: 23px;
+  display: flex;
+  flex-wrap: wrap;
+
+  &:not(:nth-last-child(1)) {
+    margin-bottom: 10px;
+  }
+}
+
+.companion-cards__profile-link {
+  color: var(--special-blue);
+  display: block;
+  height: 40px;
+}
+
+.companion-cards__profile-name {
+  position: relative;
+  width: 148px;
+  margin: 0;
+  padding: 0;
+  margin-left: 16px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    top: 8px;
+    right: 4px;
+  }
+}
+
+.companion-cards__profile-name-text {
+  display: block;
+  width: 80px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  color: var(--special-blue);
+}
+
+.companion-cards__profile-name--online::after {
+  background-color: var(--special-online);
+}
+
+.companion-cards__profile-name--offline::after {
+  background-color: var(--special-offline);
+}
+
+.companion-cards__likes-wrapper {
+  width: 40px;
+  display: block;
+  align-self: flex-end;
+  margin-left: 86px;
+  margin-top: -22px;
+}
+
+.companion-cards__likes-amount {
+  color: var(--basic-dark-blue);
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.companion-cards__hashtags-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.companion-cards__hashtags-item {
+  margin-right: 5px;
+}
+
+.companion-cards__hashtags-link {
+  color: var(--basic-grey);
+  font-size: 15px;
+  line-height: 18px;
+  flex-grow: 1;
+
+  &::before {
+    content: "#";
+    color: var(--basic-grey);
+    font-size: 15px;
+    line-height: 18px;
+  }
+}
+
+.companion-cards__category-title {
+  color: var(--basic-grey);
+  font-size: 15px;
+  line-height: 16px;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+
+.companion-cards__country-name {
+  color: var(--special-blue);
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+.companion-cards__transport-level-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.companion-cards__transport-list {
+  display: flex;
+}
+
+.companion-cards__transport-item {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--background-lighter-blue);
+}
+
+.companion-cards__transport-icon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.15;
+
+  &--airplane {
+    width: 14px;
+    height: 16px;
+  }
+
+  &--car {
+    width: 13px;
+    height: 16px;
+  }
+
+  &--bicycle {
+    width: 15px;
+    height: 17px;
+  }
+
+  &--foot-walker {
+    width: 13px;
+    height: 17px;
+  }
+
+  &--active {
+    opacity: 1;
+  }
+}
+
+.companion-cards__level-value {
+  color: var(--special-blue);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.companion-cards__call {
+  display: block;
+  width: 100%;
+  border-radius: 25px;
+  background-color: var(--basic-yellow);
+  color: var(--basic-dark-blue);
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 17px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.companion-cards__show-more {
+  display: block;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--special-blue);
+  font-size: 17px;
+  line-height: 30px;
+  font-weight: 700;
+}

@@ -1,0 +1,95 @@
+.entertainment__item {
+  position: relative;
+
+  &:not(:nth-last-child(1)) {
+    padding-bottom: 27px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 2px;
+      background-color: var(--special-blue);
+      left: -14px;
+      top: 10px;
+    }
+  }
+}
+
+.entertainment__country-name {
+  display: block;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 18px;
+  padding-left: 11px;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    background-color: var(--special-blue);
+  }
+
+  &::before {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    bottom: 4px;
+    left: -3px;
+  }
+
+  &::after {
+    width: 12px;
+    height: 2px;
+    bottom: 6px;
+    left: -14px;
+  }
+}
+
+.entertainment__country-name-text {
+  display: block;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 18px;
+  color: var(--special-blue);
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 75px;
+    height: 100%;
+    right: 0;
+    top: 0;
+    background-image: linear-gradient(to left, var(--basic-white), 95%, transparent);
+  }
+}
+
+.entertainment__country-flag {
+  position: absolute;
+  right: 0;
+  top: -3px;
+}
+
+.entertainment__country-story {
+  border: 1px solid var(--background-medium-grey);
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 14px;
+  padding-right: 14px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  min-height: 220px;
+  font-size: 16px;
+  line-height: 22px;
+  font-family: inherit;
+
+  &::placeholder {
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--basic-grey);
+    opacity: 0.3;
+    font-family: inherit;
+  }
+}

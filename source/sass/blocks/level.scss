@@ -1,0 +1,45 @@
+.level {
+  background-color: var(--basic-opaque);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+
+  &--form {
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+  }
+}
+
+.level__value {
+  margin: 0;
+  padding: 0;
+  color: var(--basic-white);
+  font-size: 24px;
+  line-height: 19px;
+  font-weight: 700;
+  margin-bottom: 5px;
+  text-align: center;
+  padding-top: 15px;
+
+  &--form {
+    font-size: 38px;
+    line-height: 38px;
+    color: var(--basic-dark-blue);
+  }
+}
+
+.level__legend {
+  margin: 0;
+  padding: 0;
+  color: var(--basic-white);
+  font-size: 14px;
+  line-height: 12px;
+  text-align: center;
+
+  &--form {
+    font-size: 18px;
+    line-height: 18px;
+    color: var(--basic-grey);
+  }
+}
