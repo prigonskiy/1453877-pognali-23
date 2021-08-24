@@ -1,31 +1,37 @@
 .companion-cards__item {
   position: relative;
+  display: grid;
+  grid-template-columns: 70px 146px;
+  grid-template-rows: auto auto auto auto auto auto;
+  column-gap: 16px;
   background-color: $basic-white;
   border-radius: 20px;
   padding-left: 18px;
   padding-right: 18px;
   padding-top: 15px;
   padding-bottom: 23px;
-  display: flex;
-  flex-wrap: wrap;
+  overflow: hidden;
 
   &:not(:nth-last-child(1)) {
     margin-bottom: 10px;
   }
 }
 
-.companion-cards__profile-link {
-  color: $special-blue;
-  display: block;
-  height: 40px;
+.companion-cards__photo-wrapper {
+  grid-column: 1;
+  grid-row: 1 / 3;
+  align-self: end;
 }
 
-.companion-cards__profile-name {
+.companion-cards__profile-link {
   position: relative;
-  width: 148px;
-  margin: 0;
-  padding: 0;
-  margin-left: 16px;
+  display: block;
+  width: 100%;
+  color: $special-blue;
+  grid-column: 2;
+  grid-row: 1;
+  align-self: start;
+  margin-top: -2px;
 
   &::after {
     position: absolute;
@@ -33,34 +39,75 @@
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    top: 8px;
-    right: 4px;
+    top: 10px;
+    right: 3px;
   }
+}
+
+.companion-cards__profile-link--online::after {
+  background-color: $special-online;
+}
+
+.companion-cards__profile-link--offline::after {
+  background-color: $special-offline;
+}
+
+.companion-cards__profile-name {
+  position: relative;
+  display: block;
+  width: 90px;
+  margin: 0;
+  padding: 0;
 }
 
 .companion-cards__profile-name-text {
   display: block;
-  width: 80px;
   font-weight: 700;
   font-size: 20px;
   line-height: 20px;
   color: $special-blue;
 }
 
-.companion-cards__profile-name--online::after {
-  background-color: $special-online;
-}
-
-.companion-cards__profile-name--offline::after {
-  background-color: $special-offline;
-}
-
 .companion-cards__likes-wrapper {
-  width: 40px;
   display: block;
-  align-self: flex-end;
-  margin-left: 86px;
-  margin-top: -22px;
+  position: relative;
+  grid-column: 2;
+  grid-row: 2;
+  margin-top: -2px;
+}
+
+.companion-cards__likes-toggle {
+  cursor: pointer;
+  position: absolute;
+  display: block;
+  top: -4px;
+  left: -36px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: $basic-light-blue;
+
+  &--active {
+    background-color: $special-like-pink;
+
+    & path {
+      fill: $special-like-red;
+      fill-rule: nonzero;
+    }
+  }
+}
+
+.companion-cards__likes-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 13px;
+  height: 13px;
+  transform: translate(-50%, -50%);
+
+  &--active {
+    fill: $special-like-red;
+  }
 }
 
 .companion-cards__likes-amount {
@@ -75,11 +122,18 @@
   display: flex;
   flex-wrap: wrap;
   padding-left: 8px;
-  padding-right: 8px;
+  padding-right: 38px;
+  padding-top: 4px;
+  padding-bottom: 13px;
+  grid-column: 1 / 3;
+  grid-row: 3;
 }
 
 .companion-cards__hashtags-item {
-  margin-right: 5px;
+  margin: 0;
+  padding: 0;
+  margin-right: 4px;
+  height: 18px;
 }
 
 .companion-cards__hashtags-link {
@@ -93,34 +147,148 @@
     color: $basic-grey;
     font-size: 15px;
     line-height: 18px;
+    font-family: inherit;
   }
 }
 
 .companion-cards__category-title {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+
+  &::after {
+    content: "";
+    z-index: 0;
+    position: absolute;
+    top: 12px;
+    left: -18px;
+    width: calc(100% + 100px);
+    background-color: $background-lighter-blue;
+    height: 1px;
+  }
+}
+
+.companion-cards__category-title-text {
+  position: relative;
   color: $basic-grey;
   font-size: 15px;
   line-height: 16px;
-  font-weight: normal;
+  background-color: $basic-white;
+  padding-left: 11px;
+  padding-right: 10px;
+  margin-left: -3px;
+  z-index: 1;
+}
+
+.companion-cards__countries-list {
+  padding-left: 7px;
+  padding-right: 7px;
   margin: 0;
-  padding: 0;
+  margin-top: 17px;
+  margin-bottom: 8px;
+}
+
+.companion-cards__countries-item {
+  &:not(:nth-last-child(1)) {
+    margin-bottom: 10px;
+  }
 }
 
 .companion-cards__country-name {
+  position: relative;
   color: $special-blue;
   font-weight: 500;
   font-size: 15px;
   line-height: 16px;
   text-transform: uppercase;
+  margin: 0;
+  padding-left: 40px;
+  padding-top: 2px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 26px;
+    height: 18px;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+  }
+
+  &--sri-lanka {
+    &::after {
+      background-image: url("../img/companion-cards-flag-sri-lanka-mobile26x18.png");
+    }
+  }
+
+  &--thailand {
+    &::after {
+      background-image: url("../img/companion-cards-flag-thailand-mobile26x18.png");
+    }
+  }
+
+  &--belgium {
+    &::after {
+      background-image: url("../img/companion-cards-flag-belgium-mobile26x18.png");
+    }
+  }
+
+  &--seychelles {
+    &::after {
+      background-image: url("../img/companion-cards-flag-seychelles-mobile26x18.png");
+    }
+  }
+
+  &--czech {
+    &::after {
+      background-image: url("../img/companion-cards-flag-czech-mobile26x18.png");
+    }
+  }
+
+  &--usa {
+    &::after {
+      background-image: url("../img/companion-cards-flag-usa-mobile26x18.png");
+    }
+  }
+
+  &--australia {
+    &::after {
+      background-image: url("../img/companion-cards-flag-australia-mobile26x18.png");
+    }
+  }
+
+  &--dominica {
+    &::after {
+      background-image: url("../img/companion-cards-flag-dominica-mobile26x18.png");
+    }
+  }
+
+  &--uk {
+    &::after {
+      background-image: url("../img/companion-cards-flag-uk-mobile26x18.png");
+    }
+  }
+
+  &--germany {
+    &::after {
+      background-image: url("../img/companion-cards-flag-germany-mobile26x18.png");
+    }
+  }
 }
 
 .companion-cards__transport-level-wrapper {
+  grid-column: 1 / 3;
+  grid-row: 5;
   display: flex;
-  width: 100%;
-  justify-content: space-between;
+  justify-content: flex-start;
+  margin-bottom: 10px;
 }
 
 .companion-cards__transport-list {
   display: flex;
+  margin-top: 14px;
+  margin-left: 3px;
 }
 
 .companion-cards__transport-item {
@@ -163,32 +331,52 @@
   }
 }
 
+.companion-cards__category-wrapper {
+  &--locations {
+    grid-column: 1 / 3;
+    grid-row: 4;
+  }
+
+  &--transport {
+    margin-right: 51px;
+  }
+
+  &--level {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 .companion-cards__level-value {
   color: $special-blue;
   font-weight: 700;
   font-size: 24px;
   line-height: 24px;
+  padding-top: 13px;
+  padding-bottom: 14px;
+  margin-top: 5px;
+  margin-right: 4px;
 }
 
 .companion-cards__call {
   display: block;
-  width: 100%;
   border-radius: 25px;
+  text-align: center;
   background-color: $basic-yellow;
   color: $basic-dark-blue;
   text-transform: uppercase;
-  text-align: center;
   font-weight: 700;
   font-size: 17px;
-  line-height: 17px;
+  line-height: 14px;
   padding-top: 14px;
-  padding-bottom: 14px;
+  padding-bottom: 13px;
+  grid-column: 1 / 3;
+  grid-row: 6;
 }
 
 .companion-cards__show-more {
   display: block;
-  width: 100%;
-  text-align: center;
   text-transform: uppercase;
   color: $special-blue;
   font-size: 17px;
