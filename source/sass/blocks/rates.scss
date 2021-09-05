@@ -14,6 +14,15 @@
     border-bottom-left-radius: 30px;
     z-index: 1;
   }
+
+  @media (min-width: $tablet) {
+    &::after {
+      height: 60px;
+      bottom: -60px;
+      border-bottom-right-radius: 60px;
+      border-bottom-left-radius: 60px;
+    }
+  }
 }
 
 .rates__wrapper {

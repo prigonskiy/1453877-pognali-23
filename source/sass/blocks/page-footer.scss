@@ -15,12 +15,26 @@
     top: -30px;
     background-color: inherit;
   }
+
+  @media (min-width: $tablet) {
+    padding-top: 0;
+    padding-bottom: 32px;
+
+    &::after {
+      height: 60px;
+      border-top-left-radius: 60px;
+      border-top-right-radius: 60px;
+      top: -60px;
+    }
+  }
 }
 
 .page-footer__wrapper {
   @media (min-width: $tablet) {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin-top: -14px;
   }
 }
 
@@ -28,10 +42,18 @@
   display: block;
   text-align: center;
   margin-bottom: 34px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 0;
+  }
 }
 
 .page-footer__social {
   margin-bottom: 37px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 0;
+  }
 }
 
 .page-footer__academy-wrapper {
@@ -40,12 +62,23 @@
   align-items: center;
   border-top: 1px solid $basic-border-gray;
   padding-top: 5px;
+
+  @media (min-width: $tablet) {
+    border: none;
+    padding-top: 0;
+  }
 }
 
 .page-footer__academy-text {
   color: $basic-grey;
   font-size: 16px;
   line-height: 16px;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 20px;
+    margin-right: 23px;
+  }
 }
 
 .page-footer__academy-link {

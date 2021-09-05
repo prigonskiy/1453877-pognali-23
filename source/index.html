@@ -80,7 +80,11 @@
         </h1>
         <div class="promo__wrapper wrapper">
           <div class="promo__traveller-image-wrapper">
-            <img class="promo__traveller-image" src="img/image-traveller-mobile.png" width="192" height="255" alt="Путешественник с чемоданом">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/image-traveller-desktop.png 1x, img/image-traveller-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/image-traveller-tablet.png 1x, img/image-traveller-tablet@2x.png 2x">
+              <img class="promo__traveller-image" src="img/image-traveller-mobile.png" srcset="img/image-traveller-mobile@2x.png 2x" alt="Путешественник с чемоданом">
+            </picture>
           </div>
           <div class="promo__contacts-authorization-wrapper">
             <ul class="promo__contacts-list">

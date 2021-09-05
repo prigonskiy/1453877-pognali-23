@@ -13,6 +13,13 @@
       display: none;
     }
   }
+
+  &--registration {
+    @media (min-width: $tablet) {
+      margin-right: 35px;
+      margin-left: 35px;
+    }
+  }
 }
 
 .contacts__item {

@@ -3,6 +3,12 @@
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
   padding-bottom: 31px;
+
+  @media (min-width: $tablet) {
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    padding-bottom: 87px;
+  }
 }
 
 .companions__wrapper {
@@ -11,7 +17,7 @@
   z-index: 1;
 
   @media (min-width: $tablet) {
-    padding-top: 141px;
+    padding-top: 201px;
   }
 
   &::before {
@@ -29,7 +35,7 @@
       background-image: url("../img/background-rogovaya-desktop.png");
       width: 285px;
       height: 285px;
-      top: 80px;
+      top: 140px;
       right: 34px;
       left: auto;
     }

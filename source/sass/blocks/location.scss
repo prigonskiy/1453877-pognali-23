@@ -14,6 +14,17 @@
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
   }
+
+  @media (min-width: $tablet) {
+    padding-top: 108px;
+
+    &::after {
+      bottom: -60px;
+      height: 60px;
+      border-bottom-left-radius: 60px;
+      border-bottom-right-radius: 60px;
+    }
+  }
 }
 
 .location__address {
@@ -32,10 +43,12 @@
   @media (min-width: $tablet) {
     font-size: 28px;
     line-height: 28px;
-    padding-left: 134px;
+    padding-left: 94px;
     padding-top: 20px;
     padding-bottom: 20px;
     margin-bottom: 62px;
+    margin-right: 35px;
+    margin-left: 35px;
   }
 
   &::before {

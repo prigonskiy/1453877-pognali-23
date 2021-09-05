@@ -1,6 +1,10 @@
 .page-header {
   position: relative;
   background-color: $basic-dark-blue;
+
+  @media (min-width: $tablet) {
+    background-color: $header-blue;
+  }
 }
 
 .page-header__menu {

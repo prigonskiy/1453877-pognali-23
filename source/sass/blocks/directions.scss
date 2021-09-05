@@ -14,6 +14,15 @@
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
   }
+
+  @media (min-width: $tablet) {
+    &::after {
+      bottom: -60px;
+      height: 60px;
+      border-bottom-left-radius: 60px;
+      border-bottom-right-radius: 60px;
+    }
+  }
 }
 
 .directions__wrapper {
@@ -195,6 +204,7 @@
     line-height: 20px;
     margin-left: 29px;
     margin-bottom: 17px;
+    width: 300px;
   }
 }
 
