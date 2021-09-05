@@ -1,24 +1,65 @@
 .about {
   position: relative;
   background-color: $basic-blue;
-  padding-top: 72px;
+  padding-top: 33px;
   padding-bottom: 82px;
-  z-index: 10;
+  overflow: hidden;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+
+  @media (min-width: $tablet) {
+    padding-top: 41px;
+    padding-bottom: 89px;
+  }
 }
 
-.about-wrapper {
+.about__wrapper {
   position: relative;
-}
+  z-index: 10;
 
-.about__wrapper::before {
-  content: "";
-  position: absolute;
-  top: 72px;
-  left: 0;
-  width: 113px;
-  height: 132px;
-  border-top-right-radius: 20px;
-  z-index: -1;
-  background-color: $basic-darker-blue;
-  background-repeat: no-repeat;
+  @media (min-width: $tablet) {
+    width: 688px;
+    text-align: left;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -33px;
+    left: -25px;
+    width: 113px;
+    height: 132px;
+    border-top-right-radius: 20px;
+    z-index: -2;
+    background-color: $basic-darker-blue;
+    background-repeat: no-repeat;
+
+    @media (min-width: $tablet) {
+      width: 100%;
+      height: 212px;
+      border-radius: 20px;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -33px;
+    left: -5px;
+    width: 292px;
+    height: 353px;
+    background-image: url("../img/about-mobile.png");
+    background-position: top center;
+    background-repeat: no-repeat;
+    z-index: -1;
+
+    @media (min-width: $tablet) {
+      width: 376px;
+      height: 548px;
+      background-image: url("../img/about-tablet.png");
+      top: 48px;
+      left: auto;
+      right: -32px;
+    }
+  }
 }

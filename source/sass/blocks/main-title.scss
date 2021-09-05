@@ -6,8 +6,14 @@
 
   &--index {
     text-align: center;
-    padding-top: 94px;
-    margin-bottom: 10px;
+    padding-top: 92px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  @media (min-width: $tablet) {
+    padding-top: 162px;
+    width: auto;
   }
 }
 
@@ -30,5 +36,10 @@
       bottom: -14px;
       left: 0;
     }
+  }
+
+  @media (min-width: $tablet) {
+    font-size: 60px;
+    line-height: 70px;
   }
 }

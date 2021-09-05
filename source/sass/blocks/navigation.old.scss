@@ -1,0 +1,22 @@
+.navigation__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $tablet) {
+    align-items: flex-start;
+  }
+}
+
+.navigation__link {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 35px;
+  text-transform: uppercase;
+  color: $basic-blue;
+
+  @media (min-width: $tablet) {
+    font-size: 60px;
+    line-height: 71px;
+  }
+}

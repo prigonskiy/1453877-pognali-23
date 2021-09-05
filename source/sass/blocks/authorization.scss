@@ -12,12 +12,29 @@
 
   &--menu {
     line-height: 30px;
-    flex-grow: 1;
+    width: 100%;
+
+    @media (min-width: $tablet) {
+      font-size: 20px;
+      line-height: 20px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      padding-left: 29px;
+      padding-right: 28px;
+    }
   }
 
   &--promo {
     line-height: 20px;
     flex-grow: 1;
+
+    @media (min-width: $tablet) {
+      display: none;
+    }
+
+    @media (min-width: $desktop) {
+      display: block;
+    }
   }
 
   &:hover {

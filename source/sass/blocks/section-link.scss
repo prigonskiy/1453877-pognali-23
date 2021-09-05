@@ -8,6 +8,8 @@
   border-radius: 10px;
   background-color: $basic-yellow;
   font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
 
   &:hover {
     background-color: $special-orange-light;
@@ -22,8 +24,42 @@
     }
   }
 
+  @media (min-width: $tablet) {
+    font-size: 24px;
+    line-height: 24px;
+    padding-top: 28px;
+    padding-bottom: 28px;
+    padding-left: 33px;
+    padding-right: 50px;
+    border-radius: 20px;
+  }
+
   &--about {
     display: none;
+
+    @media (min-width: $tablet) {
+      display: block;
+      margin-top: 52px;
+      margin-left: 34px;
+      width: 276px;
+      box-sizing: border-box;
+    }
+  }
+
+  &--directions {
+    @media (min-width: $tablet) {
+      width: calc(100% - 70px);
+      box-sizing: border-box;
+      margin: 0 auto;
+    }
+  }
+
+  &--companions {
+    @media (min-width: $tablet) {
+      width: calc(100% - 70px);
+      box-sizing: border-box;
+      margin: 0 auto;
+    }
   }
 
   &--location {
@@ -31,6 +67,11 @@
     padding-bottom: 19px;
     padding-left: 19px;
     border: 3px solid $basic-blue;
+
+    @media (min-width: $tablet) {
+      padding-top: 28px;
+      padding-bottom: 28px;
+    }
 
     &:hover {
       background-color: $basic-blue;
@@ -46,12 +87,17 @@
   &::after {
     content: "";
     position: absolute;
-    top: 25px;
+    top: 50%;
+    transform: translateY(-50%);
     right: 23px;
     width: 13px;
     height: 13px;
     background-image: url("../img/icon-triangle.svg");
     background-repeat: no-repeat;
+
+    @media (min-width: $tablet) {
+      right: 36px;
+    }
   }
 }
 

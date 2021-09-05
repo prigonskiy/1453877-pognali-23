@@ -1,13 +1,42 @@
 .navigation__list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  text-align: center;
+
+  @media (min-width: $tablet) {
+    text-align: left;
+    margin-left: 57px;
+    margin-right: 57px;
+  }
+
+  @media (min-width: $desktop) {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.navigation__item {
+  @media (min-width: $desktop) {
+    margin-right: 33px;
+  }
 }
 
 .navigation__link {
   font-weight: 500;
-  font-size: 30px;
-  line-height: 35px;
   text-transform: uppercase;
   color: $basic-blue;
+  font-size: 30px;
+  line-height: 35px;
+
+  @media (min-width: $tablet) {
+    font-size: 60px;
+    line-height: 71px;
+  }
+
+  @media (min-width: $desktop) {
+    font-size: 20px;
+    line-height: 20px;
+    color: $basic-white;
+  }
 }

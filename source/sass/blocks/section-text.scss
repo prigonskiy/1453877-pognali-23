@@ -8,8 +8,20 @@
   line-height: 22px;
   color: $basic-white;
 
+  @media (min-width: $tablet) {
+    font-size: 28px;
+    line-height: 33px;
+    margin-left: 33px;
+    margin-right: auto;
+  }
+
   &--accent {
     font-weight: 700;
+
+    @media (min-width: $tablet) {
+      font-size: 21px;
+      line-height: 25px;
+    }
   }
 
   &--light {
@@ -21,11 +33,47 @@
     margin-right: 25px;
   }
 
-  &--about:not(:nth-last-of-type(1)) {
-    margin-bottom: 20px;
+  &--wide {
+    letter-spacing: 0.01em;
   }
 
-  &--companions:not(:nth-last-of-type(1)) {
-    margin-bottom: 25px;
+  &--about {
+    margin-left: 24px;
+    margin-right: 35px;
+
+    @media (min-width: $tablet) {
+      width: 309px;
+      margin-left: 34px;
+    }
+
+    &:not(:nth-last-of-type(1)) {
+      margin-bottom: 20px;
+
+      @media (min-width: $tablet) {
+        margin-bottom: 39px;
+      }
+    }
+  }
+
+  &--directions {
+    margin-left: 24px;
+    margin-right: 30px;
+
+    @media (min-width: $tablet) {
+      width: 350px;
+    }
+  }
+
+  &--companions {
+    margin-left: 24px;
+    margin-right: 29px;
+
+    &:not(:nth-last-of-type(1)) {
+      margin-bottom: 22px;
+    }
+
+    @media (min-width: $tablet) {
+      width: 430px;
+    }
   }
 }
