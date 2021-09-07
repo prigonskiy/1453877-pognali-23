@@ -31,6 +31,10 @@
     left: -27px;
     z-index: -1;
 
+    @media (min-resolution: 1.5dppx) {
+      background-image: url("../img/background-rogovaya-mobile@2x.png");
+    }
+
     @media (min-width: $tablet) {
       background-image: url("../img/background-rogovaya-desktop.png");
       width: 285px;
@@ -38,6 +42,10 @@
       top: 140px;
       right: 34px;
       left: auto;
+
+      @media (min-resolution: 1.5dppx) {
+        background-image: url("../img/background-rogovaya-desktop@2x.png");
+      }
     }
   }
 
@@ -52,13 +60,18 @@
     right: 0;
     z-index: -1;
 
+    @media (min-resolution: 1.5dppx) {
+      background-image: url("../img/background-smolov-mobile@2x.png");
+    }
+
     @media (min-width: $tablet) {
-      background-image: url("../img/background-smolov-desktop.png");
-      width: 143px;
-      height: 143px;
       top: 426px;
       right: auto;
       left: 0;
+
+      @media (min-resolution: 1.5dppx) {
+        background-image: url("../img/background-smolov-desktope@2x.png");
+      }
     }
   }
 }

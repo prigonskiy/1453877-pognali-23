@@ -40,6 +40,10 @@
       right: 0;
       background-image: url("../img/background-flags-tablet.png");
       z-index: -1;
+
+      @media (min-resolution: 1.5dppx) {
+        background-image: url("../img/background-flags-tablet@2x.png");
+      }
     }
   }
 }

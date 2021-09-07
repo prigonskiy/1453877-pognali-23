@@ -1,19 +1,41 @@
 .promo {
   background-image: url("../img/background-globe-mobile.png");
   background-repeat: no-repeat;
-  background-position: center top;
+  background-position: center -225px;
   padding-bottom: 39px;
+
+  @media (min-resolution: 1.5dppx) {
+    background-image: url("../img/background-globe-mobile2x.png");
+  }
 
   @media (min-width: $tablet) {
     background-image: url("../img/background-globe-tablet.png");
     padding-bottom: 96px;
-    background-position: 40% 347px;
+    background-position: center -25px;
+
+    @media (min-resolution: 1.5dppx) {
+      background-image: url("../img/background-globe-tablet2x.png");
+    }
+  }
+
+  @media (min-width: $desktop) {
+    background-image: url("../img/background-globe-desktop.png");
+    background-position: center bottom;
+    padding-bottom: 0;
+
+    @media (min-resolution: 1.5dppx) {
+      background-image: url("../img/background-globe-desktop@2x.png");
+    }
   }
 }
 
 .promo__wrapper {
   @media (min-width: $tablet) {
     position: relative;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 118px;
   }
 }
 
@@ -27,6 +49,13 @@
     height: 451px;
     margin-left: 245px;
   }
+
+  @media (min-width: $desktop) {
+    margin: 0;
+    width: 431px;
+    height: 640px;
+    margin-left: 544px;
+  }
 }
 
 .promo__contacts-authorization-wrapper {
@@ -38,10 +67,7 @@
   }
 
   @media (min-width: $desktop) {
-    margin: 0;
-    position: absolute;
-    top: 0;
-    right: 0;
+    display: none;
   }
 }
 
@@ -122,6 +148,14 @@
     bottom: 350px;
     background-color: transparent;
   }
+
+  @media (min-width: $desktop) {
+    position: absolute;
+    bottom: 338px;
+    right: 23px;
+    width: 264px;
+    padding: 0;
+  }
 }
 
 .promo__quote {
@@ -141,6 +175,10 @@
     margin-bottom: 45px;
     width: 100%;
   }
+
+  @media (min-width: $desktop) {
+    line-height: 32px;
+  }
 }
 
 .promo__source {
@@ -158,6 +196,10 @@
     line-height: 25px;
     width: 100%;
   }
+
+  @media (min-width: $desktop) {
+    line-height: 24px;
+  }
 }
 
 .promo__algorithm-list {
@@ -173,6 +215,12 @@
     border-radius: 20px;
     overflow: hidden;
     margin-top: 0;
+  }
+
+  @media (min-width: $desktop) {
+    position: absolute;
+    bottom: 115px;
+    width: 100%;
   }
 }
 
@@ -190,6 +238,25 @@
     padding: 0;
     padding-top: 31px;
     padding-bottom: 61px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 25%;
+    position: relative;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding-top: 29px;
+    padding-bottom: 30px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 30px;
+      height: 100%;
+      background-color: inherit;
+      right: -30px;
+      top: 0;
+    }
   }
 
   &:nth-child(1) {
@@ -211,8 +278,12 @@
   &:not(:nth-last-child(1)) {
     padding-bottom: 82px;
 
-    @media (min-height: $tablet) {
+    @media (min-width: $tablet) {
       padding-bottom: 60px;
+    }
+
+    @media (min-width: $desktop) {
+      padding-bottom: 30px;
     }
   }
 
@@ -230,6 +301,11 @@
 
     @media (min-width: $tablet) {
       border-radius: 0;
+    }
+
+    @media (min-width: $desktop) {
+      border-top-left-radius: 30px;
+      border-bottom-left-radius: 30px;
     }
   }
 
@@ -251,6 +327,15 @@
       left: 33px;
       font-size: 30px;
       line-height: 30px;
+    }
+
+    @media (min-width: $desktop) {
+      bottom: auto;
+      top: 29px;
+      left: auto;
+      right: 34px;
+      font-size: 24px;
+      line-height: 24px;
     }
   }
 }

@@ -20,7 +20,6 @@
   z-index: 10;
 
   @media (min-width: $tablet) {
-    width: 688px;
     text-align: left;
   }
 
@@ -55,13 +54,21 @@
     background-repeat: no-repeat;
     z-index: -1;
 
+    @media (min-resolution: 1.5dppx) {
+      background-image: url("../img/about-mobile@2x.png");
+    }
+
     @media (min-width: $tablet) {
       width: 376px;
       height: 548px;
       background-image: url("../img/about-tablet.png");
-      top: 48px;
+      top: 0;
       left: auto;
       right: -32px;
+
+      @media (min-resolution: 1.5dppx) {
+        background-image: url("../img/about-tablet@2x.png");
+      }
     }
   }
 }
