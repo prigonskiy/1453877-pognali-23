@@ -13,6 +13,17 @@
     flex-wrap: wrap;
     margin-left: 0;
     margin-right: 0;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 60px;
+      height: 2px;
+      background-color: $basic-white;
+      top: 50%;
+      transform: translateY(-50%);
+      left: -105px;
+    }
   }
 }
 
@@ -39,4 +50,14 @@
     line-height: 20px;
     color: $basic-white;
   }
+}
+
+.navigation--menu-scroll .navigation__link {
+  @media (min-width: $desktop) {
+    color: $basic-blue;
+  }
+}
+
+.navigation--menu-scroll .navigation__list::after {
+  background-color: $basic-blue;
 }

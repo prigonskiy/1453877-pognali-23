@@ -2,23 +2,25 @@
   background-color: $basic-blue;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
+  padding-top: 96px;
   padding-bottom: 31px;
 
   @media (min-width: $tablet) {
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
+    padding-top: 201px;
     padding-bottom: 87px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 190px;
+    padding-bottom: 134px;
   }
 }
 
 .companions__wrapper {
   position: relative;
-  padding-top: 96px;
   z-index: 1;
-
-  @media (min-width: $tablet) {
-    padding-top: 201px;
-  }
 
   &::before {
     position: absolute;
@@ -27,25 +29,35 @@
     background-repeat: no-repeat;
     width: 64px;
     height: 71px;
-    top: 337px;
+    top: 239px;
     left: -27px;
     z-index: -1;
 
-    @media (min-resolution: 1.5dppx) {
+    @media (min-resolution: 2dppx) {
       background-image: url("../img/background-rogovaya-mobile@2x.png");
+      background-size: 64px auto;
     }
 
     @media (min-width: $tablet) {
       background-image: url("../img/background-rogovaya-desktop.png");
       width: 285px;
       height: 285px;
-      top: 140px;
+      top: -61px;
       right: 34px;
       left: auto;
 
-      @media (min-resolution: 1.5dppx) {
+      @media (min-resolution: 2dppx) {
         background-image: url("../img/background-rogovaya-desktop@2x.png");
+        background-size: 285px auto;
       }
+    }
+
+    @media (min-width: $desktop) {
+      top: auto;
+      bottom: -54px;
+      right: auto;
+      left: 130px;
+      min-height: 483px;
     }
   }
 
@@ -60,24 +72,40 @@
     right: 0;
     z-index: -1;
 
-    @media (min-resolution: 1.5dppx) {
+    @media (min-resolution: 2dppx) {
       background-image: url("../img/background-smolov-mobile@2x.png");
+      background-size: 143px auto;
     }
 
     @media (min-width: $tablet) {
       top: 426px;
       right: auto;
       left: 0;
+    }
 
-      @media (min-resolution: 1.5dppx) {
-        background-image: url("../img/background-smolov-desktope@2x.png");
-      }
+    @media (min-width: $desktop) {
+      top: 4px;
+      left: 487px;
     }
   }
 }
 
 .companions__section-title {
   position: relative;
+  margin-bottom: 19px;
+  margin-left: 26px;
+  margin-right: 29px;
+
+  @media (min-width: $tablet) {
+    margin-left: 33px;
+    margin-bottom: 55px;
+    width: 427px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-left: 69px;
+    width: 427px;
+  }
 
   &::after {
     content: "";
@@ -98,10 +126,39 @@
       top: -70px;
       left: -33px;
     }
+
+    @media (min-width: $desktop) {
+      top: -60px;
+      left: -69px;
+    }
   }
 }
 
 .companions__section-text {
+  margin-left: 24px;
+  margin-right: 29px;
+
+  &:not(:nth-last-of-type(1)) {
+    margin-bottom: 25px;
+  }
+
+  @media (min-width: $tablet) {
+    margin-left: 35px;
+    width: 427px;
+
+    &:not(:nth-last-of-type(1)) {
+      margin-bottom: 39px;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    margin-left: 70px;
+
+    &:not(:nth-last-of-type(1)) {
+      margin-bottom: 42px;
+    }
+  }
+
   & br {
     display: none;
 
@@ -122,6 +179,14 @@
     margin-right: 34px;
     margin-top: 59px;
     margin-bottom: 81px;
+  }
+
+  @media (min-width: $desktop) {
+    position: absolute;
+    top: 4px;
+    right: 0;
+    width: calc(50% - 30px);
+    margin: 0;
   }
 }
 
@@ -324,4 +389,18 @@
 
 .companions__transport-icon--active {
   opacity: 1;
+}
+
+.companions__section-link {
+  @media (min-width: $tablet) {
+    margin-left: 34px;
+    margin-right: 38px;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: 85px;
+    margin-left: 71px;
+    width: 280px;
+  }
 }

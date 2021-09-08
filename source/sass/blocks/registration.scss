@@ -1,14 +1,14 @@
 .registration {
   position: relative;
   background-color: $basic-blue;
-  padding-top: 100px;
+  padding-top: 102px;
 
   &::after {
     position: absolute;
     content: "";
     width: 100%;
     height: 30px;
-    bottom: -30px;
+    bottom: -29px;
     border-bottom-right-radius: 30px;
     border-bottom-left-radius: 30px;
     background-color: inherit;
@@ -16,7 +16,7 @@
   }
 
   @media (min-width: $tablet) {
-    padding-top: 133px;
+    padding-top: 136px;
 
     &::after {
       height: 60px;
@@ -25,11 +25,29 @@
       border-bottom-left-radius: 60px;
     }
   }
+
+  @media (min-width: $desktop) {
+    padding-top: 169px;
+  }
 }
 
-.registration__section-text br {
+.registration__section-title {
+  text-align: center;
+  margin-bottom: 19px;
+
   @media (min-width: $tablet) {
-    display: none;
+    margin-bottom: 59px;
+  }
+}
+
+.registration__section-text {
+  margin-left: 27px;
+  margin-right: 27px;
+
+  & br {
+    @media (min-width: $tablet) {
+      display: none;
+    }
   }
 }
 
@@ -57,6 +75,13 @@
     margin-left: 36px;
     margin-right: 36px;
   }
+
+  @media (min-width: $desktop) {
+    margin-top: 60px;
+    margin-bottom: 70px;
+    margin-left: 73px;
+    margin-right: 73px;
+  }
 }
 
 .registration__mail-input {
@@ -73,16 +98,20 @@
   line-height: 18px;
   color: $basic-grey;
   font-weight: 700;
-  flex-basis: 220px;
+  flex-basis: 200px;
 
   @media (min-width: $tablet) {
     font-size: 24px;
     line-height: 24px;
     padding-left: 36px;
-    padding-top: 28px;
-    padding-bottom: 28px;
+    padding-top: 26px;
+    padding-bottom: 26px;
     border-radius: 0;
     flex-basis: 536px;
+  }
+
+  @media (min-width: $desktop) {
+    flex-basis: 850px;
   }
 }
 
@@ -128,6 +157,19 @@
       height: 100%;
     }
   }
+
+  @media (min-width: $desktop) {
+    width: 324px;
+    text-align: left;
+
+    &::after {
+      right: 34px;
+      left: auto;
+      transform: none;
+      width: 14px;
+      height: 100%;
+    }
+  }
 }
 
 .registration__submit-button:active::after {
@@ -136,8 +178,26 @@
 
 .registration__submit-button-label {
   display: none;
+
+  @media (min-width: $desktop) {
+    display: inline-block;
+    color: $special-blue;
+    font-size: 24px;
+    line-height: 24px;
+    font-family: $pognali-font;
+    font-weight: 700;
+    margin-left: 36px;
+  }
 }
 
 .registration__contacts {
   margin-top: 17px;
+
+  @media (min-width: $tablet) {
+    margin-top: 40px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: 37px;
+  }
 }

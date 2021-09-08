@@ -24,54 +24,11 @@
     }
   }
 
-  @media (min-width: $tablet) {
-    font-size: 24px;
-    line-height: 24px;
-    padding-top: 28px;
-    padding-bottom: 28px;
-    padding-left: 33px;
-    padding-right: 50px;
-    border-radius: 20px;
-  }
-
-  &--about {
-    display: none;
-
-    @media (min-width: $tablet) {
-      display: block;
-      margin-top: 52px;
-      margin-left: 34px;
-      width: 276px;
-      box-sizing: border-box;
-    }
-  }
-
-  &--directions {
-    @media (min-width: $tablet) {
-      width: calc(100% - 70px);
-      box-sizing: border-box;
-      margin: 0 auto;
-    }
-  }
-
-  &--companions {
-    @media (min-width: $tablet) {
-      width: calc(100% - 70px);
-      box-sizing: border-box;
-      margin: 0 auto;
-    }
-  }
-
   &--location {
     padding-top: 19px;
     padding-bottom: 19px;
-    padding-left: 19px;
+    padding-left: 20px;
     border: 3px solid $basic-blue;
-
-    @media (min-width: $tablet) {
-      padding-top: 28px;
-      padding-bottom: 28px;
-    }
 
     &:hover {
       background-color: $basic-blue;
@@ -80,7 +37,23 @@
 
     &:active {
       background-color: $basic-blue;
-      color: $basic-white-opaque;
+      color: $basic-white-less-opaque;
+    }
+  }
+
+  @media (min-width: $tablet) {
+    font-size: 24px;
+    line-height: 24px;
+    padding-top: 28px;
+    padding-bottom: 28px;
+    padding-left: 33px;
+    padding-right: 50px;
+    border-radius: 20px;
+
+    &--location {
+      padding-top: 25px;
+      padding-bottom: 25px;
+      padding-left: 30px;
     }
   }
 
@@ -97,6 +70,13 @@
 
     @media (min-width: $tablet) {
       right: 36px;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    &--location {
+      padding-left: 34px;
+      padding-right: 62px;
     }
   }
 }

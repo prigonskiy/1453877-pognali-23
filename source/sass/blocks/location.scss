@@ -1,7 +1,7 @@
 .location {
   position: relative;
   background-color: $basic-yellow;
-  padding-top: 62px;
+  padding-top: 61px;
   padding-bottom: 5px;
 
   &::after {
@@ -17,6 +17,7 @@
 
   @media (min-width: $tablet) {
     padding-top: 108px;
+    padding-bottom: 24px;
 
     &::after {
       bottom: -60px;
@@ -24,6 +25,19 @@
       border-bottom-left-radius: 60px;
       border-bottom-right-radius: 60px;
     }
+  }
+
+  @media (min-width: $desktop) {
+    padding-bottom: 0;
+  }
+}
+
+.location__wrapper {
+  @media (min-width: $desktop) {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 
@@ -38,7 +52,7 @@
   text-transform: uppercase;
   padding-left: 61px;
   font-style: normal;
-  margin-bottom: 32px;
+  margin-bottom: 33px;
 
   @media (min-width: $tablet) {
     font-size: 28px;
@@ -46,9 +60,16 @@
     padding-left: 94px;
     padding-top: 20px;
     padding-bottom: 20px;
-    margin-bottom: 62px;
+    margin-bottom: 44px;
     margin-right: 35px;
     margin-left: 35px;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 0;
+    padding: 0;
+    padding-left: 121px;
+    margin-left: 223px;
   }
 
   &::before {

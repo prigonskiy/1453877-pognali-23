@@ -1,8 +1,18 @@
 .directions {
   position: relative;
   background-color: $background-lighter-blue;
-  z-index: 10;
+  padding-top: 71px;
   padding-bottom: 4px;
+
+  @media (min-width: $tablet) {
+    padding-top: 73px;
+    padding-bottom: 20px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 166px;
+    padding-bottom: 78px;
+  }
 
   &::after {
     position: absolute;
@@ -26,7 +36,6 @@
 }
 
 .directions__wrapper {
-  padding-top: 70px;
   position: relative;
   z-index: 1;
 
@@ -36,15 +45,54 @@
       position: absolute;
       width: 288px;
       height: 574px;
-      top: 80px;
+      top: 0;
       right: 0;
       background-image: url("../img/background-flags-tablet.png");
       z-index: -1;
 
-      @media (min-resolution: 1.5dppx) {
+      @media (min-resolution: 2dppx) {
         background-image: url("../img/background-flags-tablet@2x.png");
+        background-size: 288px auto;
+      }
+
+      @media (min-width: $desktop) {
+        top: -78px;
       }
     }
+  }
+}
+
+.directions__section-title {
+  margin-left: 25px;
+  margin-right: 30px;
+  margin-bottom: 19px;
+
+  @media (min-width: $tablet) {
+    margin-left: 33px;
+    margin-right: 315px;
+    margin-bottom: 57px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-left: 801px;
+    margin-bottom: 58px;
+    width: 378px;
+  }
+}
+
+.directions__section-text {
+  margin-left: 24px;
+  margin-right: 30px;
+
+  @media (min-width: $tablet) {
+    margin-left: 35px;
+    width: 378px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-left: 802px;
+    width: 378px;
+    margin-bottom: 98px;
   }
 }
 
@@ -72,6 +120,14 @@
       background-color: $basic-light-blue;
     }
   }
+
+  @media (min-width: $desktop) {
+    position: absolute;
+    margin: 0;
+    top: -5px;
+    left: 70px;
+    width: 560px;
+  }
 }
 
 .directions__country-item {
@@ -87,6 +143,10 @@
 
 .directions__country-item:not(:nth-last-child(1)) {
   margin-bottom: 11px;
+
+  @media (min-width: $desktop) {
+    margin-bottom: 10px;
+  }
 }
 
 .directions__country-image-wrapper {
@@ -251,5 +311,19 @@
       left: -32px;
       top: -3px;
     }
+  }
+}
+
+.directions__section-link {
+  @media (min-width: $tablet) {
+    margin-right: 35px;
+    margin-left: 35px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 275px;
+    margin: 0;
+    margin-left: 803px;
+    box-sizing: border-box;
   }
 }
