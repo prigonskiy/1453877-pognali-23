@@ -1,5 +1,5 @@
 .country-filter {
-  background-color: var(--basic-light-blue);
+  background-color: $basic-light-blue;
   padding-bottom: 28px;
 }
 
@@ -10,7 +10,7 @@
 }
 
 .country-filter__title {
-  color: var(--basic-blue);
+  color: $basic-blue;
   text-transform: uppercase;
   font-style: normal;
   font-weight: 700;
@@ -37,7 +37,7 @@
   line-height: 18px;
   opacity: 0.3;
   text-transform: uppercase;
-  color: var(--basic-blue);
+  color: $basic-blue;
 }
 
 .country-filter__continent-input:checked ~ .country-filter__continent-label {
@@ -46,7 +46,7 @@
 
 .country-filter__hide-filter {
   border-radius: 20px;
-  background-color: var(--basic-another-light-blue);
+  background-color: $basic-another-light-blue;
   border: none;
   text-transform: uppercase;
   display: block;

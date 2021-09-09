@@ -2,6 +2,20 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media (min-width: $tablet) {
+    justify-content: flex-start;
+    margin-left: 57px;
+    margin-right: 57px;
+  }
+
+  @media (min-width: $desktop) {
+    display: none;
+
+    &--footer {
+      display: flex;
+    }
+  }
 }
 
 .social__item {
@@ -10,8 +24,13 @@
   background-color: transparent;
   border-radius: 50%;
 
+  @media (min-width: $tablet) {
+    width: 62px;
+    height: 62px;
+  }
+
   &--footer {
-    background-color: var(--basic-yellow);
+    background-color: $basic-yellow;
   }
 }
 
@@ -25,14 +44,26 @@
 
   &--facebook {
     background-image: url("../img/icon-facebook.svg");
+
+    @media (min-width: $tablet) {
+      background-size: 14px 28px;
+    }
   }
 
   &--vk {
     background-image: url("../img/icon-vkontakte.svg");
+
+    @media (min-width: $tablet) {
+      background-size: 31px 16px;
+    }
   }
 
   &--instagram {
     background-image: url("../img/icon-instagram.svg");
+
+    @media (min-width: $tablet) {
+      background-size: 24px 24px;
+    }
   }
 
   &:hover {

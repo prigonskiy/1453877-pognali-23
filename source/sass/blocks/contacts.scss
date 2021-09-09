@@ -2,22 +2,64 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+
+  @media (min-width: $tablet) {
+    margin-right: 57px;
+    margin-left: 57px;
+  }
+
+  &--header {
+    @media (min-width: $desktop) {
+      display: none;
+    }
+  }
+
+  &--registration {
+    @media (min-width: $tablet) {
+      margin-right: 35px;
+      margin-left: 35px;
+    }
+
+    @media (min-width: $desktop) {
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
 }
 
 .contacts__item {
   padding-top: 15px;
   padding-bottom: 14px;
+
+  @media (min-width: $tablet) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  &--registration {
+    @media (min-width: $desktop) {
+      &:not(:nth-last-child(1)) {
+        margin-right: 110px;
+      }
+    }
+  }
 }
 
 .contacts__link {
   display: block;
   position: relative;
-  color: var(--basic-blue);
+  color: $basic-blue;
   font-size: 16px;
   line-height: 16px;
   font-weight: 700;
   text-transform: uppercase;
   padding-left: 61px;
+
+  @media (min-width: $tablet) {
+    font-size: 28px;
+    line-height: 28px;
+    padding-left: 91px;
+  }
 
   &::before {
     content: "";
@@ -27,9 +69,15 @@
     width: 45px;
     height: 45px;
     border-radius: 50%;
-    background-color: var(--basic-accent-dark-blue);
+    background-color: $basic-accent-dark-blue;
     z-index: 1;
     background-repeat: no-repeat;
+
+    @media (min-width: $tablet) {
+      width: 68px;
+      height: 68px;
+      top: -20px;
+    }
   }
 
   &::after {
@@ -44,17 +92,30 @@
     background-position: 50% 50%;
     background-repeat: no-repeat;
     z-index: 2;
+
+    @media (min-width: $tablet) {
+      width: 68px;
+      height: 68px;
+    }
   }
 
   &--registration {
-    color: var(--basic-yellow);
+    color: $basic-yellow;
   }
 }
 
 .contacts__link--phone::after {
   background-image: url("../img/icon-phone.svg");
+
+  @media (min-width: $tablet) {
+    background-size: 27px 26px;
+  }
 }
 
 .contacts__link--mail::after {
   background-image: url("../img/icon-mail.svg");
+
+  @media (min-width: $tablet) {
+    background-size: 36px 38px;
+  }
 }

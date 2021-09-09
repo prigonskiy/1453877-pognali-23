@@ -1,9 +1,9 @@
 .authorization {
   display: block;
   text-align: center;
-  color: var(--basic-dark-blue);
+  color: $basic-dark-blue;
   text-transform: uppercase;
-  background-color: var(--basic-yellow);
+  background-color: $basic-yellow;
   font-size: 17px;
   font-weight: 700;
   padding-top: 12px;
@@ -12,20 +12,37 @@
 
   &--menu {
     line-height: 30px;
-    flex-grow: 1;
+    width: 100%;
+
+    @media (min-width: $tablet) {
+      font-size: 20px;
+      line-height: 20px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      padding-left: 29px;
+      padding-right: 28px;
+    }
   }
 
   &--promo {
     line-height: 20px;
     flex-grow: 1;
+
+    @media (min-width: $tablet) {
+      display: none;
+    }
+
+    @media (min-width: $desktop) {
+      display: block;
+    }
   }
 
   &:hover {
-    background-color: var(--special-orange-light);
+    background-color: $special-orange-light;
   }
 
   &:active {
-    background-color: var(--special-orange-light);
-    color: var(--special-orange-light-opaque);
+    background-color: $special-orange-light;
+    color: $special-orange-light-opaque;
   }
 }

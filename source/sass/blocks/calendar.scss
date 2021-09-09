@@ -6,15 +6,15 @@
   position: relative;
   padding-top: 11px;
   padding-bottom: 11px;
-  border-top: 1px solid var(--basic-another-light-blue);
-  border-bottom: 1px solid var(--basic-another-light-blue);
+  border-top: 1px solid $basic-another-light-blue;
+  border-bottom: 1px solid $basic-another-light-blue;
   margin-bottom: 22px;
 }
 
 .calendar__month-name {
   margin: 0;
   padding: 0;
-  color: var(--special-blue);
+  color: $special-blue;
   text-align: center;
   font-weight: 700;
   font-size: 20px;
@@ -59,23 +59,23 @@
 
 .calendar__day-of-week {
   text-align: center;
-  color: var(--basic-grey);
+  color: $basic-grey;
   font-size: 14px;
   line-height: 18px;
   padding-bottom: 10px;
 
   &:nth-child(6),
   &:nth-child(7) {
-    color: var(--special-accent-red);
+    color: $special-accent-red;
   }
 }
 
 .calendar__table-body {
-  border: 1px solid var(--basic-another-light-blue);
+  border: 1px solid $basic-another-light-blue;
 }
 
 .calendar__day-of-month-wrapper {
-  border: 1px solid var(--basic-another-light-blue);
+  border: 1px solid $basic-another-light-blue;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -91,12 +91,12 @@
   padding-bottom: 6px;
   margin: 0;
   font-weight: 500;
-  color: var(--special-blue);
+  color: $special-blue;
   font-size: 14px;
   line-height: 18px;
   width: 100%;
   height: 100%;
-  background-color: var(--background-lighter-blue);
+  background-color: $background-lighter-blue;
 }
 
 .calendar__day-of-month-input:disabled ~ .calendar__day-of-month-label {
@@ -105,13 +105,13 @@
 }
 
 .calendar__day-of-month-input:checked ~ .calendar__day-of-month-label {
-  background-color: var(--special-blue);
-  color: var(--basic-white);
+  background-color: $special-blue;
+  color: $basic-white;
 }
 
 .calendar__day-of-month-input:not(:disabled) ~ .calendar__day-of-month-label:hover {
-  background-color: var(--special-blue);
-  color: var(--basic-white);
+  background-color: $special-blue;
+  color: $basic-white;
   cursor: pointer;
 
   &::after {
@@ -122,6 +122,6 @@
     top: -1px;
     left: -1px;
     background-color: transparent;
-    border: 2px solid var(--special-accent-red);
+    border: 2px solid $special-accent-red;
   }
 }

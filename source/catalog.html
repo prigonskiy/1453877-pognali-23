@@ -2,8 +2,8 @@
 <html class="page page--catalog" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Погнали. Попутчики</title>
-
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
@@ -839,7 +839,10 @@
       <section class="companion-filter wrapper">
         <form class="companion-filter__form" action="https://echo.htmlacademy.ru" method="post">
           <h2 class="companion-filter__title">Подберите идеального попутчика</h2>
-          <fieldset class="companion-filter__fieldset companion-filter__fieldset--hobby companion-filter__fieldset--hidden">
+          <fieldset class="companion-filter__fieldset companion-filter__fieldset--hobby companion-filter__fieldset--hidden companion-filter__fieldset--nojs">
+            <svg class="companion-filter__toggle-icon" width="10" height="5" viewBox="0 0 10 5" fill="none">
+              <path d="M5 0L9.33013 4.5H0.669873L5 0Z" fill="#192144"/>
+            </svg>
             <legend class="companion-filter__legend">Хобби</legend>
             <ul class="companion-filter__input-list companion-filter__input-list--hobby">
               <li class="companion-filter__input-item">
@@ -856,7 +859,10 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="companion-filter__fieldset companion-filter__fieldset--music companion-filter__fieldset--visible">
+          <fieldset class="companion-filter__fieldset companion-filter__fieldset--music companion-filter__fieldset--nojs">
+            <svg class="companion-filter__toggle-icon" width="10" height="5" viewBox="0 0 10 5" fill="none">
+              <path d="M5 0L9.33013 4.5H0.669873L5 0Z" fill="#192144"/>
+            </svg>
             <legend class="companion-filter__legend">Музыка</legend>
             <ul class="companion-filter__input-list companion-filter__input-list--music">
               <li class="companion-filter__input-item">
@@ -873,7 +879,10 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="companion-filter__fieldset companion-filter__fieldset--food companion-filter__fieldset--hidden">
+          <fieldset class="companion-filter__fieldset companion-filter__fieldset--food companion-filter__fieldset--hidden companion-filter__fieldset--nojs">
+            <svg class="companion-filter__toggle-icon" width="10" height="5" viewBox="0 0 10 5" fill="none">
+              <path d="M5 0L9.33013 4.5H0.669873L5 0Z" fill="#192144"/>
+            </svg>
             <legend class="companion-filter__legend">Еда</legend>
             <ul class="companion-filter__input-list companion-filter__input-list--food">
               <li class="companion-filter__input-item">
@@ -890,10 +899,13 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="companion-filter__fieldset companion-filter__fieldset--transport-inputs  companion-filter__fieldset--visible">
+          <fieldset class="companion-filter__fieldset companion-filter__fieldset--transport-inputs companion-filter__fieldset--nojs">
+            <svg class="companion-filter__toggle-icon" width="10" height="5" viewBox="0 0 10 5" fill="none">
+              <path d="M5 0L9.33013 4.5H0.669873L5 0Z" fill="#192144"/>
+            </svg>
             <legend class="companion-filter__legend">Транспорт</legend>
-            <ul class="companion-filter__inputs-list companion-filter__inputs-list--transport-inputs transport-inputs">
-              <li class="transport-inputs__item">
+            <ul class="companion-filter__input-list companion-filter__input-list--transport-input transport-inputs">
+              <li class="companion-filter__input-item transport-inputs__item">
                 <input class="visually-hidden transport-inputs__input" type="checkbox" value="airplane" name="transport" id="airplane" checked>
                 <label class="transport-inputs__label" for="airplane">
                   <svg class="transport-inputs__icon" width="17" height="16" viewBox="0 0 21 23" fill="#D9D9D9">
@@ -901,7 +913,7 @@
                   </svg>
                 </label>
               </li>
-              <li class="transport-inputs__item">
+              <li class="companion-filter__input-item transport-inputs__item">
                 <input class="visually-hidden transport-inputs__input" type="checkbox" value="car" name="transport" id="car" checked>
                 <label class="transport-inputs__label" for="car">
                   <svg class="transport-inputs__icon" width="17" height="16" viewBox="0 0 18 21" fill="#D9D9D9">
@@ -909,7 +921,7 @@
                   </svg>
                 </label>
               </li>
-              <li class="transport-inputs__item">
+              <li class="companion-filter__input-item transport-inputs__item">
                 <input class="visually-hidden transport-inputs__input" type="checkbox" value="bicycle" name="transport" id="bicycle">
                 <label class="transport-inputs__label" for="bicycle">
                   <svg class="transport-inputs__icon" width="17" height="16" viewBox="0 0 25 24" fill="#D9D9D9">
@@ -920,7 +932,7 @@
                   </svg>
                 </label>
               </li>
-              <li class="transport-inputs__item">
+              <li class="companion-filter__input-item transport-inputs__item">
                 <input class="visually-hidden transport-inputs__input" type="checkbox" value="foot-walker" name="transport" id="foot-walker" checked>
                 <label class="transport-inputs__label" for="foot-walker">
                   <svg class="transport-inputs__icon" width="17" height="16" viewBox="0 0 21 24" fill="#D9D9D9">
@@ -931,7 +943,10 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="companion-filter__fieldset companion-filter__fieldset--level companion-filter__fieldset--visible">
+          <fieldset class="companion-filter__fieldset companion-filter__fieldset--level companion-filter__fieldset--nojs">
+            <svg class="companion-filter__toggle-icon" width="10" height="5" viewBox="0 0 10 5" fill="none">
+              <path d="M5 0L9.33013 4.5H0.669873L5 0Z" fill="#192144"/>
+            </svg>
             <legend class="companion-filter__legend">Левел</legend>
             👾👾👾👾👾👾👾👾👾👾
             <!--здесь будет фильтр по диапазону-->
@@ -943,15 +958,19 @@
         <ul class="companion-cards__list">
           <li class="companion-cards__item">
             <a class="companion-cards__photo-wrapper" href="#">
-              <img src="https://via.placeholder.com/70x70" width="70" height="70" alt="Фотография Татьяны Фирсовой">
+              <img src="../img/companion-cards-firsova-mobile.png" width="70" height="70" alt="Фотография Татьяны Фирсовой">
             </a>
-            <a class="companion-cards__profile-link" href="#">
-              <h3 class="companion-cards__profile-name companion-cards__profile-name--offline">
+            <a class="companion-cards__profile-link companion-cards__profile-link--offline" href="#">
+              <h3 class="companion-cards__profile-name">
                 <span class="companion-cards__profile-name-text">Таня Фирсова</span>
               </h3>
             </a>
             <div class="companion-cards__likes-wrapper">
-              <div class="companion-cards__likes-icon companion-cards__likes-icon--active"></div>
+              <a class="companion-cards__likes-toggle companion-cards__likes-toggle--active" aria-label="Поставить/снять лайк">
+                <svg class="companion-cards__likes-icon companion-cards__likes-icon--active" width="13" height="13" viewBox="0 0 13 13" fill="none">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M6.31915 5.1042L7.00392 3.73777C7.17396 3.39941 7.46885 2.91288 7.8863 2.51952C8.29685 2.13228 8.7886 1.86877 9.38298 1.86877C10.6667 1.86877 11.6809 2.88156 11.6809 4.09905C11.6809 5.024 11.2565 5.67704 10.25 6.67302C9.99192 6.92813 9.69779 7.20386 9.37226 7.50785C8.52358 8.30219 7.46809 9.29054 6.31915 10.6119C5.17021 9.29054 4.11473 8.30219 3.26604 7.50785C2.94051 7.20386 2.64562 6.92737 2.38826 6.67302C1.38179 5.67704 0.957448 5.024 0.957448 4.09905C0.957448 2.88156 1.97158 1.86877 3.25532 1.86877C3.8497 1.86877 4.34145 2.13228 4.752 2.51952C5.16945 2.91288 5.46434 3.39941 5.63439 3.73777L6.31915 5.1042ZM6.61941 11.4376C6.58252 11.4811 6.53654 11.5161 6.48468 11.5402C6.43283 11.5642 6.37633 11.5766 6.31915 11.5766C6.26197 11.5766 6.20548 11.5642 6.15362 11.5402C6.10176 11.5161 6.05578 11.4811 6.0189 11.4376C4.7926 9.98483 3.68273 8.94607 2.76894 8.09139C1.18724 6.61039 0.19149 5.67933 0.19149 4.09905C0.19149 2.44544 1.56255 1.10498 3.25532 1.10498C4.48085 1.10498 5.33796 1.90696 5.86264 2.63867C6.06179 2.91746 6.21345 3.18555 6.31915 3.39636C6.45166 3.13252 6.60428 2.87922 6.77566 2.63867C7.30034 1.9062 8.15745 1.10498 9.38298 1.10498C11.0757 1.10498 12.4468 2.44544 12.4468 4.09905C12.4468 5.67933 11.4511 6.61039 9.86937 8.09139C8.95558 8.94683 7.84571 9.98559 6.61941 11.4368V11.4376Z" fill="#192144"/>
+                </svg>
+              </a>
               <span class="companion-cards__likes-amount">1,5 M</span>
             </div>
             <ul class="companion-cards__hashtags-list">
@@ -975,7 +994,9 @@
               </li>
             </ul>
             <div class="companion-cards__category-wrapper companion-cards__category-wrapper--locations">
-              <h4 class="companion-cards__category-title">хочет посетить:</h4>
+              <h4 class="companion-cards__category-title">
+                <span class="companion-cards__category-title-text">хочет посетить:</span>
+              </h4>
               <ul class="companion-cards__countries-list">
                 <li class="companion-cards__countries-item">
                   <p class="companion-cards__country-name companion-cards__country-name--sri-lanka">Шри-Ланка</p>
@@ -989,8 +1010,10 @@
               </ul>
             </div>
             <div class="companion-cards__transport-level-wrapper">
-              <div class="companion-cards__category-wrapper">
-                <h4 class="companion-cards__category-title">транспорт:</h4>
+              <div class="companion-cards__category-wrapper companion-cards__category-wrapper--transport">
+                <h4 class="companion-cards__category-title">
+                  <span class="companion-cards__category-title-text">транспорт:</span>
+                </h4>
                 <ul class="companion-cards__transport-list">
                   <li class="companion-cards__transport-item">
                     <svg class="companion-cards__transport-icon companion-cards__transport-icon--airplane companion-cards__transport-icon--active" viewBox="0 0 21 23" fill="none" opacity="0.15">
@@ -1018,8 +1041,10 @@
                   </li>
                 </ul>
               </div>
-              <div class="companion-cards__category-wrapper">
-                <h4 class="companion-cards__category-title">левел:</h4>
+              <div class="companion-cards__category-wrapper companion-cards__category-wrapper--level">
+                <h4 class="companion-cards__category-title">
+                  <span class="companion-cards__category-title-text companion-cards__category-title-text--level">левел:</span>
+                </h4>
                 <span class="companion-cards__level-value">99</span>
               </div>
             </div>
@@ -1027,15 +1052,19 @@
           </li>
           <li class="companion-cards__item">
             <a class="companion-cards__photo-wrapper" href="#">
-              <img src="https://via.placeholder.com/70x70" width="70" height="70" alt="Фотография Пети Дёмина">
+              <img src="../img/companion-cards-demin-mobile.png" width="70" height="70" alt="Фотография Пети Дёмина">
             </a>
-            <a class="companion-cards__profile-link" href="#">
-              <h3 class="companion-cards__profile-name companion-cards__profile-name--offline">
+            <a class="companion-cards__profile-link companion-cards__profile-link--offline" href="#">
+              <h3 class="companion-cards__profile-name">
                 <span class="companion-cards__profile-name-text">Петя Демин</span>
               </h3>
             </a>
             <div class="companion-cards__likes-wrapper">
-              <div class="companion-cards__likes-icon"></div>
+              <a class="companion-cards__likes-toggle" aria-label="Поставить/снять лайк">
+                <svg class="companion-cards__likes-icon companion-cards__likes-icon--active" width="13" height="13" viewBox="0 0 13 13" fill="none">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M6.31915 5.1042L7.00392 3.73777C7.17396 3.39941 7.46885 2.91288 7.8863 2.51952C8.29685 2.13228 8.7886 1.86877 9.38298 1.86877C10.6667 1.86877 11.6809 2.88156 11.6809 4.09905C11.6809 5.024 11.2565 5.67704 10.25 6.67302C9.99192 6.92813 9.69779 7.20386 9.37226 7.50785C8.52358 8.30219 7.46809 9.29054 6.31915 10.6119C5.17021 9.29054 4.11473 8.30219 3.26604 7.50785C2.94051 7.20386 2.64562 6.92737 2.38826 6.67302C1.38179 5.67704 0.957448 5.024 0.957448 4.09905C0.957448 2.88156 1.97158 1.86877 3.25532 1.86877C3.8497 1.86877 4.34145 2.13228 4.752 2.51952C5.16945 2.91288 5.46434 3.39941 5.63439 3.73777L6.31915 5.1042ZM6.61941 11.4376C6.58252 11.4811 6.53654 11.5161 6.48468 11.5402C6.43283 11.5642 6.37633 11.5766 6.31915 11.5766C6.26197 11.5766 6.20548 11.5642 6.15362 11.5402C6.10176 11.5161 6.05578 11.4811 6.0189 11.4376C4.7926 9.98483 3.68273 8.94607 2.76894 8.09139C1.18724 6.61039 0.19149 5.67933 0.19149 4.09905C0.19149 2.44544 1.56255 1.10498 3.25532 1.10498C4.48085 1.10498 5.33796 1.90696 5.86264 2.63867C6.06179 2.91746 6.21345 3.18555 6.31915 3.39636C6.45166 3.13252 6.60428 2.87922 6.77566 2.63867C7.30034 1.9062 8.15745 1.10498 9.38298 1.10498C11.0757 1.10498 12.4468 2.44544 12.4468 4.09905C12.4468 5.67933 11.4511 6.61039 9.86937 8.09139C8.95558 8.94683 7.84571 9.98559 6.61941 11.4368V11.4376Z" fill="#192144"/>
+                </svg>
+              </a>
               <span class="companion-cards__likes-amount">1500</span>
             </div>
             <ul class="companion-cards__hashtags-list">
@@ -1049,9 +1078,6 @@
                 <a class="companion-cards__hashtags-link">футбол</a>
               </li>
               <li class="companion-cards__hashtags-item">
-                <a class="companion-cards__hashtags-link">футбол</a>
-              </li>
-              <li class="companion-cards__hashtags-item">
                 <a class="companion-cards__hashtags-link">концерт</a>
               </li>
               <li class="companion-cards__hashtags-item">
@@ -1059,7 +1085,9 @@
               </li>
             </ul>
             <div class="companion-cards__category-wrapper companion-cards__category-wrapper--locations">
-              <h4 class="companion-cards__category-title">хочет посетить:</h4>
+              <h4 class="companion-cards__category-title">
+                <span class="companion-cards__category-title-text">хочет посетить:</span>
+              </h4>
               <ul class="companion-cards__countries-list">
                 <li class="companion-cards__countries-item">
                   <p class="companion-cards__country-name companion-cards__country-name--belgium">Бельгия</p>
@@ -1070,8 +1098,10 @@
               </ul>
             </div>
             <div class="companion-cards__transport-level-wrapper">
-              <div class="companion-cards__category-wrapper">
-                <h4 class="companion-cards__category-title">транспорт:</h4>
+              <div class="companion-cards__category-wrapper companion-cards__category-wrapper--transport">
+                <h4 class="companion-cards__category-title">
+                  <span class="companion-cards__category-title-text">транспорт:</span>
+                </h4>
                 <ul class="companion-cards__transport-list">
                   <li class="companion-cards__transport-item">
                     <svg class="companion-cards__transport-icon companion-cards__transport-icon--airplane companion-cards__transport-icon--active" viewBox="0 0 21 23" fill="none" opacity="0.15">
@@ -1099,8 +1129,10 @@
                   </li>
                 </ul>
               </div>
-              <div class="companion-cards__category-wrapper">
-                <h4 class="companion-cards__category-title">левел:</h4>
+              <div class="companion-cards__category-wrapper companion-cards__category-wrapper--level">
+                <h4 class="companion-cards__category-title">
+                  <span class="companion-cards__category-title-text companion-cards__category-title-text--level">левел:</span>
+                </h4>
                 <span class="companion-cards__level-value">80</span>
               </div>
             </div>
@@ -1108,15 +1140,19 @@
           </li>
           <li class="companion-cards__item">
             <a class="companion-cards__photo-wrapper" href="#">
-              <img src="https://via.placeholder.com/70x70" width="70" height="70" alt="Фотография Марка Смолова">
+              <img src="../img/companion-cards-smolov-mobile.png" width="70" height="70" alt="Фотография Марка Смолова">
             </a>
-            <a class="companion-cards__profile-link" href="#">
-              <h3 class="companion-cards__profile-name companion-cards__profile-name--offline">
+            <a class="companion-cards__profile-link companion-cards__profile-link--offline" href="#">
+              <h3 class="companion-cards__profile-name">
                 <span class="companion-cards__profile-name-text">Марк Смолов</span>
               </h3>
             </a>
             <div class="companion-cards__likes-wrapper">
-              <div class="companion-cards__likes-icon"></div>
+              <a class="companion-cards__likes-toggle" aria-label="Поставить/снять лайк">
+                <svg class="companion-cards__likes-icon" width="13" height="13" viewBox="0 0 13 13" fill="none">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M6.31915 5.1042L7.00392 3.73777C7.17396 3.39941 7.46885 2.91288 7.8863 2.51952C8.29685 2.13228 8.7886 1.86877 9.38298 1.86877C10.6667 1.86877 11.6809 2.88156 11.6809 4.09905C11.6809 5.024 11.2565 5.67704 10.25 6.67302C9.99192 6.92813 9.69779 7.20386 9.37226 7.50785C8.52358 8.30219 7.46809 9.29054 6.31915 10.6119C5.17021 9.29054 4.11473 8.30219 3.26604 7.50785C2.94051 7.20386 2.64562 6.92737 2.38826 6.67302C1.38179 5.67704 0.957448 5.024 0.957448 4.09905C0.957448 2.88156 1.97158 1.86877 3.25532 1.86877C3.8497 1.86877 4.34145 2.13228 4.752 2.51952C5.16945 2.91288 5.46434 3.39941 5.63439 3.73777L6.31915 5.1042ZM6.61941 11.4376C6.58252 11.4811 6.53654 11.5161 6.48468 11.5402C6.43283 11.5642 6.37633 11.5766 6.31915 11.5766C6.26197 11.5766 6.20548 11.5642 6.15362 11.5402C6.10176 11.5161 6.05578 11.4811 6.0189 11.4376C4.7926 9.98483 3.68273 8.94607 2.76894 8.09139C1.18724 6.61039 0.19149 5.67933 0.19149 4.09905C0.19149 2.44544 1.56255 1.10498 3.25532 1.10498C4.48085 1.10498 5.33796 1.90696 5.86264 2.63867C6.06179 2.91746 6.21345 3.18555 6.31915 3.39636C6.45166 3.13252 6.60428 2.87922 6.77566 2.63867C7.30034 1.9062 8.15745 1.10498 9.38298 1.10498C11.0757 1.10498 12.4468 2.44544 12.4468 4.09905C12.4468 5.67933 11.4511 6.61039 9.86937 8.09139C8.95558 8.94683 7.84571 9.98559 6.61941 11.4368V11.4376Z" fill="#192144"/>
+                </svg>
+              </a>
               <span class="companion-cards__likes-amount">170</span>
             </div>
             <ul class="companion-cards__hashtags-list">
@@ -1137,7 +1173,9 @@
               </li>
             </ul>
             <div class="companion-cards__category-wrapper companion-cards__category-wrapper--locations">
-              <h4 class="companion-cards__category-title">хочет посетить:</h4>
+              <h4 class="companion-cards__category-title">
+                <span class="companion-cards__category-title-text">хочет посетить:</span>
+              </h4>
               <ul class="companion-cards__countries-list">
                 <li class="companion-cards__countries-item">
                   <p class="companion-cards__country-name companion-cards__country-name--usa">США</p>
@@ -1151,8 +1189,10 @@
               </ul>
             </div>
             <div class="companion-cards__transport-level-wrapper">
-              <div class="companion-cards__category-wrapper">
-                <h4 class="companion-cards__category-title">транспорт:</h4>
+              <div class="companion-cards__category-wrapper companion-cards__category-wrapper--transport">
+                <h4 class="companion-cards__category-title">
+                  <span class="companion-cards__category-title-text">транспорт:</span>
+                </h4>
                 <ul class="companion-cards__transport-list">
                   <li class="companion-cards__transport-item">
                     <svg class="companion-cards__transport-icon companion-cards__transport-icon--airplane companion-cards__transport-icon--active" viewBox="0 0 21 23" fill="none" opacity="0.15">
@@ -1180,8 +1220,10 @@
                   </li>
                 </ul>
               </div>
-              <div class="companion-cards__category-wrapper">
-                <h4 class="companion-cards__category-title">левел:</h4>
+              <div class="companion-cards__category-wrapper companion-cards__category-wrapper--level">
+                <h4 class="companion-cards__category-title">
+                  <span class="companion-cards__category-title-text companion-cards__category-title-text--level">левел:</span>
+                </h4>
                 <span class="companion-cards__level-value">25</span>
               </div>
             </div>
@@ -1189,15 +1231,19 @@
           </li>
           <li class="companion-cards__item">
             <a class="companion-cards__photo-wrapper" href="#">
-              <img src="https://via.placeholder.com/70x70" width="70" height="70" alt="Фотография Ларисы Роговой">
+              <img src="../img/companion-cards-rogovaya-mobile.png" width="70" height="70" alt="Фотография Ларисы Роговой">
             </a>
-            <a class="companion-cards__profile-link" href="#">
-              <h3 class="companion-cards__profile-name companion-cards__profile-name--online">
+            <a class="companion-cards__profile-link companion-cards__profile-link--online" href="#">
+              <h3 class="companion-cards__profile-name">
                 <span class="companion-cards__profile-name-text">Лариса Роговая</span>
               </h3>
             </a>
             <div class="companion-cards__likes-wrapper">
-              <div class="companion-cards__likes-icon"></div>
+              <a class="companion-cards__likes-toggle" aria-label="Поставить/снять лайк">
+                <svg class="companion-cards__likes-icon" width="13" height="13" viewBox="0 0 13 13" fill="none">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M6.31915 5.1042L7.00392 3.73777C7.17396 3.39941 7.46885 2.91288 7.8863 2.51952C8.29685 2.13228 8.7886 1.86877 9.38298 1.86877C10.6667 1.86877 11.6809 2.88156 11.6809 4.09905C11.6809 5.024 11.2565 5.67704 10.25 6.67302C9.99192 6.92813 9.69779 7.20386 9.37226 7.50785C8.52358 8.30219 7.46809 9.29054 6.31915 10.6119C5.17021 9.29054 4.11473 8.30219 3.26604 7.50785C2.94051 7.20386 2.64562 6.92737 2.38826 6.67302C1.38179 5.67704 0.957448 5.024 0.957448 4.09905C0.957448 2.88156 1.97158 1.86877 3.25532 1.86877C3.8497 1.86877 4.34145 2.13228 4.752 2.51952C5.16945 2.91288 5.46434 3.39941 5.63439 3.73777L6.31915 5.1042ZM6.61941 11.4376C6.58252 11.4811 6.53654 11.5161 6.48468 11.5402C6.43283 11.5642 6.37633 11.5766 6.31915 11.5766C6.26197 11.5766 6.20548 11.5642 6.15362 11.5402C6.10176 11.5161 6.05578 11.4811 6.0189 11.4376C4.7926 9.98483 3.68273 8.94607 2.76894 8.09139C1.18724 6.61039 0.19149 5.67933 0.19149 4.09905C0.19149 2.44544 1.56255 1.10498 3.25532 1.10498C4.48085 1.10498 5.33796 1.90696 5.86264 2.63867C6.06179 2.91746 6.21345 3.18555 6.31915 3.39636C6.45166 3.13252 6.60428 2.87922 6.77566 2.63867C7.30034 1.9062 8.15745 1.10498 9.38298 1.10498C11.0757 1.10498 12.4468 2.44544 12.4468 4.09905C12.4468 5.67933 11.4511 6.61039 9.86937 8.09139C8.95558 8.94683 7.84571 9.98559 6.61941 11.4368V11.4376Z" fill="#192144"/>
+                </svg>
+              </a>
               <span class="companion-cards__likes-amount">23</span>
             </div>
             <ul class="companion-cards__hashtags-list">
@@ -1215,10 +1261,12 @@
               </li>
             </ul>
             <div class="companion-cards__category-wrapper companion-cards__category-wrapper--locations">
-              <h4 class="companion-cards__category-title">хочет посетить:</h4>
+              <h4 class="companion-cards__category-title">
+                <span class="companion-cards__category-title-text">хочет посетить:</span>
+              </h4>
               <ul class="companion-cards__countries-list">
                 <li class="companion-cards__countries-item">
-                  <p class="companion-cards__country-name companion-cards__country-name--great-britain">Великобритания</p>
+                  <p class="companion-cards__country-name companion-cards__country-name--uk">Великобритания</p>
                 </li>
                 <li class="companion-cards__countries-item">
                   <p class="companion-cards__country-name companion-cards__country-name--germany">Германия</p>
@@ -1226,8 +1274,10 @@
               </ul>
             </div>
             <div class="companion-cards__transport-level-wrapper">
-              <div class="companion-cards__category-wrapper">
-                <h4 class="companion-cards__category-title">транспорт:</h4>
+              <div class="companion-cards__category-wrapper companion-cards__category-wrapper--transport">
+                <h4 class="companion-cards__category-title">
+                  <span class="companion-cards__category-title-text">транспорт:</span>
+                </h4>
                 <ul class="companion-cards__transport-list">
                   <li class="companion-cards__transport-item">
                     <svg class="companion-cards__transport-icon companion-cards__transport-icon--airplane companion-cards__transport-icon--active" viewBox="0 0 21 23" fill="none" opacity="0.15">
@@ -1255,8 +1305,10 @@
                   </li>
                 </ul>
               </div>
-              <div class="companion-cards__category-wrapper">
-                <h4 class="companion-cards__category-title">левел:</h4>
+              <div class="companion-cards__category-wrapper companion-cards__category-wrapper--level">
+                <h4 class="companion-cards__category-title">
+                  <span class="companion-cards__category-title-text companion-cards__category-title-text--level">левел:</span>
+                </h4>
                 <span class="companion-cards__level-value">50</span>
               </div>
             </div>

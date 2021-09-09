@@ -1,6 +1,6 @@
 .step-link {
   display: block;
-  color: var(--special-blue);
+  color: $special-blue;
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
@@ -8,23 +8,23 @@
   line-height: 17px;
 
   &:active {
-    color: var(--special-blue-more-or-less-opaque);
+    color: $special-blue-more-or-less-opaque;
   }
 
   &--next,
   &--submit {
     border-radius: 20px;
-    background-color: var(--basic-yellow);
+    background-color: $basic-yellow;
     padding-top: 12px;
     padding-bottom: 11px;
 
     &:hover {
-      background-color: var(--special-orange-light);
+      background-color: $special-orange-light;
     }
 
     &:active {
       border-radius: 20px;
-      background-color: var(--special-orange-light);
+      background-color: $special-orange-light;
     }
   }
 

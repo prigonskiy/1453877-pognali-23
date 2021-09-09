@@ -1,29 +1,162 @@
 .directions {
-  background-color: var(--background-lighter-blue);
-  z-index: 10;
+  position: relative;
+  background-color: $background-lighter-blue;
+  padding-top: 71px;
+  padding-bottom: 4px;
+
+  @media (min-width: $tablet) {
+    padding-top: 73px;
+    padding-bottom: 20px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 166px;
+    padding-bottom: 78px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    bottom: -30px;
+    width: 100%;
+    background-color: inherit;
+    height: 30px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+
+  @media (min-width: $tablet) {
+    &::after {
+      bottom: -60px;
+      height: 60px;
+      border-bottom-left-radius: 60px;
+      border-bottom-right-radius: 60px;
+    }
+  }
 }
 
 .directions__wrapper {
-  padding-top: 71px;
+  position: relative;
+  z-index: 1;
+
+  &::after {
+    @media (min-width: $tablet) {
+      content: "";
+      position: absolute;
+      width: 288px;
+      height: 574px;
+      top: 0;
+      right: 0;
+      background-image: url("../img/background-flags-tablet.png");
+      z-index: -1;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/background-flags-tablet@2x.png");
+        background-size: 288px auto;
+      }
+
+      @media (min-width: $desktop) {
+        top: -78px;
+      }
+    }
+  }
+}
+
+.directions__section-title {
+  margin-left: 25px;
+  margin-right: 30px;
+  margin-bottom: 19px;
+
+  @media (min-width: $tablet) {
+    margin-left: 33px;
+    margin-right: 315px;
+    margin-bottom: 57px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-left: 801px;
+    margin-bottom: 58px;
+    width: 378px;
+  }
+}
+
+.directions__section-text {
+  margin-left: 24px;
+  margin-right: 30px;
+
+  @media (min-width: $tablet) {
+    margin-left: 35px;
+    width: 378px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-left: 802px;
+    width: 378px;
+    margin-bottom: 98px;
+  }
 }
 
 .directions__country-list {
   margin-top: 60px;
-  margin-bottom: 27px;
+  margin-bottom: 25px;
+
+  @media (min-width: $tablet) {
+    position: relative;
+    margin-top: 104px;
+    margin-bottom: 46px;
+    margin-left: 36px;
+    margin-right: 36px;
+    width: calc(100% - 72px);
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 141px;
+      height: 141px;
+      top: -38px;
+      left: -36px;
+      z-index: -1;
+      border-radius: 20px;
+      background-color: $basic-light-blue;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    position: absolute;
+    margin: 0;
+    top: -5px;
+    left: 70px;
+    width: 560px;
+  }
 }
 
 .directions__country-item {
   width: 270px;
+
+  @media (min-width: $tablet) {
+    width: 100%;
+    display: flex;
+    border-radius: 20px;
+    overflow: hidden;
+  }
 }
 
 .directions__country-item:not(:nth-last-child(1)) {
   margin-bottom: 11px;
+
+  @media (min-width: $desktop) {
+    margin-bottom: 10px;
+  }
 }
 
 .directions__country-image-wrapper {
   background-color: transparent;
   margin: 0;
   padding: 0;
+
+  @media (min-width: $tablet) {
+    order: 2;
+  }
 }
 
 .directions__country-image {
@@ -31,14 +164,25 @@
 }
 
 .directions__country-information {
-  background-color: var(--basic-white);
+  background-color: $basic-white;
+  box-sizing: border-box;
   position: relative;
   border-radius: 10px;
+  min-height: 89px;
   padding-top: 26px;
-  padding-bottom: 24px;
+  padding-bottom: 6px;
   margin-top: -11px;
   padding-left: 24px;
   padding-right: 24px;
+
+  @media (min-width: $tablet) {
+    width: 432px;
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+    z-index: 2;
+    height: 140px;
+  }
 
   &::after {
     content: "";
@@ -49,56 +193,106 @@
     height: 25px;
     background-repeat: no-repeat;
     z-index: 0;
+
+    @media (min-width: $tablet) {
+      top: 17px;
+      right: -35px;
+      left: auto;
+      width: 70px;
+      height: 47px;
+    }
   }
 
   &--thailand {
     &::after {
       background-image: url("../img/flag-thailand-mobile.png");
+
+      @media (min-width: $tablet) {
+        background-image: url("../img/flag-thailand-tablet.png");
+      }
     }
   }
 
   &--france {
     &::after {
       background-image: url("../img/flag-france-mobile.png");
+
+      @media (min-width: $tablet) {
+        background-image: url("../img/flag-france-tablet.png");
+      }
     }
   }
 
   &--czech {
     &::after {
       background-image: url("../img/flag-czech-mobile.png");
+
+      @media (min-width: $tablet) {
+        background-image: url("../img/flag-czech-tablet.png");
+      }
     }
   }
 }
 
 .directions__country-name {
   margin: 0;
-  color: var(--basic-black);
+  color: $basic-black;
   font-weight: 700;
   font-size: 21px;
   line-height: 21px;
   margin-bottom: 2px;
+
+  @media (min-width: $tablet) {
+    font-size: 24px;
+    line-height: 24px;
+    margin: 0;
+    padding: 0;
+    margin-top: 30px;
+    margin-left: 29px;
+    margin-right: 64px;
+    margin-bottom: 5px;
+  }
 }
 
 .directions__country-motto {
   margin: 0;
   padding: 0;
-  color: var(--basic-grey-opaque);
+  color: $basic-grey-opaque;
   font-weight: 500;
   font-size: 16px;
   line-height: 18px;
+  width: 160px;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 20px;
+    margin-left: 29px;
+    margin-bottom: 17px;
+    width: 300px;
+  }
 }
 
 .directions__country-likes {
   position: absolute;
   top: 28px;
-  right: 24px;
+  left: 185px;
   margin: 0;
   padding: 0;
   margin-left: 19px;
-  color: var(--basic-grey-opaque);
+  color: $basic-grey-opaque;
   font-weight: 500;
   font-size: 16px;
   line-height: 20px;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    position: relative;
+    top: auto;
+    bottom: auto;
+    left: auto;
+    right: auto;
+    margin-left: 58px;
+  }
 
   &::before {
     content: "";
@@ -109,5 +303,27 @@
     height: 14px;
     top: 2px;
     left: -19px;
+
+    @media (min-width: $tablet) {
+      width: 24px;
+      height: 24px;
+      background-size: 100% 100%;
+      left: -32px;
+      top: -3px;
+    }
+  }
+}
+
+.directions__section-link {
+  @media (min-width: $tablet) {
+    margin-right: 35px;
+    margin-left: 35px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 275px;
+    margin: 0;
+    margin-left: 803px;
+    box-sizing: border-box;
   }
 }

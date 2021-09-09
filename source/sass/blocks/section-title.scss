@@ -1,21 +1,23 @@
 .section-title {
-  color: var(--special-orange-dark);
+  color: $special-orange-dark;
   font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;
   margin: 0;
-  margin-left: 25px;
-  margin-right: 25px;
-  margin-bottom: 19px;
 
-  &--rates {
-    width: 110px;
+  @media (min-width: $tablet) {
+    font-size: 45px;
+    line-height: 45px;
   }
 
   &--form {
-    color: var(--special-blue);
     font-size: 24px;
     line-height: 24px;
-    margin-bottom: 29px;
-    margin-left: 0;
-    margin-right: 80px;
+    color: $special-blue;
+
+    @media (min-width: $tablet) {
+      font-size: 36px;
+      line-height: 36px;
+    }
   }
 }
