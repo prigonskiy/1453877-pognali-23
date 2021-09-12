@@ -31,6 +31,7 @@ $background-dark-grey: #e6e8f1;
 $background-light-grey: #e5e5e5;
 $background-lighter-grey: #dfe3f0;
 $background-medium-grey: #cbced9;
+$background-medium-grey-opaque: rgba(203, 206, 217, 0.3);
 $special-orange-dark: #ff8d30;
 $special-orange-dark-hover: #f26926;
 $special-orange-medium: #ffa530;
@@ -49,6 +50,10 @@ $special-accent-red: #ff5c23;
 $special-border-yellow: #f3c72b;
 $special-like-pink: #f9eaea;
 $special-like-red: #f02323;
+$special-invalid-red: #f47e7e;
+$special-invalid-text-red: #ff0000;
+$special-invalid-background-red: #ffefef;
+$shadow-desktop-blue: rgba(54, 80, 148, 0.18);
 
 //breakpoints
 $mobile: 767px;

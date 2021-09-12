@@ -9,6 +9,20 @@
     height: 100px;
     background-color: transparent;
   }
+
+  @media (min-width: $tablet) {
+    &--form {
+      width: 94px;
+      height: 94px;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    &--form {
+      width: 95px;
+      height: 95px;
+    }
+  }
 }
 
 .level__value {
@@ -27,6 +41,21 @@
     line-height: 38px;
     color: $basic-dark-blue;
   }
+
+  @media (min-width: $tablet) {
+    &--form {
+      padding-top: 20px;
+      margin-bottom: 12px;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    &--form {
+      padding-top: 22px;
+      margin-bottom: 4px;
+      color: $basic-white;
+    }
+  }
 }
 
 .level__legend {
@@ -41,5 +70,9 @@
     font-size: 18px;
     line-height: 18px;
     color: $basic-grey;
+  }
+
+  @media (min-width: $desktop) {
+    color: $basic-white;
   }
 }

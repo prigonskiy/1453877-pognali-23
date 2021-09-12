@@ -16,6 +16,11 @@
   &:active {
     background-color: $basic-light-blue;
   }
+
+  @media (min-width: $tablet) {
+    width: 44px;
+    height: 44px;
+  }
 }
 
 .transport-inputs__label {
@@ -32,6 +37,11 @@
   top: 50%;
   transform: translate(-50%, -50%);
   opacity: 1;
+
+  @media (min-width: $tablet) {
+    width: 23px;
+    height: 23px;
+  }
 }
 
 .transport-inputs__input ~ .transport-inputs:hover .transport-inputs__icon {

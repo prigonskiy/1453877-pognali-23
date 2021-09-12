@@ -1,9 +1,50 @@
 .my-plans {
   background-color: $background-lighter-grey;
+  padding-top: 28px;
+  padding-bottom: 60px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+
+  @media (min-width: $tablet) {
+    padding-top: 57px;
+    padding-bottom: 106px;
+  }
+
+  @media (min-width: $desktop) {
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+    padding-top: 54px;
+    padding-bottom: 124px;
+  }
+}
+
+.my-plans__section-title {
+  @media (min-width: $tablet) {
+    margin-left: 35px;
+    margin-right: 35px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-left: 71px;
+    margin-right: 71px;
+  }
 }
 
 .my-plans__list {
   counter-reset: my-plans-counter;
+  margin-top: 29px;
+
+  @media (min-width: $tablet) {
+    margin-top: 48px;
+    margin-left: 35px;
+    margin-right: 35px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: 49px;
+    margin-left: 71px;
+    margin-right: 71px;
+  }
 }
 
 .my-plans__item {
@@ -20,6 +61,22 @@
     margin-bottom: 10px;
   }
 
+  @media (min-width: $tablet) {
+    padding-top: 40px;
+    padding-bottom: 15px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 37px;
+    padding-bottom: 36px;
+    padding-left: 42px;
+    padding-right: 42px;
+    display: flex;
+    justify-content: space-between;
+  }
+
   &::before {
     position: absolute;
     content: counter(my-plans-counter) ". ";
@@ -29,6 +86,20 @@
     font-weight: 500;
     font-size: 16px;
     line-height: 16px;
+
+    @media (min-width: $tablet) {
+      top: 43px;
+      left: auto;
+      right: 32px;
+      font-size: 20px;
+      line-height: 20px;
+    }
+
+    @media (min-width: $desktop) {
+      top: 40px;
+      left: 43px;
+      right: auto;
+    }
   }
 }
 
@@ -41,6 +112,38 @@
   font-weight: 700;
   font-size: 16px;
   line-height: 16px;
+
+  @media (min-width: $tablet) {
+    font-size: 24px;
+    line-height: 24px;
+    margin-bottom: 34px;
+    padding-left: 0;
+    margin-left: 40px;
+    margin-right: 88px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-left: 53px;
+    margin-bottom: 0;
+  }
+}
+
+.my-plans__info-wrapper {
+  @media (min-width: $tablet) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid $background-medium-grey-opaque;
+    padding-top: 19px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 0;
+    border: none;
+    width: 590px;
+  }
 }
 
 .my-plans__companions {
@@ -53,6 +156,13 @@
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: $special-blue;
+
+  @media (min-width: $tablet) {
+    margin: 0;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+  }
 }
 
 .my-plans__dates {
@@ -65,6 +175,13 @@
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: $special-blue;
+
+  @media (min-width: $tablet) {
+    margin: 0;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.06em;
+  }
 }
 
 .my-plans__change {
@@ -74,4 +191,11 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   opacity: 0.3;
+
+  @media (min-width: $tablet) {
+    margin: 0;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+  }
 }

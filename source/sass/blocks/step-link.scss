@@ -1,37 +1,80 @@
 .step-link {
   display: block;
-  color: $special-blue;
-  font-weight: 700;
-  text-align: center;
-  text-transform: uppercase;
+  position: relative;
   font-size: 17px;
-  line-height: 17px;
+  line-height: 30px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: $special-blue;
+  box-sizing: border-box;
+  text-align: center;
+  width: 100%;
 
-  &:active {
-    color: $special-blue-more-or-less-opaque;
+  @media (min-width: $tablet) {
+    font-size: 24px;
+    line-height: 24px;
+    text-transform: none;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      background-image: url("../img/icon-triangle.svg");
+    }
   }
 
-  &--next,
   &--submit {
-    border-radius: 20px;
+    cursor: pointer;
+    border: none;
+    font-family: inherit;
+  }
+
+  &--submit,
+  &--next {
     background-color: $basic-yellow;
-    padding-top: 12px;
-    padding-bottom: 11px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 20px;
+
+    @media (min-width: $tablet) {
+      padding-top: 28px;
+      padding-bottom: 28px;
+      padding-left: 34px;
+      text-align: left;
+      width: 286px;
+
+      &::after {
+        right: 37px;
+      }
+    }
 
     &:hover {
       background-color: $special-orange-light;
     }
+  }
 
-    &:active {
-      border-radius: 20px;
-      background-color: $special-orange-light;
+  &--previous {
+    @media (min-width: $tablet) {
+      padding-left: 35px;
+      width: 182px;
+
+      &::after {
+        transform: translateY(-50%) rotate(180deg);
+        left: 0;
+      }
     }
   }
 
-  &--submit {
-    font-family: inherit;
-    border: none;
-    cursor: pointer;
-    width: 100%;
+  &:active {
+    color: $special-blue-opaque;
+
+    &::after {
+      opacity: 0.3;
+    }
   }
 }
