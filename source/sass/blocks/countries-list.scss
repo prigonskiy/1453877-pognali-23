@@ -33,9 +33,6 @@
   flex-wrap: wrap;
   width: 100%;
   box-sizing: border-box;
-  border-left: 1px solid $background-medium-grey;
-  border-right: 1px solid $background-medium-grey;
-  border-bottom: 1px solid $background-medium-grey;
 
   &--filter {
     background-color: $basic-white;
@@ -48,12 +45,24 @@
     margin-right: 80px;
     box-sizing: content-box;
     width: 262px;
+
+    &--filter {
+      background-color: transparent;
+      border: none;
+      width: 390px;
+      margin-right: 0;
+      justify-content: space-between;
+    }
   }
 
   @media (min-width: $desktop) {
     width: 361px;
     margin-left: 26px;
     margin-right: 128px;
+
+    &--filter {
+      display: none;
+    }
   }
 }
 
@@ -75,6 +84,15 @@
 
   @media (min-width: $desktop) {
     width: 215px;
+
+    &--filter {
+      width: auto;
+      display: flex;
+      flex-wrap: wrap;
+      padding-left: 35px;
+      padding-right: 35px;
+      align-items: flex-start;
+    }
   }
 }
 
@@ -91,6 +109,15 @@
 
   @media (min-width: $tablet) {
     border-bottom: none;
+    padding: 0;
+  }
+
+  @media (min-width: $desktop) {
+    &--filter {
+      display: block;
+      width: 250px;
+      margin-bottom: 50px;
+    }
   }
 }
 
@@ -102,28 +129,41 @@
       margin-bottom: 10px;
     }
   }
+
+  &--filter {
+    &:not(:nth-last-child(1)) {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .countries-list__sorted-names-letter {
   display: none;
+
+  @media (min-width: $desktop) {
+    display: block;
+    font-size: 60px;
+    line-height: 60px;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 30px;
+    font-weight: 700;
+    color: $basic-blue;
+  }
 }
 
 .countries-list__letters-item {
   display: flex;
-  width: 20%;
+  width: calc(100% / 5);
   box-sizing: border-box;
-  height: 40px;
+  height: 41px;
   align-items: center;
   justify-content: center;
-  border-right: 1px solid $background-medium-grey;
+  border-left: 1px solid $background-medium-grey;
   border-bottom: 1px solid $background-medium-grey;
 
   &:nth-child(5n) {
-    border-right: none;
-  }
-
-  &:nth-child(n+21) {
-    border-bottom: none;
+    border-right: 1px solid $background-medium-grey;
   }
 
   @media (min-width: $tablet) {
@@ -139,6 +179,24 @@
 
     &:nth-child(5n) {
       border-right: 1px solid $background-medium-grey;
+    }
+
+    &--filter {
+      border: none;
+      height: auto;
+      width: 78px;
+
+      &:not(:nth-child(n+21)) {
+        margin-bottom: 36px;
+      }
+
+      &:nth-child(n+21) {
+        border-bottom: none;
+      }
+
+      &:nth-child(5n) {
+        border: none;
+      }
     }
   }
 
@@ -174,6 +232,14 @@
   @media (min-width: $tablet) {
     font-size: 20px;
     line-height: 20px;
+
+    &--filter {
+      font-size: 60px;
+      line-height: 60px;
+      color: $basic-blue-opaque;
+      font-weight: 700;
+      justify-content: flex-start;
+    }
   }
 }
 
@@ -193,6 +259,12 @@
   @media (min-width: $tablet) {
     font-size: 20px;
     line-height: 20px;
+  }
+
+  &--filter {
+    @media (min-width: $tablet) {
+      line-height: 30px;
+    }
   }
 }
 
@@ -229,6 +301,15 @@
 .countries-list__radio-letter--letter1:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter1"] {
   background-color: $special-blue;
   color: $basic-white;
+
+  @media (min-width: $tablet) {
+    background-color: transparent;
+    color: $basic-blue;
+
+    &::after {
+      display: none;
+    }
+  }
 }
 
 .countries-list__radio-letter--letter1:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter1"]::after {
@@ -275,6 +356,15 @@
 .countries-list__radio-letter--letter2:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter2"] {
   background-color: $special-blue;
   color: $basic-white;
+
+  @media (min-width: $tablet) {
+    background-color: transparent;
+    color: $basic-blue;
+
+    &::after {
+      display: none;
+    }
+  }
 }
 
 .countries-list__radio-letter--letter2:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter2"]::after {
@@ -321,6 +411,15 @@
 .countries-list__radio-letter--letter3:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter3"] {
   background-color: $special-blue;
   color: $basic-white;
+
+  @media (min-width: $tablet) {
+    background-color: transparent;
+    color: $basic-blue;
+
+    &::after {
+      display: none;
+    }
+  }
 }
 
 .countries-list__radio-letter--letter3:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter3"]::after {
@@ -367,6 +466,15 @@
 .countries-list__radio-letter--letter4:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter4"] {
   background-color: $special-blue;
   color: $basic-white;
+
+  @media (min-width: $tablet) {
+    background-color: transparent;
+    color: $basic-blue;
+
+    &::after {
+      display: none;
+    }
+  }
 }
 
 .countries-list__radio-letter--letter4:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter4"]::after {
@@ -413,6 +521,15 @@
 .countries-list__radio-letter--letter5:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter5"] {
   background-color: $special-blue;
   color: $basic-white;
+
+  @media (min-width: $tablet) {
+    background-color: transparent;
+    color: $basic-blue;
+
+    &::after {
+      display: none;
+    }
+  }
 }
 
 .countries-list__radio-letter--letter5:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter5"]::after {
@@ -459,6 +576,15 @@
 .countries-list__radio-letter--letter6:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter6"] {
   background-color: $special-blue;
   color: $basic-white;
+
+  @media (min-width: $tablet) {
+    background-color: transparent;
+    color: $basic-blue;
+
+    &::after {
+      display: none;
+    }
+  }
 }
 
 .countries-list__radio-letter--letter6:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter6"]::after {
@@ -505,6 +631,15 @@
 .countries-list__radio-letter--letter7:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter7"] {
   background-color: $special-blue;
   color: $basic-white;
+
+  @media (min-width: $tablet) {
+    background-color: transparent;
+    color: $basic-blue;
+
+    &::after {
+      display: none;
+    }
+  }
 }
 
 .countries-list__radio-letter--letter7:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter7"]::after {
@@ -551,6 +686,15 @@
 .countries-list__radio-letter--letter8:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter8"] {
   background-color: $special-blue;
   color: $basic-white;
+
+  @media (min-width: $tablet) {
+    background-color: transparent;
+    color: $basic-blue;
+
+    &::after {
+      display: none;
+    }
+  }
 }
 
 .countries-list__radio-letter--letter8:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter8"]::after {
@@ -597,6 +741,15 @@
 .countries-list__radio-letter--letter9:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter9"] {
   background-color: $special-blue;
   color: $basic-white;
+
+  @media (min-width: $tablet) {
+    background-color: transparent;
+    color: $basic-blue;
+
+    &::after {
+      display: none;
+    }
+  }
 }
 
 .countries-list__radio-letter--letter9:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter9"]::after {
@@ -643,6 +796,15 @@
 .countries-list__radio-letter--letter10:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter10"] {
   background-color: $special-blue;
   color: $basic-white;
+
+  @media (min-width: $tablet) {
+    background-color: transparent;
+    color: $basic-blue;
+
+    &::after {
+      display: none;
+    }
+  }
 }
 
 .countries-list__radio-letter--letter10:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter10"]::after {
@@ -689,6 +851,15 @@
 .countries-list__radio-letter--letter11:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter11"] {
   background-color: $special-blue;
   color: $basic-white;
+
+  @media (min-width: $tablet) {
+    background-color: transparent;
+    color: $basic-blue;
+
+    &::after {
+      display: none;
+    }
+  }
 }
 
 .countries-list__radio-letter--letter11:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter11"]::after {
@@ -735,6 +906,15 @@
 .countries-list__radio-letter--letter12:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter12"] {
   background-color: $special-blue;
   color: $basic-white;
+
+  @media (min-width: $tablet) {
+    background-color: transparent;
+    color: $basic-blue;
+
+    &::after {
+      display: none;
+    }
+  }
 }
 
 .countries-list__radio-letter--letter12:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter12"]::after {
@@ -781,6 +961,15 @@
 .countries-list__radio-letter--letter13:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter13"] {
   background-color: $special-blue;
   color: $basic-white;
+
+  @media (min-width: $tablet) {
+    background-color: transparent;
+    color: $basic-blue;
+
+    &::after {
+      display: none;
+    }
+  }
 }
 
 .countries-list__radio-letter--letter13:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter13"]::after {
@@ -827,6 +1016,15 @@
 .countries-list__radio-letter--letter14:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter14"] {
   background-color: $special-blue;
   color: $basic-white;
+
+  @media (min-width: $tablet) {
+    background-color: transparent;
+    color: $basic-blue;
+
+    &::after {
+      display: none;
+    }
+  }
 }
 
 .countries-list__radio-letter--letter14:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter14"]::after {
@@ -873,6 +1071,15 @@
 .countries-list__radio-letter--letter15:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter15"] {
   background-color: $special-blue;
   color: $basic-white;
+
+  @media (min-width: $tablet) {
+    background-color: transparent;
+    color: $basic-blue;
+
+    &::after {
+      display: none;
+    }
+  }
 }
 
 .countries-list__radio-letter--letter15:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter15"]::after {
@@ -919,6 +1126,15 @@
 .countries-list__radio-letter--letter16:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter16"] {
   background-color: $special-blue;
   color: $basic-white;
+
+  @media (min-width: $tablet) {
+    background-color: transparent;
+    color: $basic-blue;
+
+    &::after {
+      display: none;
+    }
+  }
 }
 
 .countries-list__radio-letter--letter16:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter16"]::after {
@@ -965,6 +1181,15 @@
 .countries-list__radio-letter--letter17:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter17"] {
   background-color: $special-blue;
   color: $basic-white;
+
+  @media (min-width: $tablet) {
+    background-color: transparent;
+    color: $basic-blue;
+
+    &::after {
+      display: none;
+    }
+  }
 }
 
 .countries-list__radio-letter--letter17:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter17"]::after {
@@ -1011,6 +1236,15 @@
 .countries-list__radio-letter--letter18:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter18"] {
   background-color: $special-blue;
   color: $basic-white;
+
+  @media (min-width: $tablet) {
+    background-color: transparent;
+    color: $basic-blue;
+
+    &::after {
+      display: none;
+    }
+  }
 }
 
 .countries-list__radio-letter--letter18:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter18"]::after {
@@ -1057,6 +1291,15 @@
 .countries-list__radio-letter--letter19:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter19"] {
   background-color: $special-blue;
   color: $basic-white;
+
+  @media (min-width: $tablet) {
+    background-color: transparent;
+    color: $basic-blue;
+
+    &::after {
+      display: none;
+    }
+  }
 }
 
 .countries-list__radio-letter--letter19:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter19"]::after {
@@ -1103,6 +1346,15 @@
 .countries-list__radio-letter--letter20:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter20"] {
   background-color: $special-blue;
   color: $basic-white;
+
+  @media (min-width: $tablet) {
+    background-color: transparent;
+    color: $basic-blue;
+
+    &::after {
+      display: none;
+    }
+  }
 }
 
 .countries-list__radio-letter--letter20:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter20"]::after {
@@ -1149,6 +1401,15 @@
 .countries-list__radio-letter--letter21:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter21"] {
   background-color: $special-blue;
   color: $basic-white;
+
+  @media (min-width: $tablet) {
+    background-color: transparent;
+    color: $basic-blue;
+
+    &::after {
+      display: none;
+    }
+  }
 }
 
 .countries-list__radio-letter--letter21:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter21"]::after {
@@ -1195,6 +1456,15 @@
 .countries-list__radio-letter--letter22:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter22"] {
   background-color: $special-blue;
   color: $basic-white;
+
+  @media (min-width: $tablet) {
+    background-color: transparent;
+    color: $basic-blue;
+
+    &::after {
+      display: none;
+    }
+  }
 }
 
 .countries-list__radio-letter--letter22:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter22"]::after {
@@ -1241,6 +1511,15 @@
 .countries-list__radio-letter--letter23:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter23"] {
   background-color: $special-blue;
   color: $basic-white;
+
+  @media (min-width: $tablet) {
+    background-color: transparent;
+    color: $basic-blue;
+
+    &::after {
+      display: none;
+    }
+  }
 }
 
 .countries-list__radio-letter--letter23:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter23"]::after {
@@ -1287,6 +1566,15 @@
 .countries-list__radio-letter--letter24:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter24"] {
   background-color: $special-blue;
   color: $basic-white;
+
+  @media (min-width: $tablet) {
+    background-color: transparent;
+    color: $basic-blue;
+
+    &::after {
+      display: none;
+    }
+  }
 }
 
 .countries-list__radio-letter--letter24:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter24"]::after {
@@ -1333,6 +1621,15 @@
 .countries-list__radio-letter--letter25:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter25"] {
   background-color: $special-blue;
   color: $basic-white;
+
+  @media (min-width: $tablet) {
+    background-color: transparent;
+    color: $basic-blue;
+
+    &::after {
+      display: none;
+    }
+  }
 }
 
 .countries-list__radio-letter--letter25:checked ~ .countries-list__letters-list .countries-list__label-letter--filter[for="letter25"]::after {

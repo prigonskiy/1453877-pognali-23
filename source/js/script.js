@@ -80,23 +80,6 @@ if (index) {
   })
 }
 
-// Companion filter {
-
-if (catalog) {
-  var filterFieldsets = document.querySelectorAll('.companion-filter__fieldset');
-
-  for (var i = 0; i < filterFieldsets.length; i++) {
-    filterFieldsets[i].classList.remove('companion-filter__fieldset--nojs');
-    filterFieldsets[i].addEventListener('click', function() {
-      if (filterFieldsets[i].classList.contains('companion-filter__fieldset--hidden')) {
-        filterFieldsets[i].classList.remove('companion-filter__fieldset--hidden');
-      } else {
-        filterFieldsets[i].classList.add('companion-filter__fieldset--hidden')
-      }
-    })
-  }
-}
-
 // Likes toggler
 
 if (catalog) {

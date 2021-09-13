@@ -2,11 +2,13 @@
   position: relative;
   background-color: $basic-dark-blue;
 
-  &--form {
+  &--not-index {
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     padding-bottom: 12px;
+  }
 
+  &--form {
     &::after {
       content: "";
       position: absolute;
@@ -18,16 +20,22 @@
     }
   }
 
+  &--catalog {
+    z-index: 50;
+  }
+
   @media (min-width: $tablet) and (max-width: $almost-desktop) {
     background-color: $header-blue;
   }
 
   @media (min-width: $tablet) {
-    &--form {
+    &--not-index {
       border-bottom-left-radius: 60px;
       border-bottom-right-radius: 60px;
       padding-bottom: 66px;
+    }
 
+    &--form {
       &::after {
         display: none;
       }
@@ -285,7 +293,7 @@
   margin-top: 94px;
   margin-bottom: 10px;
 
-  &--form {
+  &--not-index {
     margin-bottom: 0;
     text-align: left;
   }
@@ -293,7 +301,7 @@
   @media (min-width: $tablet) {
     margin-top: 162px;
 
-    &--form {
+    &--not-index {
       margin-top: 224px;
     }
   }
@@ -310,7 +318,7 @@
     padding-left: 67px;
     background-color: transparent;
 
-    &--form {
+    &--not-index {
       width: 1320px;
       margin: 0 auto;
       padding: 0;
@@ -333,7 +341,7 @@
   color: $basic-white;
   position: relative;
 
-  &--form {
+  &--not-index {
     margin-left: calc(50% - 135px);
 
     &::after {
@@ -353,7 +361,7 @@
     font-size: 60px;
     line-height: 70px;
 
-    &--form {
+    &--not-index {
       margin-left: calc(50% - 299px);
       line-height: 60px;
 
@@ -365,7 +373,7 @@
   }
 
   @media (min-width: $desktop) {
-    &--form {
+    &--not-index {
       margin: 0;
       padding: 0;
       position: relative;
