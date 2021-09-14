@@ -79,8 +79,8 @@
       </h1>
     </header>
     <main class="page-main">
-      <section class="country-filter country-filter--opened"> <!--opened closed-->
-        <div class="wrapper country-filter__wrapper country-filter__wrapper--opened"> <!--opened closed-->
+      <section class="country-filter"> <!--opened closed-->
+        <div class="wrapper country-filter__wrapper"> <!--opened closed-->
           <h2 class="country-filter__title">
             <svg class="country-filter__title-icon" width="15" height="10" viewBox="0 0 15 10" fill="none">
               <rect x="7.17391" width="7.82609" height="2" fill="#192144"/>
@@ -95,7 +95,7 @@
             </svg>
             <span class="country-filter__title-text">Фильтрация по странам:</span>
           </h2>
-          <button class="country-filter__filter-toggle country-filter__filter-toggle--opened" type="button" aria-label="Закрыть фильтр"> <!--opened closed-->
+          <button class="country-filter__filter-toggle" type="button" aria-label="Закрыть фильтр"> <!--opened closed-->
             <span class="country-filter__toggle-text country-filter__toggle-text--show">Показать все</span>
             <svg class="country-filter__toggle-icon country-filter__toggle-icon--show" width="17" height="3" viewBox="0 0 17 3" fill="none">
               <circle cx="1.5" cy="1.5" r="1.5" fill="#192144"/>
@@ -969,8 +969,20 @@
               <path d="M5 0L9.33013 4.5H0.669873L5 0Z" fill="#192144"/>
             </svg>
             <legend class="companion-filter__legend">Левел</legend>
-            👾👾👾👾👾👾👾👾👾👾
-            <!--здесь будет фильтр по диапазону-->
+            <div class="companion-filter__range-filter">
+              <div class="companion-filter__level-controls">
+                <input class="companion-filter__level-input" type="text" name="min-level" value="30">
+                <input class="companion-filter__level-input" type="text" name="min-level" value="100">
+                <div class="companion-filter__input-divider"></div>
+              </div>
+              <div class="companion-filter__range-controls">
+                <div class="companion-filter__range-scale">
+                  <div class="companion-filter__range-bar"></div>
+                </div>
+                <div class="companion-filter__range companion-filter__range--min"></div>
+                <div class="companion-filter__range companion-filter__range--max"></div>
+              </div>
+            </div>
           </fieldset>
           <button class="companion-filter__submit" type="submit">Показать</button>
         </form>
@@ -979,7 +991,14 @@
         <ul class="companion-cards__list">
           <li class="companion-cards__item">
             <a class="companion-cards__photo-wrapper" href="#">
-              <img src="../img/companion-cards-firsova-mobile.png" width="70" height="70" alt="Фотография Татьяны Фирсовой">
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/companion-cards-firsova-desktop.webp 1x, img/companion-cards-firsova-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/companion-cards-firsova-tablet.webp 1x, img/companion-cards-firsova-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/companion-cards-firsova-mobile.webp 1x, img/companion-cards-firsova-mobile@2x.webp 2x">
+                <source media="(min-width: 1440px)" srcset="img/companion-cards-firsova-desktop.png 1x, img/companion-cards-firsova-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/companion-cards-firsova-tablet.png 1x, img/companion-cards-firsova-tablet@2x.png 2x">
+                <img src="../img/companion-cards-firsova-mobile.png" srcset="../img/companion-cards-firsova-mobile@2x.png 2x" alt="Фотография Татьяны Фирсовой">
+              </picture>
             </a>
             <a class="companion-cards__profile-link companion-cards__profile-link--offline" href="#">
               <h3 class="companion-cards__profile-name">
@@ -1073,7 +1092,14 @@
           </li>
           <li class="companion-cards__item">
             <a class="companion-cards__photo-wrapper" href="#">
-              <img src="../img/companion-cards-demin-mobile.png" width="70" height="70" alt="Фотография Пети Дёмина">
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/companion-cards-demin-desktop.webp 1x, img/companion-cards-demin-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/companion-cards-demin-tablet.webp 1x, img/companion-cards-demin-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/companion-cards-demin-mobile.webp 1x, img/companion-cards-demin-mobile@2x.webp 2x">
+                <source media="(min-width: 1440px)" srcset="img/companion-cards-demin-desktop.png 1x, img/companion-cards-demin-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/companion-cards-demin-tablet.png 1x, img/companion-cards-demin-tablet@2x.png 2x">
+                <img src="../img/companion-cards-demin-mobile.png" srcset="../img/companion-cards-demin-mobile@2x.png 2x" alt="Фотография Пети Дёмина">
+              </picture>
             </a>
             <a class="companion-cards__profile-link companion-cards__profile-link--offline" href="#">
               <h3 class="companion-cards__profile-name">
@@ -1161,7 +1187,14 @@
           </li>
           <li class="companion-cards__item">
             <a class="companion-cards__photo-wrapper" href="#">
-              <img src="../img/companion-cards-smolov-mobile.png" width="70" height="70" alt="Фотография Марка Смолова">
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/companion-cards-smolov-desktop.webp 1x, img/companion-cards-smolov-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/companion-cards-smolov-tablet.webp 1x, img/companion-cards-smolov-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/companion-cards-smolov-mobile.webp 1x, img/companion-cards-smolov-mobile@2x.webp 2x">
+                <source media="(min-width: 1440px)" srcset="img/companion-cards-smolov-desktop.png 1x, img/companion-cards-smolov-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/companion-cards-smolov-tablet.png 1x, img/companion-cards-smolov-tablet@2x.png 2x">
+                <img src="../img/companion-cards-smolov-mobile.png" srcset="../img/companion-cards-smolov-mobile@2x.png 2x" alt="Фотография Марка Смолова">
+              </picture>
             </a>
             <a class="companion-cards__profile-link companion-cards__profile-link--offline" href="#">
               <h3 class="companion-cards__profile-name">
@@ -1252,7 +1285,14 @@
           </li>
           <li class="companion-cards__item">
             <a class="companion-cards__photo-wrapper" href="#">
-              <img src="../img/companion-cards-rogovaya-mobile.png" width="70" height="70" alt="Фотография Ларисы Роговой">
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/companion-cards-rogovaya-desktop.webp 1x, img/companion-cards-rogovaya-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/companion-cards-rogovaya-tablet.webp 1x, img/companion-cards-rogovaya-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/companion-cards-smolov-mobile.webp 1x, img/companion-cards-smolov-mobile@2x.webp 2x">
+                <source media="(min-width: 1440px)" srcset="img/companion-cards-rogovaya-desktop.png 1x, img/companion-cards-rogovaya-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/companion-cards-rogovaya-tablet.png 1x, img/companion-cards-rogovaya-tablet@2x.png 2x">
+                <img src="../img/companion-cards-rogovaya-mobile.png" srcset="../img/companion-cards-rogovaya-mobile@2x.png 2x" alt="Фотография Ларисы Роговой">
+              </picture>
             </a>
             <a class="companion-cards__profile-link companion-cards__profile-link--online" href="#">
               <h3 class="companion-cards__profile-name">
@@ -1336,7 +1376,13 @@
             <a class="companion-cards__call" href="#">Позвать!</a>
           </li>
         </ul>
-        <a class="companion-cards__show-more" href="#">Показать ещё</a>
+        <a class="companion-cards__show-more" href="#">
+          <svg class="companion-cards__show-more-icon" width="18" height="18" viewBox="0 0 18 18" fill="none">
+            <rect y="8.30762" width="18" height="1.38461" rx="0.692307" fill="#1D2E5B"/>
+            <rect x="8.30769" y="18" width="18" height="1.38461" rx="0.692307" transform="rotate(-90 8.30769 18)" fill="#1D2E5B"/>
+          </svg>
+          <span class="companion-cards__show-more-text">Показать ещё</span>
+        </a>
       </section>
       <section class="pagination wrapper">
         <h2 class="visually-hidden">Выбор страницы</h2>
