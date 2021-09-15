@@ -3,6 +3,7 @@
   background-color: $basic-white;
   padding-top: 7px;
   padding-bottom: 18px;
+  z-index: 50;
 
   &::after {
     position: absolute;
