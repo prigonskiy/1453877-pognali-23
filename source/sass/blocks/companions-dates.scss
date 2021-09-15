@@ -1,11 +1,73 @@
-.companions-dates__amount-controls-wrapper:not(:nth-last-child(1)) {
-  margin-bottom: 20px;
+.companions-dates {
+  @media (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: $desktop) {
+    display: grid;
+    grid-template-columns: 470px 470px;
+    grid-template-rows: auto auto auto;
+    column-gap: 60px;
+    row-gap: 0;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid $basic-border-another-gray;
+    padding-top: 30px;
+    margin-top: 55px;
+  }
 }
 
-.companions-dates__label-wrapper {
+.companions-dates__amount-controls-wrapper {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+
+  &:not(:nth-last-of-type(1)) {
+    margin-bottom: 20px;
+  }
+
+  &:nth-child(1) {
+    @media (min-width: $tablet) {
+      order: 1;
+      margin-bottom: 34px;
+    }
+
+    @media (min-width: $desktop) {
+      grid-column: 1;
+      grid-row: 1;
+      margin-bottom: 0;
+    }
+  }
+
+  &:nth-child(2) {
+    @media (min-width: $tablet) {
+      order: 3;
+      margin-top: 25px;
+    }
+
+    @media (min-width: $desktop) {
+      grid-column: 1;
+      grid-row: 2;
+      margin-top: 14px;
+    }
+
+    @media (min-width: $desktop) {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: $tablet) {
+    flex-basis: 100%;
+  }
+
+  @media (min-width: $desktop) {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+  }
 }
 
 .companions-dates__label {
@@ -17,7 +79,18 @@
   line-height: 16px;
   font-weight: 500;
   letter-spacing: 0.09em;
-  padding-bottom: 8px;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: 0.1em;
+  }
+
+  @media (min-width: $desktop) {
+    letter-spacing: 0;
+    flex-basis: 221px;
+    order: 1;
+  }
 }
 
 .companions-dates__unit {
@@ -28,10 +101,36 @@
   font-weight: 500;
   letter-spacing: 0.07em;
   opacity: 0.3;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: 0.08em;
+  }
+
+  @media (min-width: $desktop) {
+    order: 3;
+    letter-spacing: 0;
+    opacity: 1;
+    flex-grow: 1;
+    padding-left: 30px;
+  }
 }
 
 .companions-dates__number-input-wrapper {
   position: relative;
+  flex-basis: 100%;
+  margin-top: 8px;
+
+  @media (min-width: $tablet) {
+    margin-top: 24px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: 0;
+    flex-basis: 180px;
+    order: 2;
+  }
 }
 
 .companions-dates__number-change {
@@ -41,6 +140,12 @@
   top: 15px;
   width: 14px;
   height: 14px;
+
+  @media (min-width: $tablet) {
+    width: 20px;
+    height: 20px;
+    top: 25px;
+  }
 
   &--decrease {
     left: 14px;
@@ -54,6 +159,15 @@
       height: 2px;
       background-color: $another-grey;
       z-index: 2;
+    }
+
+    @media (min-width: $tablet) {
+      left: 23px;
+
+      &::after {
+        width: 20px;
+        top: 9px;
+      }
     }
   }
 
@@ -81,6 +195,20 @@
       background-color: $another-grey;
       z-index: 2;
     }
+
+    @media (min-width: $tablet) {
+      right: 23px;
+
+      &::before {
+        height: 20px;
+        right: 9px;
+      }
+
+      &::after {
+        width: 20px;
+        top: 9px;
+      }
+    }
   }
 }
 
@@ -99,6 +227,18 @@
   font-weight: 500;
   font-family: inherit;
   appearance: none;
+
+  @media (min-width: $tablet) {
+    padding-top: 22px;
+    padding-bottom: 22px;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 500;
+  }
+
+  @media (min-width: $desktop) {
+    line-height: 18px;
+  }
 
   &:hover {
     border-color: $basic-accent-another-dark-blue;
@@ -119,6 +259,18 @@
   background-color: $basic-dark-blue;
 }
 
+.companions-dates__checkbox-wrapper {
+  @media (min-width: $tablet) {
+    order: 2;
+  }
+
+  @media (min-width: $desktop) {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
+  }
+}
+
 .companions-dates__checkbox-label {
   position: relative;
   padding-left: 39px;
@@ -127,6 +279,17 @@
   color: $special-blue;
   font-size: 15px;
   line-height: 15px;
+
+  @media (min-width: $tablet) {
+    padding-left: 58px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
 
   &::before {
     position: absolute;
@@ -138,6 +301,11 @@
     border: 1px solid $background-medium-grey;
     border-radius: 4px;
     background-color: transparent;
+
+    @media (min-width: $tablet) {
+      width: 36px;
+      height: 36px;
+    }
   }
 
   &:hover {
@@ -163,6 +331,14 @@
   background-repeat: no-repeat;
   top: 7px;
   left: 6px;
+
+  @media (min-width: $tablet) {
+    width: 18px;
+    height: 17px;
+    top: 10px;
+    left: 9px;
+    background-size: 100% 100%;
+  }
 }
 
 .companions-dates__checkbox-input:checked ~ .companions-dates__checkbox-label:active::after {
@@ -171,4 +347,15 @@
 
 .companions-dates__calendar {
   margin-top: 24px;
+
+  @media (min-width: $tablet) {
+    flex-basis: 100%;
+    order: 4;
+    margin-top: 40px;
+  }
+
+  @media (min-width: $desktop) {
+    grid-column: 1 / -1;
+    grid-row: 3;
+  }
 }

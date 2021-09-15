@@ -1,11 +1,97 @@
 .add-plan {
   background-color: $background-light-blue;
-  padding-bottom: 43px;
+  padding-bottom: 73px;
+  position: relative;
+
+  @media (min-width: $tablet) {
+    padding-top: 23px;
+    padding-bottom: 123px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -30px;
+    width: 100%;
+    height: 30px;
+    background-color: inherit;
+    z-index: 1;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+
+    @media (min-width: $desktop) {
+      top: -60px;
+      height: 60px;
+      border-top-left-radius: 60px;
+      border-top-right-radius: 60px;
+    }
+  }
+}
+
+.add-plan__wrapper {
+  position: relative;
+
+  @media (min-width: $tablet) {
+    padding-left: 35px;
+    padding-right: 35px;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: $desktop) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.add-plan__progress-circles {
+  width: 47px;
+  height: 5px;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 9px;
+  right: 18px;
+
+  @media (min-width: $tablet) {
+    width: 76px;
+    height: 6px;
+    top: 13px;
+    right: 33px;
+  }
+
+  @media (min-width: $desktop) {
+    display: none;
+  }
+}
+
+.add-plan__progress-circle {
+  height: 100%;
+  width: 5px;
+  border-radius: 50%;
+  background-color: $special-blue;
+  opacity: 0.3;
+
+  &--current {
+    opacity: 1;
+  }
+
+  @media (min-width: $tablet) {
+    width: 6px;
+  }
 }
 
 .add-plan__form {
   margin: 0;
   padding: 0;
+  margin-top: 29px;
+
+  @media (min-width: $tablet) {
+    margin-top: 56px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: 54px;
+  }
 }
 
 .add-plan__step {
@@ -22,6 +108,74 @@
   &:not(:nth-last-child(1)) {
     margin-bottom: 10px;
   }
+
+  @media (min-width: $tablet) {
+    border-radius: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 50px;
+
+    &:not(:nth-last-child(1)) {
+      margin-bottom: 39px;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    padding-left: 160px;
+    padding-right: 160px;
+    padding-bottom: 100px;
+    border-radius: 60px;
+
+    &:not(:nth-last-child(1)) {
+      margin-bottom: 44px;
+    }
+  }
+}
+
+.add-plan__progress-steps {
+  @media (max-width: $almost-desktop) {
+    display: none;
+  }
+
+  @media (min-width: $desktop) {
+    display: block;
+    position: absolute;
+    top: 107px;
+    right: 207px;
+  }
+}
+
+.add-plan__progress-step {
+  position: relative;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: $basic-black;
+  opacity: 0.6;
+
+  &:not(:nth-last-child(1)) {
+    margin-bottom: 27px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    top: 7px;
+    left: -42px;
+    background-color: $special-blue-opaque;
+  }
+
+  &--current {
+    opacity: 1;
+
+    &::before {
+      background-color: $special-blue;
+    }
+  }
 }
 
 .add-plan__step-legend {
@@ -34,6 +188,22 @@
   font-size: 20px;
   line-height: 20px;
   color: $special-blue;
+
+  @media (min-width: $tablet) {
+    font-size: 36px;
+    line-height: 36px;
+    top: 48px;
+    left: 40px;
+  }
+
+  @media (min-width: $desktop) {
+    & br {
+      display: none;
+    }
+
+    top: 101px;
+    left: 159px;
+  }
 }
 
 .add-plan__step-info {
@@ -44,8 +214,74 @@
   font-size: 16px;
   line-height: 22px;
   color: $basic-grey;
+
+  @media (min-width: $tablet) {
+    margin-top: 155px;
+    margin-bottom: 0;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: 170px;
+    font-size: 20px;
+    line-height: 24px;
+    width: 700px;
+    border: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
 }
 
 .add-plan__countries {
+  margin-top: 21px;
   margin-bottom: 25px;
+
+  @media (min-width: $tablet) {
+    margin-top: 41px;
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: 55px;
+    padding-top: 62px;
+    border-top: 1px solid $basic-border-another-gray;
+  }
+}
+
+.add-plan__companions-dates {
+  margin-bottom: 22px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 47px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 57px;
+  }
+}
+
+.add-plan__step-links-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: $tablet) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.add-plan-entertainment {
+  margin-top: 23px;
+
+  @media (min-width: $tablet) {
+    margin-top: 34px;
+    margin-bottom: 49px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: 55px;
+  }
 }

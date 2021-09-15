@@ -19,5 +19,9 @@
       font-size: 36px;
       line-height: 36px;
     }
+
+    @media (min-width: $desktop) {
+      margin-left: 69px;
+    }
   }
 }

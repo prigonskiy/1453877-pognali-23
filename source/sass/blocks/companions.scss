@@ -22,6 +22,10 @@
   position: relative;
   z-index: 1;
 
+  @media (min-width: $desktop) {
+    min-height: 483px;
+  }
+
   &::before {
     position: absolute;
     content: "";
@@ -57,7 +61,6 @@
       bottom: -54px;
       right: auto;
       left: 130px;
-      min-height: 483px;
     }
   }
 

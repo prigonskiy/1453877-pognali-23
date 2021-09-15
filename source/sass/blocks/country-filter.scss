@@ -1,62 +1,345 @@
 .country-filter {
   background-color: $basic-light-blue;
-  padding-bottom: 28px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding-top: 42px;
+  margin-top: -20px;
+
+  &--opened,
+  &--closed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+  }
+
+  @media (min-width: $desktop) {
+    position: static;
+  }
 }
 
 .country-filter__wrapper {
-  margin: 0 auto;
-  width: 220px;
-  padding: 0 45px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 17px;
+  position: relative;
+
+  @media (min-width: $desktop) {
+    justify-content: flex-start;
+  }
+}
+
+.country-filter__wrapper .country-filter__filter-hide {
+  display: none;
+}
+
+.country-filter__wrapper--opened,
+.country-filter__wrapper--closed {
+  & .country-filter__filter-hide {
+    display: flex;
+  }
+}
+
+.country-filter__wrapper--closed {
+  & .country-filter__continent-list {
+    display: none;
+  }
+
+  & .country-filter__countries-list {
+    display: none;
+  }
+
+  & .country-filter__filter-hide {
+    display: none;
+  }
 }
 
 .country-filter__title {
-  color: $basic-blue;
-  text-transform: uppercase;
-  font-style: normal;
-  font-weight: 700;
+  display: flex;
+  margin: 0;
   font-size: 16px;
   line-height: 18px;
+  justify-content: flex-start;
+  align-items: center;
+  flex-basis: 233px;
+
+  @media (min-width: $tablet) {
+    display: none;
+  }
+
+  @media (min-width: $desktop) {
+    display: flex;
+    font-size: 20px;
+    line-height: 20px;
+    order: 1;
+  }
+}
+
+.country-filter__title-icon {
+  width: 15px;
+  height: 10px;
+
+  @media (min-width: $desktop) {
+    display: block;
+    width: 23px;
+    height: 15px;
+  }
+}
+
+.country-filter__title-text {
+  font-weight: 700;
+  color: $basic-blue;
+  text-transform: uppercase;
+  margin-left: 11px;
+}
+
+.country-filter__filter-toggle {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  flex-basis: 15px;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet) {
+    order: 2;
+  }
+
+  @media (min-width: $desktop) {
+    order: 3;
+  }
+
+  &--opened {
+    display: flex;
+    margin-right: 5px;
+    align-self: flex-start;
+
+    & .country-filter__toggle-text--show {
+      display: none;
+    }
+
+    & .country-filter__toggle-icon--show {
+      display: none;
+    }
+
+    @media (min-width: $tablet) {
+      flex-basis: 174px;
+      margin-right: 33px;
+      justify-content: space-between;
+    }
+
+    @media (min-width: $desktop) {
+      display: none;
+    }
+  }
+
+  &--closed {
+    display: flex;
+    margin-right: 4px;
+
+    & .country-filter__toggle-text--hide {
+      display: none;
+    }
+
+    & .country-filter__toggle-icon--hide {
+      display: none;
+    }
+
+    @media (min-width: $tablet) {
+      width: 185px;
+    }
+  }
+}
+
+.country-filter__toggle-icon {
+  &--show {
+    width: 17px;
+    height: 3px;
+
+    @media (min-width: $tablet) {
+      width: 30px;
+      height: 6px;
+    }
+  }
+
+  &--hide {
+    width: 16px;
+    height: 16px;
+
+    @media (min-width: $tablet) {
+      width: 24px;
+      height: 22px;
+    }
+  }
+}
+
+.country-filter__toggle-text {
+  display: none;
+
+  @media (min-width: $tablet) {
+    display: block;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    color: $basic-blue;
+    font-family: $pognali-font;
+    text-transform: uppercase;
+  }
 }
 
 .country-filter__continent-list {
+  margin-top: 37px;
   margin-bottom: 21px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 220px;
+
+  @media (min-width: $tablet) {
+    width: 368px;
+    display: flex;
+    order: 1;
+    margin: 0;
+    margin-left: 32px;
+  }
+
+  @media (min-width: $desktop) {
+    order: 2;
+    flex-grow: 1;
+  }
 }
 
 .country-filter__continent-item {
-  margin: 0;
   padding: 0;
 
-  &:not(:nth-last-child(1)) {
-    margin-bottom: 9px;
+  &:not(:nth-last-of-type(1)) {
+    margin-bottom: 6px;
+  }
+
+  @media (min-width: $tablet) {
+    &:not(:nth-last-of-type(1)) {
+      margin-bottom: 0;
+      margin-right: 28px;
+    }
   }
 }
 
 .country-filter__continent-label {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 16px;
   line-height: 18px;
+  color: $basic-blue;
   opacity: 0.3;
   text-transform: uppercase;
-  color: $basic-blue;
+  margin: 0;
+  padding: 0;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 1;
+  }
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .country-filter__continent-input:checked ~ .country-filter__continent-label {
   opacity: 1;
 }
 
-.country-filter__hide-filter {
-  border-radius: 20px;
-  background-color: $basic-another-light-blue;
-  border: none;
-  text-transform: uppercase;
-  display: block;
+.country-filter__countries-list-wrapper {
+  width: 220px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet) {
+    order: 3;
+    width: 100%;
+  }
+
+  @media (min-width: $desktop) {
+    order: 4;
+  }
+}
+
+.country-filter__filter-hide {
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  text-align: center;
-  letter-spacing: 0.05em;
+  border-radius: 20px;
+  background-color: $background-button-grey;
+  border: none;
+  padding-top: 12px;
+  padding-bottom: 11px;
+  cursor: pointer;
+  box-sizing: padding-box;
+  margin-bottom: 9px;
+
+  &:hover {
+    background-color: $background-button-grey-hover;
+  }
+
+  &:active {
+    & .country-filter__filter-hide-text,
+    & .country-filter__filter-hide-icon {
+      opacity: 0.3;
+    }
+  }
+
+  @media (min-width: $tablet) {
+    padding-top: 37px;
+    padding-bottom: 37px;
+    order: 4;
+  }
+
+  @media (min-width: $desktop) {
+    order: 5;
+  }
+}
+
+.country-filter__filter-hide-icon {
+  width: 14px;
+  height: 14px;
+
+  @media (min-width: $tablet) {
+    width: 24px;
+    height: 22px;
+  }
+}
+
+.country-filter__filter-hide-text {
+  font-weight: 700;
   font-size: 16px;
   line-height: 16px;
-  font-weight: 700;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  font-family: inherit;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-family: $pognali-font;
+  margin-left: 11px;
+  color: $basic-blue;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0;
+    margin-left: 18px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-left: 17px;
+  }
 }

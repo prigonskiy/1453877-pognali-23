@@ -1,7 +1,3 @@
-.calendar {
-  margin-bottom: 22px;
-}
-
 .calendar__month-picker-wrapper {
   position: relative;
   padding-top: 11px;
@@ -9,6 +5,16 @@
   border-top: 1px solid $basic-another-light-blue;
   border-bottom: 1px solid $basic-another-light-blue;
   margin-bottom: 22px;
+
+  @media (min-width: $tablet) {
+    padding-top: 23px;
+    padding-bottom: 23px;
+    margin-bottom: 39px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 18px;
+  }
 }
 
 .calendar__month-name {
@@ -19,6 +25,11 @@
   font-weight: 700;
   font-size: 20px;
   line-height: 20px;
+
+  @media (min-width: $tablet) {
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .calendar__month-change {
@@ -34,12 +45,36 @@
   width: 9px;
   height: 19px;
   opacity: 0.3;
+  cursor: pointer;
 
   &--next {
     transform: translateY(-50%) rotate(180deg);
     top: 50%;
     left: auto;
     right: 0;
+  }
+
+  @media (min-width: $tablet) {
+    width: 19px;
+    height: 34px;
+    background-size: 100% 100%;
+    left: 17px;
+
+    &--next {
+      left: auto;
+      right: 17px;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    width: 16px;
+    height: 28px;
+    left: 0;
+
+    &--next {
+      left: auto;
+      right: 0;
+    }
   }
 
   &:hover {
@@ -64,9 +99,32 @@
   line-height: 18px;
   padding-bottom: 10px;
 
+  @media (min-width: $tablet) {
+    font-size: 18px;
+    line-height: 18px;
+    padding-bottom: 9px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-bottom: 19px;
+    text-align: left;
+    padding-left: 16px;
+  }
+
   &:nth-child(6),
   &:nth-child(7) {
     color: $special-accent-red;
+  }
+}
+
+.calendar__day-letter {
+  &:nth-child(2) {
+    display: none;
+
+    @media (min-width: $tablet) {
+      display: inline-block;
+      margin-left: -6px;
+    }
   }
 }
 
@@ -90,13 +148,51 @@
   padding-top: 7px;
   padding-bottom: 6px;
   margin: 0;
-  font-weight: 500;
   color: $special-blue;
   font-size: 14px;
   line-height: 18px;
   width: 100%;
   height: 100%;
   background-color: $background-lighter-blue;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet) {
+    font-size: 18px;
+    line-height: 18px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  @media (min-width: $desktop) {
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 14px;
+    padding-bottom: 40px;
+    padding-left: 16px;
+    width: 144px;
+  }
+
+  &--arrival {
+    @media (min-width: $desktop) {
+      &::after {
+        content: "Заезд";
+        position: absolute;
+        bottom: 13px;
+        left: 16px;
+      }
+    }
+  }
+
+  &--departure {
+    @media (min-width: $desktop) {
+      &::after {
+        content: "Выезд";
+        position: absolute;
+        bottom: 13px;
+        left: 16px;
+      }
+    }
+  }
 }
 
 .calendar__day-of-month-input:disabled ~ .calendar__day-of-month-label {
@@ -109,12 +205,16 @@
   color: $basic-white;
 }
 
+.calendar__day-of-month-input:not(:disabled) ~ .calendar__day-of-month-label {
+  font-weight: 500;
+}
+
 .calendar__day-of-month-input:not(:disabled) ~ .calendar__day-of-month-label:hover {
   background-color: $special-blue;
   color: $basic-white;
   cursor: pointer;
 
-  &::after {
+  &::before {
     position: absolute;
     content: "";
     width: calc(100% + 2px);
@@ -123,5 +223,27 @@
     left: -1px;
     background-color: transparent;
     border: 2px solid $special-accent-red;
+    z-index: 1;
+
+    @media (min-width: $tablet) {
+      width: calc(100% + 2px);
+      height: calc(100% + 2px);
+      top: -1px;
+      left: -1px;
+      border: 4px solid $special-accent-red;
+    }
+
+    @media (min-width: $desktop) {
+      width: calc(100% + 4px);
+      height: calc(100% + 5px);
+      top: -2px;
+      left: -2px;
+    }
+  }
+}
+
+.calendar__day-of-month-month {
+  @media (max-width: $almost-desktop) {
+    display: none;
   }
 }

@@ -80,23 +80,6 @@ if (index) {
   })
 }
 
-// Companion filter {
-
-if (catalog) {
-  var filterFieldsets = document.querySelectorAll('.companion-filter__fieldset');
-
-  for (var i = 0; i < filterFieldsets.length; i++) {
-    filterFieldsets[i].classList.remove('companion-filter__fieldset--nojs');
-    filterFieldsets[i].addEventListener('click', function() {
-      if (filterFieldsets[i].classList.contains('companion-filter__fieldset--hidden')) {
-        filterFieldsets[i].classList.remove('companion-filter__fieldset--hidden');
-      } else {
-        filterFieldsets[i].classList.add('companion-filter__fieldset--hidden')
-      }
-    })
-  }
-}
-
 // Likes toggler
 
 if (catalog) {
@@ -115,4 +98,20 @@ if (catalog) {
       }
     })
   }
+}
+
+// Choose country toggle
+
+var countryPickers = document.querySelectorAll('.country-picker--choose');
+
+for (var i = 0; i < countryPickers.length; i++) {
+  var countryPickerButton = countryPickers[i].querySelector('.country-picker__button');
+  countryPickerButton.addEventListener('click', function(evt) {
+    evt.preventDefault();
+    if (countryPickerButton.parentElement.classList.contains('country-picker--choose-active')) {
+      countryPickerButton.parentElement.classList.remove('country-picker--choose-active');
+    } else {
+      countryPickerButton.parentElement.classList.add('country-picker--choose-active');
+    }
+  })
 }
