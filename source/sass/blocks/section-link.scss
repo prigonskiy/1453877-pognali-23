@@ -1,15 +1,35 @@
 .section-link {
-  display: block;
-  position: relative;
-  color: $special-blue;
-  padding-top: 22px;
-  padding-bottom: 22px;
-  padding-left: 23px;
-  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: $basic-yellow;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 18px;
+  box-sizing: border-box;
+  transition: 0.1s;
+
+  &--index {
+    border-radius: 10px;
+    padding-left: 23px;
+    padding-right: 23px;
+    padding-top: 22px;
+    padding-bottom: 22px;
+
+    @media (min-width: $tablet) {
+      padding-top: 29px;
+      padding-bottom: 29px;
+      padding-left: 32px;
+      padding-right: 32px;
+    }
+  }
+
+  &--registration {
+    cursor: pointer;
+    border: none;
+    font-family: inherit;
+  }
+
+  &--location {
+    border: 3px solid $basic-blue;
+  }
 
   &:hover {
     background-color: $special-orange-light;
@@ -17,71 +37,67 @@
 
   &:active {
     background-color: $special-orange-light;
-    color: $special-blue-opaque;
 
-    &::after {
+    & .section-link__text {
       opacity: 0.3;
     }
-  }
 
-  &--location {
-    padding-top: 19px;
-    padding-bottom: 19px;
-    padding-left: 20px;
-    border: 3px solid $basic-blue;
-
-    &:hover {
-      background-color: $basic-blue;
-      color: $basic-white;
-    }
-
-    &:active {
-      background-color: $basic-blue;
-      color: $basic-white-less-opaque;
-    }
-  }
-
-  @media (min-width: $tablet) {
-    font-size: 24px;
-    line-height: 24px;
-    padding-top: 28px;
-    padding-bottom: 28px;
-    padding-left: 33px;
-    padding-right: 50px;
-    border-radius: 20px;
-
-    &--location {
-      padding-top: 25px;
-      padding-bottom: 25px;
-      padding-left: 30px;
-    }
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 23px;
-    width: 13px;
-    height: 13px;
-    background-image: url("../img/icon-triangle.svg");
-    background-repeat: no-repeat;
-
-    @media (min-width: $tablet) {
-      right: 36px;
-    }
-  }
-
-  @media (min-width: $desktop) {
-    &--location {
-      padding-left: 34px;
-      padding-right: 62px;
+    & .section-link__icon {
+      opacity: 0.3;
     }
   }
 }
 
-.section-link--location:hover::after,
-.section-link--location:active::after {
-  background-image: url("../img/icon-triangle-white.svg");
+.section-link--location:hover {
+  background-color: $basic-blue;
+
+  & .section-link__text {
+    color: $basic-white;
+  }
+
+  & use {
+    fill: $basic-white;
+  }
+}
+
+.section-link--location:active {
+  background-color: $basic-blue;
+
+  & .section-link__text {
+    color: $basic-white;
+    opacity: 0.3;
+  }
+
+  & use {
+    fill: $basic-white;
+    opacity: 0.3;
+  }
+}
+
+.section-link__text {
+  display: block;
+  flex-basis: 210px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+  color: $special-blue;
+  transition: 0.1s;
+
+  @media (min-width: $tablet) {
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  &--registration {
+    @media (max-width: $almost-desktop) {
+      display: none;
+    }
+  }
+}
+
+.section-link__icon {
+  width: 13px;
+  height: 13px;
+  flex-shrink: 0;
+  transition: 0.1s;
 }

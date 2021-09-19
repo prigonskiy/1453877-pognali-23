@@ -54,6 +54,15 @@
 .registration__link {
   color: $basic-yellow;
   text-decoration: underline;
+
+  &:hover {
+    color: $special-orange-dark;
+  }
+
+  &:active {
+    color: $special-orange-dark;
+    opacity: 0.3;
+  }
 }
 
 .registration__form {

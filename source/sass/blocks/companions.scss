@@ -29,7 +29,7 @@
   &::before {
     position: absolute;
     content: "";
-    background-image: url("../img/background-rogovaya-mobile.png");
+    background-image: url("../img/background/companions/companions-rogovaya-mobile.png");
     background-repeat: no-repeat;
     width: 64px;
     height: 71px;
@@ -38,12 +38,12 @@
     z-index: -1;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/background-rogovaya-mobile@2x.png");
+      background-image: url("../img/background/companions/companions-rogovaya-mobile@2x.png");
       background-size: 64px auto;
     }
 
     @media (min-width: $tablet) {
-      background-image: url("../img/background-rogovaya-desktop.png");
+      background-image: url("../img/background/companions/companions-rogovaya-desktop.png");
       width: 285px;
       height: 285px;
       top: -61px;
@@ -51,7 +51,7 @@
       left: auto;
 
       @media (min-resolution: 2dppx) {
-        background-image: url("../img/background-rogovaya-desktop@2x.png");
+        background-image: url("../img/background/companions/companions-rogovaya-desktop@2x.png");
         background-size: 285px auto;
       }
     }
@@ -67,7 +67,7 @@
   &::after {
     position: absolute;
     content: "";
-    background-image: url("../img/background-smolov-mobile.png");
+    background-image: url("../img/background/companions/companions-smolov-mobile.png");
     background-repeat: no-repeat;
     width: 143px;
     height: 143px;
@@ -76,7 +76,7 @@
     z-index: -1;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/background-smolov-mobile@2x.png");
+      background-image: url("../img/background/companions/companions-smolov-mobile@2x.png");
       background-size: 143px auto;
     }
 
@@ -201,12 +201,22 @@
   background-color: $basic-white;
   width: 270px;
   padding-bottom: 16px;
+  overflow: hidden;
+  transition: 0.2s;
 
   @media (min-width: $tablet) {
     width: 285px;
     border-radius: 20px;
     padding-bottom: 22px;
     margin: 0;
+  }
+
+  &:hover {
+    box-shadow: 0 2px 8px $basic-accent-another-dark-blue;
+
+    & .companions__photo-image {
+      transform: scale(1.1);
+    }
   }
 }
 
@@ -218,8 +228,13 @@
   }
 }
 
+.companions__photo-wrapper {
+  overflow: hidden;
+}
+
 .companions__photo-image {
   vertical-align: top;
+  transition: 0.2s;
 }
 
 .companions__level {
@@ -239,6 +254,8 @@
   justify-content: center;
   margin-top: -11px;
   margin-bottom: 13px;
+  position: relative;
+  z-index: 10;
 
   @media (min-width: $tablet) {
     margin-top: -12px;
@@ -248,55 +265,107 @@
 
 .companions__countries-item {
   width: 35px;
-  height: 25px;
+  height: 24px;
   background-repeat: no-repeat;
 
+  @media (min-resolution: 2dppx) {
+    background-size: 35px auto;
+  }
+
   &--australia {
-    background-image: url("../img/flag-australia-mobile.png");
+    background-image: url("../img/background/flags/35x24/australia.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background/flags/35x24/australia@2x.png");
+    }
   }
 
   &--belgium {
-    background-image: url("../img/flag-belgium-mobile.png");
+    background-image: url("../img/background/flags/35x24/belgium.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background/flags/35x24/belgium@2x.png");
+    }
   }
 
   &--bosnia-and-herzegovina {
-    background-image: url("../img/flag-bosnia-and-herzegovina-mobile.png");
+    background-image: url("../img/background/flags/35x24/bosnia-and-herzegovina.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background/flags/35x24/bosnia-and-herzegovina@2x.png");
+    }
   }
 
-  &--czech {
-    background-image: url("../img/flag-czech-mobile.png");
+  &--czech-republic {
+    background-image: url("../img/background/flags/35x24/czech-republic.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background/flags/35x24/czech-republic@2x.png");
+    }
   }
 
   &--dominica {
-    background-image: url("../img/flag-dominica-mobile.png");
+    background-image: url("../img/background/flags/35x24/dominica.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background/flags/35x24/dominica@2x.png");
+    }
   }
 
   &--france {
-    background-image: url("../img/flag-france-mobile.png");
+    background-image: url("../img/background/flags/35x24/france.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background/flags/35x24/france@2x.png");
+    }
   }
 
   &--germany {
-    background-image: url("../img/flag-germany-mobile.png");
+    background-image: url("../img/background/flags/35x24/germany.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background/flags/35x24/germany@2x.png");
+    }
   }
 
   &--seychelles {
-    background-image: url("../img/flag-seychelles-mobile.png");
+    background-image: url("../img/background/flags/35x24/seychelles.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background/flags/35x24/seychelles@2x.png");
+    }
   }
 
   &--sri-lanka {
-    background-image: url("../img/flag-sri-lanka-mobile.png");
+    background-image: url("../img/background/flags/35x24/sri-lanka.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background/flags/35x24/sri-lanka@2x.png");
+    }
   }
 
   &--thailand {
-    background-image: url("../img/flag-thailand-mobile.png");
+    background-image: url("../img/background/flags/35x24/thailand.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background/flags/35x24/thailand@2x.png");
+    }
   }
 
   &--uk {
-    background-image: url("../img/flag-uk-mobile.png");
+    background-image: url("../img/background/flags/35x24/uk.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background/flags/35x24/uk@2x.png");
+    }
   }
 
   &--usa {
-    background-image: url("../img/flag-usa-mobile.png");
+    background-image: url("../img/background/flags/35x24/usa.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background/flags/35x24/usa@2x.png");
+    }
   }
 }
 
@@ -390,8 +459,12 @@
   align-items: center;
 }
 
-.companions__transport-icon--active {
-  opacity: 1;
+.companions__transport-icon {
+  opacity: 0.15;
+
+  &--active {
+    opacity: 1;
+  }
 }
 
 .companions__section-link {

@@ -20,7 +20,8 @@
   &--phone {
     background-color: $special-orange-dark;
 
-    &:hover {
+    &:hover,
+    &:active {
       background-color: $special-orange-dark-hover;
     }
   }
@@ -28,45 +29,44 @@
   &--mail {
     background-color: $special-orange-light;
 
-    &:hover {
+    &:hover,
+    &:active {
       background-color: $special-orange-dark;
-    }
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: transparent;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-  }
-
-  &:active {
-    &::after {
-      opacity: 0.3;
     }
   }
 
   @media (min-width: $desktop) {
     width: 50px;
     height: 50px;
+  }
 
-    &::after {
-      width: 50px;
-      height: 50px;
+  &:active {
+    & .contacts-authorization__contacts-icon {
+      opacity: 0.3;
     }
   }
 }
 
-.contacts-authorization__contacts-link--phone::after {
-  background-image: url("../img/icon-call.svg");
-}
+.contacts-authorization__contacts-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
-.contacts-authorization__contacts-link--mail::after {
-  background-image: url("../img/icon-mail2.svg");
+  &--phone {
+    width: 18px;
+    height: 18px;
+  }
+
+  &--mail {
+    width: 18px;
+    height: 16px;
+  }
+
+  @media (min-width: $desktop) {
+    &--mail {
+      width: 16px;
+      height: 14px;
+    }
+  }
 }

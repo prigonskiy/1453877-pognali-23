@@ -47,6 +47,7 @@
   background-color: $basic-white;
   padding-top: 25px;
   padding-bottom: 29px;
+  transition: 0.1s;
 
   &--menu-active {
     @media (max-width: $almost-desktop) {
@@ -178,13 +179,13 @@
     left: 0;
     width: 96px;
     height: 15px;
-    background-image: url("../img/logo-mobile-open.svg");
+    background-image: url("../img/content/logo/logo-mobile-open.svg");
     background-repeat: no-repeat;
 
     @media (min-width: $tablet) {
       width: 166px;
       height: 42px;
-      background-image: url("../img/logo-tablet-open.svg");
+      background-image: url("../img/content/logo/logo-tablet-open.svg");
     }
 
     @media (min-width: $desktop) {
@@ -212,7 +213,7 @@
         left: 0;
         width: 200px;
         height: 50px;
-        background-image: url("../img/logo-desktop-open.svg");
+        background-image: url("../img/content/logo/logo-desktop-open.svg");
       }
     }
   }
@@ -246,7 +247,11 @@
 }
 
 .page-header__menu-open {
-  &--menu-scroll rect {
+  & use {
+    fill: $basic-white;
+  }
+
+  &--menu-scroll use {
     fill: $another-grey;
   }
 }

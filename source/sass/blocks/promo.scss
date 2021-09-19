@@ -1,32 +1,32 @@
 .promo {
-  background-image: url("../img/background-globe-mobile.png");
+  background-image: url("../img/background/promo/promo-globe-mobile.png");
   background-repeat: no-repeat;
   background-position: center -225px;
   padding-bottom: 39px;
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../img/background-globe-mobile2x.png");
+    background-image: url("../img/background/promo/promo-globe-mobile2x.png");
     background-size: 320px auto;
   }
 
   @media (min-width: $tablet) {
-    background-image: url("../img/background-globe-tablet.png");
+    background-image: url("../img/background/promo/promo-globe-tablet.png");
     padding-bottom: 96px;
     background-position: center -25px;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/background-globe-tablet2x.png");
+      background-image: url("../img/background/promo/promo-globe-tablet2x.png");
       background-size: 1479px auto;
     }
   }
 
   @media (min-width: $desktop) {
-    background-image: url("../img/background-globe-desktop.png");
+    background-image: url("../img/background/promo/promo-globe-desktop.png");
     background-position: center bottom;
     padding-bottom: 0;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/background-globe-desktop@2x.png");
+      background-image: url("../img/background/promo/promo-globe-desktop@2x.png");
       background-size: 1440px auto;
     }
   }
@@ -93,10 +93,17 @@
   height: 40px;
   border-radius: 50%;
 
+  &:active {
+    & .promo__contacts-icon {
+      opacity: 0.3;
+    }
+  }
+
   &--phone {
     background-color: $special-orange-dark;
 
-    &:hover {
+    &:hover,
+    &:active {
       background-color: $special-orange-dark-hover;
     }
   }
@@ -104,37 +111,28 @@
   &--mail {
     background-color: $special-orange-light;
 
-    &:hover {
+    &:hover,
+    &:active {
       background-color: $special-orange-dark;
     }
   }
-
-  &::after {
-    content: "";
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: transparent;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-  }
-
-  &:active {
-    &::after {
-      opacity: 0.3;
-    }
-  }
 }
 
-.promo__contacts-link--phone::after {
-  background-image: url("../img/icon-call.svg");
-}
+.promo__contacts-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
-.promo__contacts-link--mail::after {
-  background-image: url("../img/icon-mail2.svg");
+  &--phone {
+    width: 18px;
+    height: 18px;
+  }
+
+  &--mail {
+    width: 18px;
+    height: 16px;
+  }
 }
 
 .promo__quote-wrapper {

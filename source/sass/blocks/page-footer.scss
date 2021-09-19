@@ -57,16 +57,24 @@
   }
 }
 
-.page-footer__academy-wrapper {
+.page-footer__academy-link {
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-top: 1px solid $basic-border-gray;
-  padding-top: 5px;
+  padding-top: 13px;
 
   @media (min-width: $tablet) {
     border: none;
     padding-top: 0;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 
@@ -82,12 +90,7 @@
   }
 }
 
-.page-footer__academy-link {
-  display: block;
+.page-footer__academy-icon {
   width: 27px;
-  height: 33px;
-  background-repeat: no-repeat;
-  background-color: transparent;
-  background-position: 50% 50%;
-  background-image: url("../img/htmlacademy.svg");
+  height: 34px;
 }

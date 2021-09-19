@@ -42,79 +42,76 @@
 }
 
 .location__address {
-  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   margin: 0;
   padding: 0;
-  color: $basic-blue;
+  margin-bottom: 33px;
+
+  @media (min-width: $tablet) {
+    margin-left: 35px;
+    margin-right: 35px;
+  }
+}
+
+.location__address-icon-wrapper {
+  position: relative;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: $basic-accent-dark-blue;
+  flex-shrink: 0;
+  margin-right: 16px;
+
+  @media (min-width: $tablet) {
+    width: 68px;
+    height: 68px;
+    margin-right: 26px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 90px;
+    height: 90px;
+    margin-right: 31px;
+  }
+}
+
+.location__address-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 21px;
+  height: 21px;
+
+  @media (min-width: $tablet) {
+    width: 32px;
+    height: 32px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 42px;
+    height: 42px;
+  }
+}
+
+.location__address-text {
   font-size: 16px;
   line-height: 22px;
   font-weight: 700;
+  color: $special-blue;
   text-transform: uppercase;
-  padding-left: 61px;
   font-style: normal;
-  margin-bottom: 33px;
 
   @media (min-width: $tablet) {
     font-size: 28px;
     line-height: 28px;
-    padding-left: 94px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    margin-bottom: 44px;
-    margin-right: 35px;
-    margin-left: 35px;
   }
 
-  @media (min-width: $desktop) {
-    margin: 0;
-    padding: 0;
-    padding-left: 121px;
-    margin-left: 223px;
-  }
-
-  &::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    background-color: $basic-accent-dark-blue;
-    z-index: 1;
-    background-repeat: no-repeat;
-
+  & br {
     @media (min-width: $tablet) {
-      width: 68px;
-      height: 68px;
+      display: none;
     }
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 50%;
-    width: 45px;
-    height: 45px;
-    transform: translateY(-50%);
-    background-color: transparent;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-image: url("../img/icon-location.svg");
-    z-index: 2;
-
-    @media (min-width: $tablet) {
-      width: 68px;
-      height: 68px;
-      background-size: 32px 32px;
-    }
-  }
-}
-
-.location__address br {
-  @media (min-width: $tablet) {
-    display: none;
   }
 }
