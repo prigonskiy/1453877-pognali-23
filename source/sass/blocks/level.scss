@@ -26,6 +26,11 @@
 }
 
 .level--companions {
+  &::before {
+    position: absolute;
+
+  }
+
   &::after {
     position: absolute;
     content: "";
@@ -55,11 +60,24 @@
   margin-bottom: 5px;
   text-align: center;
   padding-top: 15px;
+  position: relative;
 
   &--form {
     font-size: 38px;
     line-height: 38px;
     color: $basic-dark-blue;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: calc(100% + 2px);
+    width: 30px;
+    height: 1px;
+    background-color: $basic-white;
+    opacity: 0.3;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   @media (min-width: $tablet) {

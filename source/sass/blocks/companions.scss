@@ -23,7 +23,10 @@
   z-index: 1;
 
   @media (min-width: $desktop) {
-    min-height: 483px;
+    display: grid;
+    grid-template-columns: 630px 630px;
+    grid-template-rows: min-content min-content min-content min-content auto;
+    column-gap: 60px;
   }
 
   &::before {
@@ -96,7 +99,7 @@
 .companions__section-title {
   position: relative;
   margin-bottom: 19px;
-  margin-left: 26px;
+  margin-left: 24px;
   margin-right: 29px;
 
   @media (min-width: $tablet) {
@@ -106,8 +109,12 @@
   }
 
   @media (min-width: $desktop) {
+    margin: 0;
     margin-left: 69px;
-    width: 427px;
+    margin-bottom: 55px;
+    width: auto;
+    grid-column: 1;
+    grid-row: 1;
   }
 
   &::after {
@@ -142,7 +149,7 @@
   margin-right: 29px;
 
   &:not(:nth-last-of-type(1)) {
-    margin-bottom: 25px;
+    margin-bottom: 23px;
   }
 
   @media (min-width: $tablet) {
@@ -155,11 +162,10 @@
   }
 
   @media (min-width: $desktop) {
+    margin: 0;
+    width: auto;
+    grid-column: 1;
     margin-left: 70px;
-
-    &:not(:nth-last-of-type(1)) {
-      margin-bottom: 42px;
-    }
   }
 
   & br {
@@ -169,11 +175,26 @@
       display: inline-block;
     }
   }
+
+  &:nth-of-type(1) {
+    @media (min-width: $desktop) {
+      grid-row: 2;
+      margin-bottom: 42px;
+      width: 427px;
+    }
+  }
+
+  &:nth-of-type(2) {
+    @media (min-width: $desktop) {
+      grid-row: 3;
+      margin-bottom: 85px;
+    }
+  }
 }
 
 .companions__list {
   margin-top: 54px;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
 
   @media (min-width: $tablet) {
     display: flex;
@@ -185,11 +206,11 @@
   }
 
   @media (min-width: $desktop) {
-    position: absolute;
-    top: 4px;
-    right: 0;
-    width: calc(50% - 30px);
+    width: auto;
     margin: 0;
+    grid-column: 2;
+    grid-row: 1 / -1;
+    margin-top: 7px;
   }
 }
 
@@ -200,15 +221,18 @@
   border-radius: 10px;
   background-color: $basic-white;
   width: 270px;
-  padding-bottom: 16px;
-  overflow: hidden;
-  transition: 0.2s;
+  padding-bottom: 22px;
+  transition: 0.1s;
 
   @media (min-width: $tablet) {
     width: 285px;
     border-radius: 20px;
-    padding-bottom: 22px;
+    padding-bottom: 28px;
     margin: 0;
+  }
+
+  @media (min-width: $desktop) {
+    padding-bottom: 27px;
   }
 
   &:hover {
@@ -230,11 +254,18 @@
 
 .companions__photo-wrapper {
   overflow: hidden;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+  @media (min-width: $tablet) {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
 }
 
 .companions__photo-image {
   vertical-align: top;
-  transition: 0.2s;
+  transition: 0.1s;
 }
 
 .companions__level {
@@ -266,7 +297,44 @@
 .companions__countries-item {
   width: 35px;
   height: 24px;
+  position: relative;
   background-repeat: no-repeat;
+
+  &::before {
+    display: none;
+    position: absolute;
+    background-color: $tooltip-background;
+    color: $basic-white;
+    padding: 18px 25px;
+    top: calc(100% + 13px);
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    line-height: 20px;
+    font-family: $pognali-font;
+    width: auto;
+    border-radius: 4px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    display: none;
+    width: 16px;
+    height: 10px;
+    top: calc(100% + 6px);
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: url("../img/background/tooltip/polygon.svg");
+    background-repeat: no-repeat;
+  }
+
+  &:hover {
+    &::before,
+    &::after {
+      display: block;
+    }
+  }
 
   @media (min-resolution: 2dppx) {
     background-size: 35px auto;
@@ -274,6 +342,10 @@
 
   &--australia {
     background-image: url("../img/background/flags/35x24/australia.png");
+
+    &::before {
+      content: "Австралия";
+    }
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/background/flags/35x24/australia@2x.png");
@@ -283,6 +355,10 @@
   &--belgium {
     background-image: url("../img/background/flags/35x24/belgium.png");
 
+    &::before {
+      content: "Бельгия";
+    }
+
     @media (min-resolution: 2dppx) {
       background-image: url("../img/background/flags/35x24/belgium@2x.png");
     }
@@ -290,6 +366,10 @@
 
   &--bosnia-and-herzegovina {
     background-image: url("../img/background/flags/35x24/bosnia-and-herzegovina.png");
+
+    &::before {
+      content: "Босния и Герцеговина";
+    }
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/background/flags/35x24/bosnia-and-herzegovina@2x.png");
@@ -299,6 +379,10 @@
   &--czech-republic {
     background-image: url("../img/background/flags/35x24/czech-republic.png");
 
+    &::before {
+      content: "Чехия";
+    }
+
     @media (min-resolution: 2dppx) {
       background-image: url("../img/background/flags/35x24/czech-republic@2x.png");
     }
@@ -306,6 +390,10 @@
 
   &--dominica {
     background-image: url("../img/background/flags/35x24/dominica.png");
+
+    &::before {
+      content: "Доминика";
+    }
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/background/flags/35x24/dominica@2x.png");
@@ -315,6 +403,10 @@
   &--france {
     background-image: url("../img/background/flags/35x24/france.png");
 
+    &::before {
+      content: "Франция";
+    }
+
     @media (min-resolution: 2dppx) {
       background-image: url("../img/background/flags/35x24/france@2x.png");
     }
@@ -322,6 +414,10 @@
 
   &--germany {
     background-image: url("../img/background/flags/35x24/germany.png");
+
+    &::before {
+      content: "Германия";
+    }
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/background/flags/35x24/germany@2x.png");
@@ -331,6 +427,10 @@
   &--seychelles {
     background-image: url("../img/background/flags/35x24/seychelles.png");
 
+    &::before {
+      content: "Сейшелы";
+    }
+
     @media (min-resolution: 2dppx) {
       background-image: url("../img/background/flags/35x24/seychelles@2x.png");
     }
@@ -338,6 +438,10 @@
 
   &--sri-lanka {
     background-image: url("../img/background/flags/35x24/sri-lanka.png");
+
+    &::before {
+      content: "Шри-Ланка";
+    }
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/background/flags/35x24/sri-lanka@2x.png");
@@ -347,6 +451,10 @@
   &--thailand {
     background-image: url("../img/background/flags/35x24/thailand.png");
 
+    &::before {
+      content: "Тайланд";
+    }
+
     @media (min-resolution: 2dppx) {
       background-image: url("../img/background/flags/35x24/thailand@2x.png");
     }
@@ -355,6 +463,10 @@
   &--uk {
     background-image: url("../img/background/flags/35x24/uk.png");
 
+    &::before {
+      content: "Великобритания";
+    }
+
     @media (min-resolution: 2dppx) {
       background-image: url("../img/background/flags/35x24/uk@2x.png");
     }
@@ -362,6 +474,10 @@
 
   &--usa {
     background-image: url("../img/background/flags/35x24/usa.png");
+
+    &::before {
+      content: "Соединённые Штаты Америки";
+    }
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/background/flags/35x24/usa@2x.png");
@@ -382,11 +498,6 @@
   font-size: 21px;
   line-height: 21px;
 
-  @media (min-width: $tablet) {
-    font-size: 24px;
-    line-height: 22px;
-  }
-
   &::after {
     position: absolute;
     content: "";
@@ -395,6 +506,22 @@
     border-radius: 50%;
     top: 7px;
     left: -16px;
+  }
+
+  @media (min-width: $tablet) {
+    font-size: 24px;
+    line-height: 22px;
+    display: block;
+    margin-left: 68px;
+    margin-right: 46px;
+    text-align: left;
+
+    &::after {
+      width: 8px;
+      height: 8px;
+      top: 7px;
+      left: -22px;
+    }
   }
 }
 
@@ -406,12 +533,14 @@
   background-color: $special-offline;
 }
 
-.companions__profile-link:hover {
-  opacity: 0.6;
-}
+.companions__profile-link {
+  &:hover {
+    opacity: 0.6;
+  }
 
-.companions__profile-link:active {
-  opacity: 0.3;
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .companions__hashtags-list {
@@ -425,14 +554,22 @@
 
   @media (min-width: $tablet) {
     margin-top: 23px;
-    margin-bottom: 24px;
+    margin-bottom: 26px;
     width: 225px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 26px;
   }
 }
 
 .companions__hashtags-item {
   margin-right: 4px;
   margin-bottom: -4px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: -2px;
+  }
 }
 
 .companions__hashtags-link {
@@ -459,11 +596,120 @@
   align-items: center;
 }
 
+.companions__transport-item {
+  position: relative;
+
+  &::before {
+    display: none;
+    position: absolute;
+    background-color: $tooltip-background;
+    color: $basic-white;
+    padding: 18px 25px;
+    top: calc(100% + 13px);
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    line-height: 20px;
+    font-family: $pognali-font;
+    width: auto;
+    border-radius: 4px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    display: none;
+    width: 16px;
+    height: 10px;
+    top: calc(100% + 6px);
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: url("../img/background/tooltip/polygon.svg");
+    background-repeat: no-repeat;
+  }
+
+  &:hover {
+    &::before,
+    &::after {
+      display: block;
+      z-index: 1;
+    }
+  }
+
+  &--plane {
+    &::before {
+      content: "Авиаперелёт";
+    }
+  }
+
+  &--bus {
+    &::before {
+      content: "Автотранспорт";
+    }
+  }
+
+  &--bicycle {
+    &::before {
+      content: "Велосипед";
+    }
+  }
+
+  &--hike {
+    &::before {
+      content: "Пешком";
+    }
+  }
+}
+
 .companions__transport-icon {
   opacity: 0.15;
+  position: relative;
+  display: block;
 
   &--active {
     opacity: 1;
+  }
+
+  &--plane {
+    width: 21px;
+    height: 21px;
+  }
+
+  &--bus {
+    width: 17px;
+    height: 19px;
+  }
+
+  &--bicycle {
+    width: 24px;
+    height: 24px;
+  }
+
+  &--hike {
+    width: 21px;
+    height: 23px;
+  }
+
+  @media (min-width: $tablet) {
+    &--plane {
+      width: 23px;
+      height: 22px;
+    }
+
+    &--bus {
+      width: 18px;
+      height: 20px;
+    }
+
+    &--bicycle {
+      width: 25px;
+      height: 25px;
+    }
+
+    &--hike {
+      width: 22px;
+      height: 24px;
+    }
   }
 }
 
@@ -475,8 +721,10 @@
   }
 
   @media (min-width: $desktop) {
-    margin-top: 85px;
-    margin-left: 71px;
+    margin: 0;
     width: 280px;
+    grid-column: 1;
+    grid-row: 4;
+    margin-left: 71px;
   }
 }
