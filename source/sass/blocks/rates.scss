@@ -57,9 +57,9 @@
     margin-bottom: 30px;
 
     &::after {
-      top: 180px;
+      bottom: -120px;
+      top: auto;
       right: 45px;
-      bottom: auto;
     }
   }
 

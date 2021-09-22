@@ -500,7 +500,7 @@
             <span class="location__address-text">Ул. Большая&nbsp;<br>Конюшенная, 19/8</span>
           </address>
           <a class="section-link section-link--index section-link--location location__section-link" href="https://yandex.ru/maps/-/CCUiUGckSD">
-            <span class="section-link__text">Проложить маршрут</span>
+            <span class="section-link__text section-link__text--location">Проложить маршрут</span>
             <svg class="section-link__icon" width="13" height="13">
               <use xlink:href="img/sprite.svg#arrow-button-right"></use>
             </svg>
@@ -510,12 +510,13 @@
       <section class="map">
         <h2 class="visually-hidden">Мы на карте</h2>
         <div class="map__wrapper">
-          <iframe class="map__interactive" src="https://yandex.ru/map-widget/v1/-/CCUiUGguGB"></iframe>
+          <iframe class="map__interactive"></iframe>
+          <!--src="https://yandex.ru/map-widget/v1/-/CCUiUGguGB"-->
         </div>
       </section>
     </main>
     <footer class="page-footer">
-      <div class="page-footer__wrapper wrapper">
+      <div class="wrapper page-footer__wrapper">
         <a class="page-footer__logo">
           <picture>
             <source media="(min-width: 1440px)" srcset="img/content/logo/logo-desktop-open.svg">

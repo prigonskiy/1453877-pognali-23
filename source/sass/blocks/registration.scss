@@ -27,7 +27,8 @@
   }
 
   @media (min-width: $desktop) {
-    padding-top: 169px;
+    padding-top: 165px;
+    padding-bottom: 43px;
   }
 }
 
@@ -37,6 +38,10 @@
 
   @media (min-width: $tablet) {
     margin-bottom: 59px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 56px;
   }
 }
 
@@ -86,8 +91,8 @@
   }
 
   @media (min-width: $desktop) {
-    margin-top: 60px;
-    margin-bottom: 70px;
+    margin-top: 58px;
+    margin-bottom: 65px;
     margin-left: 73px;
     margin-right: 73px;
   }
@@ -124,78 +129,9 @@
   }
 }
 
-.registration__submit-button {
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 0;
-  margin: 0;
-  width: 62px;
-  height: 100%;
-  cursor: pointer;
-  border: none;
-  background-color: $basic-yellow;
-  border-radius: 10px;
-
-  &:hover {
-    background-color: $special-orange-light;
-  }
-
-  &:active {
-    background-color: $special-orange-light;
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-image: url("../img/icon-triangle.svg");
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    width: 62px;
-    height: 100%;
-  }
-
-  @media (min-width: $tablet) {
-    width: 80px;
-    border-radius: 0;
-
-    &::after {
-      width: 80px;
-      height: 100%;
-    }
-  }
-
+.registration__section-link {
   @media (min-width: $desktop) {
     width: 324px;
-    text-align: left;
-
-    &::after {
-      right: 34px;
-      left: auto;
-      transform: none;
-      width: 14px;
-      height: 100%;
-    }
-  }
-}
-
-.registration__submit-button:active::after {
-  opacity: 0.3;
-}
-
-.registration__submit-button-label {
-  display: none;
-
-  @media (min-width: $desktop) {
-    display: inline-block;
-    color: $special-blue;
-    font-size: 24px;
-    line-height: 24px;
-    font-family: $pognali-font;
-    font-weight: 700;
-    margin-left: 36px;
   }
 }
 
@@ -207,6 +143,6 @@
   }
 
   @media (min-width: $desktop) {
-    margin-top: 37px;
+    margin-top: 43px;
   }
 }

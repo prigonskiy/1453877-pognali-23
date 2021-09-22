@@ -16,7 +16,7 @@
   }
 
   @media (min-width: $tablet) {
-    padding-top: 108px;
+    padding-top: 114px;
     padding-bottom: 24px;
 
     &::after {
@@ -35,7 +35,6 @@
 .location__wrapper {
   @media (min-width: $desktop) {
     display: flex;
-    margin: 0 auto;
     justify-content: space-between;
     align-items: center;
   }
@@ -52,6 +51,12 @@
   @media (min-width: $tablet) {
     margin-left: 35px;
     margin-right: 35px;
+    margin-bottom: 44px;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 0;
+    margin-left: 223px;
   }
 }
 
@@ -113,5 +118,17 @@
     @media (min-width: $tablet) {
       display: none;
     }
+  }
+}
+
+.location__section-link {
+  @media (min-width: $tablet) {
+    margin-left: 35px;
+    margin-right: 35px;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 0;
+    margin-right: 75px;
   }
 }
